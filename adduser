@@ -1,0 +1,2 @@
+  sudo useradd -m -G wheel -s /bin/zsh moca_tao7
+
