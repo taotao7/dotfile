@@ -385,3 +385,9 @@ set foldmethod=indent
 set foldlevel=99
 "取消预览窗口
 set completeopt=longest,menu 
+"ctrl+n出发jedi补全
+let g:jedi#completions_command = "<C-n>"
+"自动格式化代码，针对所有支持的文件
+"au BufWrite * :Autoformat
+"自动格式化python代码
+au BufWrite *.py :Autoformat
