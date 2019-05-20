@@ -360,6 +360,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'dracula/vim'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 "代码格式化
@@ -396,3 +397,17 @@ let g:jedi#completions_command = "<C-n>"
 "自动格式化python代码
 au BufWrite *.py :Autoformat
 colorscheme dracula
+
+"语法检查
+"syntastic  语法错误检查 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+"每次自动调用 :SyntasticSetLocList, 将错误覆盖 **quickfix**
+let g:syntastic_always_populate_loc_list = 1
+" 自动拉起/关闭错误窗口, 不需要手动调用 :Errors
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+map <leader>s :SyntasticToggleMode<CR>
+let g:syntastic_python_checkers = ['pylint']
