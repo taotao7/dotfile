@@ -359,6 +359,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'dracula/vim'
 Plug 'junegunn/goyo.vim'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 "代码格式化
@@ -399,3 +400,18 @@ set guifont=Fira_Code_Retina:h10:cANSI:qDRAFT
 nnoremap <silent> <leader>z :Goyo<cr>
 set guioptions-=m 
 set guioptions-=T
+nnoremap <leader>; : terminal<cr>
+
+"语法检查
+"syntastic  语法错误检查 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+"每次自动调用 :SyntasticSetLocList, 将错误覆盖 **quickfix**
+let g:syntastic_always_populate_loc_list = 1
+" 自动拉起/关闭错误窗口, 不需要手动调用 :Errors
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+map <leader>s :SyntasticToggleMode<CR>
+let g:syntastic_python_checkers = ['pylint']
