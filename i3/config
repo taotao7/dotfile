@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec uxterm
+bindsym $mod+Return exec terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -75,7 +75,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-#bindsym $mod+l focus up
+bindsym $mod+p focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -280,7 +280,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+exec --no-startup-id start_conky_grey
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
@@ -415,7 +415,7 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-exec sslocal -s '144.168.58.249' -k '123456' -p '6667' -l '1080' -m 'chacha20'
+exec sslocal -s 144.168.58.249 -k 123456 -p 6667 -m chacha20 -l 1080
 exec setxkbmap -option "ctrl:swapcaps"
 exec --no-startup-id 'fcitx'
 exec redshift
