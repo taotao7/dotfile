@@ -11,8 +11,8 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "jellybeans"
-    background = "dark"
+    colorscheme = "dracula"
+    colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -22,9 +22,10 @@
     statusline_inactive_separator = "arrow"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
-    enable_statusline_display_mode = false
+    enable_statusline_mode = false
+    snippet_engien = 'ultisnips'
+    filetree_direction = "left"
     enable_ycm = true
-    snippet_engien = "ultisnips"
 
 # Enable autocomplete layer
 [[layers]]
@@ -34,21 +35,16 @@ auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
 name = 'shell'
-default_position = 'top'
+default_position = 'bottom'
 default_height = 30
 
 [[layers]]
 name = 'lang#python'
+format-on-save= true
 
 [[layers]]
-name = 'colorscheme'
+name = 'tmux'
 
-[[layers]]
-  name = "lang#c"
-#  clang_executable = "/usr/bin/clang"
-  [layer.clang_std]
-    c = "c11"
-    cpp = "c++1z"
-    objc = "c11"
-    objcpp = "c++1z"
+[[custom_plugins]]
+name ='dracula/vim'
 
