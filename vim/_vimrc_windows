@@ -360,7 +360,16 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'dracula/vim'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-syntastic/syntastic'
+" Track the engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 call plug#end()
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "代码格式化
 nnoremap <F4> :Autoformat<CR>
@@ -400,7 +409,6 @@ set guifont=Fira_Code_Retina:h10:cANSI:qDRAFT
 nnoremap <silent> <leader>z :Goyo<cr>
 set guioptions-=m 
 set guioptions-=T
-nnoremap <leader>; : terminal<cr>
 
 "语法检查
 "syntastic  语法错误检查 
@@ -410,7 +418,7 @@ set statusline+=%*
 "每次自动调用 :SyntasticSetLocList, 将错误覆盖 **quickfix**
 let g:syntastic_always_populate_loc_list = 1
 " 自动拉起/关闭错误窗口, 不需要手动调用 :Errors
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 map <leader>s :SyntasticToggleMode<CR>
