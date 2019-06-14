@@ -413,6 +413,9 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+"coc跳转到语义
+nmap <leader>jd <Plug>(coc-definition)
+
 "editorconfig设置
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
