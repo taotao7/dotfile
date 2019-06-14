@@ -360,6 +360,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'posva/vim-vue'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 "代码格式化
@@ -390,9 +391,9 @@ set foldlevel=99
 "取消预览窗口
 set completeopt=longest,menu 
 "自动格式化代码，针对所有支持的文件
-"au BufWrite * :Autoformat
+au BufWrite * :Autoformat
 "自动格式化python代码
-au BufWrite *.py :Autoformat
+"au BufWrite *.py :Autoformat
 
 "coc的snippets
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
@@ -412,10 +413,13 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
+"editorconfig设置
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
+
 "vue空格
-au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
-au BufNewFile,BufRead *.html,*.js,*.vue set softtabstop=2
-au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
-au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
-au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
-au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
+"au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
+"au BufNewFile,BufRead *.html,*.js,*.vue set softtabstop=2
+"au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
+"au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
+"au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
+"au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
