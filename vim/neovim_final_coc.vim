@@ -348,7 +348,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'posva/vim-vue'
-Plug 'editorconfig/editorconfig-vim'
+"Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
@@ -411,7 +411,7 @@ let g:coc_snippet_next = '<tab>'
 nmap <leader>jd <Plug>(coc-definition)
 
 "editorconfig设置
-let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
+"let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 "vue空格
 "au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
