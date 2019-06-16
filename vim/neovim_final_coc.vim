@@ -102,18 +102,6 @@ set foldcolumn=1
 " Enable syntax highlighting
 syntax enable 
 
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-try
-    colorscheme dracula
-catch
-endtry
-
-set background=dark
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -354,20 +342,21 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Raimondi/delimitMate'
-Plug 'Chiel92/vim-autoformat'
+"Plug 'Chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'posva/vim-vue'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 "代码格式化
-nnoremap <F4> :Autoformat<CR>
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
+"nnoremap <F4> :Autoformat<CR>
+"let g:autoformat_autoindent = 0
+"let g:autoformat_retab = 0
+"let g:autoformat_remove_trailing_spaces = 0
 "自动格式化
 "autocmd FileType python let g:autoformatpython_enabled = 1
 
@@ -389,11 +378,16 @@ nmap <F2> :TagbarToggle<CR>
 set foldmethod=indent
 set foldlevel=99
 "取消预览窗口
-set completeopt=longest,menu 
+"set completeopt=longest,menu 
+
+"格式化js,ts
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 "自动格式化代码，针对所有支持的文件
-au BufWrite * :Autoformat
+nmap <leader>f <Plug>(coc-format) 
+"au BufWrite * :<Plug>(coc-format) 
 "自动格式化python代码
-"au BufWrite *.py :Autoformat
+"au BufWrite *.vue :Prettier
 
 "coc的snippets
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
@@ -426,3 +420,5 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 "au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
 "au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
 "au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
+colorscheme gruvbox
+set background=dark
