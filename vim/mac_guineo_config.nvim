@@ -346,6 +346,9 @@ Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'dracula/vim'
 Plug 'luochen1990/rainbow'
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 "代码格式化
