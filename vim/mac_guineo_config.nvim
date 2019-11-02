@@ -349,6 +349,7 @@ Plug 'luochen1990/rainbow'
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 "代码格式化
@@ -358,6 +359,13 @@ call plug#end()
 "let g:autoformat_remove_trailing_spaces = 0
 "自动格式化
 "autocmd FileType python let g:autoformatpython_enabled = 1
+"文件树开关
+nnoremap <F3> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"文件树左边
+let g:NERDTreeWinPos='left'
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
 "ctag
