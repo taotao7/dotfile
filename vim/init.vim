@@ -161,7 +161,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
 map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
@@ -339,39 +338,19 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 "设置插件安装
 call plug#begin('~/.vim/plugged')
-Plug 'majutsushi/tagbar'
-"Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-Plug 'dracula/vim'
 Plug 'luochen1990/rainbow'
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
-Plug 'scrooloose/nerdtree'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-"代码格式化
-"nnoremap <F4> :Autoformat<CR>
-"let g:autoformat_autoindent = 0
-"let g:autoformat_retab = 0
-"let g:autoformat_remove_trailing_spaces = 0
-"自动格式化
-"autocmd FileType python let g:autoformatpython_enabled = 1
-"文件树开关
-nnoremap <F3> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"文件树左边
-let g:NERDTreeWinPos='left'
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"outline
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 
-
-"ctag
-let g:tagbar_width=25
-let g:tagbar_autofocus=1
-let g:tagbar_right = 1
 nmap <F2> :TagbarToggle<CR>
 
 "代码折叠
@@ -411,13 +390,6 @@ nmap <leader>gd <Plug>(coc-definition)
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
-"vue空格
-"au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
-"au BufNewFile,BufRead *.html,*.js,*.vue set softtabstop=2
-"au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
-"au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
-"au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
-"au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
 let g:rainbow_active = 1
 "map <leader>t :Deol -split=floating<CR>
 "打开终端并设定窗口高度为10
@@ -426,3 +398,4 @@ map <leader>t :new +resize10 term://zsh<CR>
 set splitbelow
 "让终端可以用esc进入normall模式
 tnoremap <ESC>   <C-\><C-n>
+colorscheme gruvbox
