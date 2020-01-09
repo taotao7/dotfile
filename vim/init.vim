@@ -350,8 +350,9 @@ call plug#end()
 
 "outline
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"explorer
+nnoremap <F3> :CocCommand explorer<CR>
 
-nmap <F2> :TagbarToggle<CR>
 
 "代码折叠
 set foldmethod=indent
