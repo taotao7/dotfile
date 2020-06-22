@@ -339,17 +339,30 @@ endfunction
 "设置插件安装
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
-Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'luochen1990/rainbow'
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
-Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdcommenter'
+Plug 'joshdick/onedark.vim'
+Plug 'vim-airline/vim-airline'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
-"outline
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"markdown
+"nmap <silent> <F7> <Plug>MarkdownPreview
+"imap <silent> <F7> <Plug>MarkdownPreview
+"nmap <silent> <F8> <Plug>StopMarkdownPreview
+"imap <silent> <F8> <Plug>StopMarkdownPreview
+
+
+"Tagbar
+let g:tagbar_width=25
+let g:tagbar_autofocus=1
+let g:tagbar_right = 1
+nmap <F2> :TagbarToggle<CR>
 "explorer
 nnoremap <F3> :CocCommand explorer<CR>
 
@@ -363,9 +376,6 @@ set foldlevel=99
 
 "自动格式化代码，针对所有支持的文件
 nmap <leader>f <Plug>(coc-format) 
-"au BufWrite * :<Plug>(coc-format) 
-"自动格式化python代码
-"au BufWrite *.vue :Prettier
 
 "coc的snippets
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
@@ -392,11 +402,4 @@ nmap <leader>gd <Plug>(coc-definition)
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-"map <leader>t :Deol -split=floating<CR>
-"打开终端并设定窗口高度为10
-map <leader>t :new +resize10 term://zsh<CR>
-"从下面打开终端
-set splitbelow
-"让终端可以用esc进入normall模式
-tnoremap <ESC>   <C-\><C-n>
-colorscheme gruvbox
+colorscheme onedark
