@@ -346,16 +346,17 @@ Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'preservim/nerdcommenter'
-Plug 'joshdick/onedark.vim'
+Plug 'connorholyday/vim-snazzy'
 Plug 'vim-airline/vim-airline'
-"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'vim-airline/vim-airline-themes'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 "markdown
-"nmap <silent> <F7> <Plug>MarkdownPreview
-"imap <silent> <F7> <Plug>MarkdownPreview
-"nmap <silent> <F8> <Plug>StopMarkdownPreview
-"imap <silent> <F8> <Plug>StopMarkdownPreview
+ nmap <silent> <F7> <Plug>MarkdownPreview
+ imap <silent> <F7> <Plug>MarkdownPreview
+ nmap <silent> <F8> <Plug>StopMarkdownPreview
+ imap <silent> <F8> <Plug>StopMarkdownPreview
 
 
 "Tagbar
@@ -402,4 +403,5 @@ nmap <leader>gd <Plug>(coc-definition)
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme onedark
+colorscheme snazzy
+let g:airline_theme = 'base16_snazzy'
