@@ -2,6 +2,7 @@
 set history=500
 set nu
 set lines=35 columns=130 
+"windows共享剪切板
 set clipboard=unnamed
 
 " Enable filetype plugins
