@@ -2,6 +2,7 @@
 set history=500
 set nu
 
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -346,7 +347,7 @@ Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'preservim/nerdcommenter'
-Plug 'connorholyday/vim-snazzy'
+Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -403,5 +404,5 @@ nmap <leader>gd <Plug>(coc-definition)
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme snazzy
-let g:airline_theme = 'base16_snazzy'
+colorscheme onedark
+let g:airline_theme = 'onedark'
