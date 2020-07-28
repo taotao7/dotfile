@@ -350,15 +350,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
-"markdown
- nmap <silent> <F7> <Plug>MarkdownPreview
- imap <silent> <F7> <Plug>MarkdownPreview
- nmap <silent> <F8> <Plug>StopMarkdownPreview
- imap <silent> <F8> <Plug>StopMarkdownPreview
 
 
 "Tagbar
