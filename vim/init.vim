@@ -347,9 +347,9 @@ Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'preservim/nerdcommenter'
-Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sainnhe/forest-night'
 call plug#end()
 
 
@@ -397,5 +397,5 @@ nmap <leader>gd <Plug>(coc-definition)
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme onedark
-let g:airline_theme = 'onedark'
+colorscheme forest-night
+let g:airline_theme = 'forest_night'
