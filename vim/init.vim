@@ -350,27 +350,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/forest-night'
-Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
-Plug 'junegunn/fzf.vim' 
-Plug 'antoinemadec/coc-fzf'
 Plug 'kkoomen/vim-doge'
 call plug#end()
-
-
-"fzf config
-let g:coc_fzf_preview = ''
-let g:coc_fzf_opts = []
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-nnoremap <silent> <space><space> :<C-u>CocFzfList<CR>
-nnoremap <silent> <space>a       :<C-u>CocFzfList diagnostics<CR>
-nnoremap <silent> <space>b       :<C-u>CocFzfList diagnostics --current-buf<CR>
-nnoremap <silent> <space>c       :<C-u>CocFzfList commands<CR>
-nnoremap <silent> <space>e       :<C-u>CocFzfList extensions<CR>
-nnoremap <silent> <space>l       :<C-u>CocFzfList location<CR>
-nnoremap <silent> <space>o       :<C-u>CocFzfList outline<CR>
-nnoremap <silent> <space>s       :<C-u>CocFzfList symbols<CR>
-nnoremap <silent> <space>p       :<C-u>CocFzfListResume<CR>
-
 
 "Tagbar
 let g:tagbar_width=25
