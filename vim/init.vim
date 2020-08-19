@@ -343,14 +343,15 @@ Plug 'Yggdroot/indentLine'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'luochen1990/rainbow'
-Plug 'ianks/vim-tsx'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'sainnhe/forest-night'
+Plug 'mhinz/vim-startify'
 Plug 'kkoomen/vim-doge'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 "Tagbar
