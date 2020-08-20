@@ -2,7 +2,6 @@
 set history=500
 set nu
 
-
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -340,7 +339,7 @@ endfunction
 "设置插件安装
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
-Plug 'majutsushi/tagbar'
+Plug 'liuchengxu/vista.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'luochen1990/rainbow'
 Plug 'yuezk/vim-js'
@@ -351,21 +350,24 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'kkoomen/vim-doge'
-Plug 'lifepillar/vim-solarized8'
+Plug 'flazz/vim-colorschemes'
 call plug#end()
 
 "Tagbar
-let g:tagbar_width=25
-let g:tagbar_autofocus=1
-let g:tagbar_right = 1
-nmap <F2> :TagbarToggle<CR>
+"let g:tagbar_width=25
+"let g:tagbar_autofocus=1
+"let g:tagbar_right = 1
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista#renderer#enable_icon = 1
+nmap <F2> :Vista!!<CR>
 "explorer
 nnoremap <F3> :CocCommand explorer<CR>
 
 
 "代码折叠
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=1
 "取消预览窗口
 "set completeopt=longest,menu 
 
@@ -392,11 +394,12 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 "coc跳转到语义
-nmap <leader>gd <Plug>(coc-definition)
+nmap <leader> gd <Plug>(coc-definition)
+nmap <leader> gy <Plug>(coc-type-definition)
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme forest-night
-let g:airline_theme = 'forest_night'
+colorscheme random
+let g:airline_theme='random'
