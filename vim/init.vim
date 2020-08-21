@@ -350,7 +350,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'kkoomen/vim-doge'
-Plug 'flazz/vim-colorschemes'
+Plug 'dracula/vim'
 call plug#end()
 
 "Tagbar
@@ -394,12 +394,12 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 
 "coc跳转到语义
-nmap <leader> gd <Plug>(coc-definition)
-nmap <leader> gy <Plug>(coc-type-definition)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme random
-let g:airline_theme='random'
+colorscheme dracula
+let g:airline_theme=dracula
