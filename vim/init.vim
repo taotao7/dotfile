@@ -47,9 +47,6 @@ endif
 "Always show current position
 set ruler
 
-" Height of the command bar
-set cmdheight=2
-
 " A buffer becomes hidden when it is abandoned
 set hid
 
@@ -339,7 +336,7 @@ endfunction
 "设置插件安装
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
-Plug 'liuchengxu/vista.vim'
+Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'luochen1990/rainbow'
 Plug 'yuezk/vim-js'
@@ -351,16 +348,14 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'kkoomen/vim-doge'
 Plug 'dracula/vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "Tagbar
-"let g:tagbar_width=25
-"let g:tagbar_autofocus=1
-"let g:tagbar_right = 1
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'ctags'
-let g:vista#renderer#enable_icon = 1
-nmap <F2> :Vista!!<CR>
+let g:tagbar_width=25
+let g:tagbar_autofocus=1
+let g:tagbar_iconchars = ['▸', '▾']
+nnoremap <F2> :TagbarToggle<CR>
 "explorer
 nnoremap <F3> :CocCommand explorer<CR>
 
@@ -378,6 +373,22 @@ nmap <leader>f <Plug>(coc-format)
 "coc的snippets
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
             \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+set updatetime=100
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "coc的tab下个参数
 inoremap <silent><expr> <TAB>
@@ -402,4 +413,3 @@ nmap <silent> gy <Plug>(coc-type-definition)
 
 let g:rainbow_active = 1
 colorscheme dracula
-let g:airline_theme=dracula
