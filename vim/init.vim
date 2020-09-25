@@ -424,6 +424,7 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+nnoremap  <F5> :call CocActionAsync('showSignatureHelp')<CR>
 
 "coc跳转到语义
 nmap <silent> gd <Plug>(coc-definition)
