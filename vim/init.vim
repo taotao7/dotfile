@@ -351,6 +351,27 @@ Plug 'dracula/vim'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+let g:coc_global_extensions = [
+	\ 'coc-actions',
+	\ 'coc-css',
+	\ 'coc-diagnostic',
+	\ 'coc-explorer',
+	\ 'coc-gitignore',
+	\ 'coc-html',
+	\ 'coc-json',
+	\ 'coc-lists',
+	\ 'coc-prettier',
+	\ 'coc-snippets',
+	\ 'coc-stylelint',
+	\ 'coc-syntax',
+	\ 'coc-tslint-plugin',
+	\ 'coc-tsserver',
+	\ 'coc-vimlsp',
+	\ 'coc-vetur',
+	\ 'coc-yaml',
+	\ 'coc-emmet',
+	\ 'coc-tabnine']
+
 "Tagbar
 let g:tagbar_width=25
 let g:tagbar_autofocus=1
