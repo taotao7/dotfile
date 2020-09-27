@@ -362,7 +362,6 @@ let g:coc_global_extensions = [
 	\ 'coc-lists',
 	\ 'coc-prettier',
 	\ 'coc-snippets',
-	\ 'coc-stylelint',
 	\ 'coc-syntax',
 	\ 'coc-tslint-plugin',
 	\ 'coc-tsserver',
