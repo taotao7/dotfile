@@ -347,7 +347,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'kkoomen/vim-doge'
-Plug 'cseelus/vim-colors-lucid'
+Plug 'ajmwagar/vim-deus'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
@@ -431,5 +431,5 @@ nmap <silent> gy <Plug>(coc-type-definition)
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme lucid
-let g:airline_theme='lucius'
+colorscheme deus
+"let g:airline_theme='deus'
