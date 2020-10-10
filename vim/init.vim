@@ -354,6 +354,7 @@ call plug#end()
 let g:coc_global_extensions = [
 	\ 'coc-actions',
 	\ 'coc-css',
+	\ 'coc-pairs',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
 	\ 'coc-gitignore',
