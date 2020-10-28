@@ -407,7 +407,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-"autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "coc的tab下个参数
 inoremap <silent><expr> <TAB>
@@ -427,6 +427,19 @@ nnoremap  <F5> :call CocActionAsync('showSignatureHelp')<CR>
 "coc跳转到语义
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"coc rename
+nmap <leader>r <Plug>(coc-rename)
+"cocaction & quick fix
+nmap <leader>ac <Plug>(coc-codeaction)
+nmap <leader>qf <Plug>(coc-fix-current)
+"[diagnostic]
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
