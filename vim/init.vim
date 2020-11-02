@@ -347,8 +347,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'kkoomen/vim-doge'
-Plug 'ajmwagar/vim-deus'
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/seoul256.vim'
+Plug 'alpertuna/vim-header'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -439,11 +440,15 @@ nmap <leader>qf <Plug>(coc-fix-current)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
+"设置自动加载头文件
+let g:header_field_author = 'tao7'
+let g:header_field_author_email = 'moca_tao7@foxmail.com'
+let g:header_field_timestamp_format = '%Y.%m.%d'
+map <F4> :AddHeader<CR>
 
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme deus
-"let g:airline_theme='deus'
+colorscheme seoul256
