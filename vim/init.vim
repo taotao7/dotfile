@@ -350,6 +350,8 @@ Plug 'kkoomen/vim-doge'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/seoul256.vim'
 Plug 'alpertuna/vim-header'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -369,6 +371,7 @@ let g:coc_global_extensions = [
 	\ 'coc-tsserver',
 	\ 'coc-yaml',
 	\ 'coc-emmet',
+        \ 'coc-fzf',
 	\ 'coc-tabnine']
 
 "Tagbar
@@ -444,8 +447,11 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 let g:header_field_author = 'tao7'
 let g:header_field_author_email = 'moca_tao7@foxmail.com'
 let g:header_field_timestamp_format = '%Y.%m.%d'
+let g:header_field_modified_timestamp_format = '%Y.%m.%d'
 map <F4> :AddHeader<CR>
 
+"fzf浮窗
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
