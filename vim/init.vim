@@ -350,7 +350,8 @@ Plug 'kkoomen/vim-doge'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/seoul256.vim'
 Plug 'alpertuna/vim-header'
-Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 let g:coc_global_extensions = [
