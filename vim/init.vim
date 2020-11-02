@@ -350,9 +350,7 @@ Plug 'kkoomen/vim-doge'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/seoul256.vim'
 Plug 'alpertuna/vim-header'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -450,18 +448,12 @@ let g:header_field_timestamp_format = '%Y.%m.%d'
 let g:header_field_modified_timestamp_format = '%Y.%m.%d'
 map <F4> :AddHeader<CR>
 
-"fzf浮窗
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-"mappings
-nnoremap <silent> <space><space> :<C-u>CocFzfList<CR>
-nnoremap <silent> <space>a       :<C-u>CocFzfList diagnostics<CR>
-nnoremap <silent> <space>b       :<C-u>CocFzfList diagnostics --current-buf<CR>
-nnoremap <silent> <space>c       :<C-u>CocFzfList commands<CR>
-nnoremap <silent> <space>e       :<C-u>CocFzfList extensions<CR>
-nnoremap <silent> <space>l       :<C-u>CocFzfList location<CR>
-nnoremap <silent> <space>o       :<C-u>CocFzfList outline<CR>
-nnoremap <silent> <space>s       :<C-u>CocFzfList symbols<CR>
-nnoremap <silent> <space>p       :<C-u>CocFzfListResume<CR>
+"leaderf
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+"let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+let g:Lf_ShortcutF = '<C-P>'
+noremap <C-s> :<C-U>Leaderf rg <CR>
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
