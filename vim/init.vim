@@ -352,6 +352,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'alpertuna/vim-header'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -371,7 +372,6 @@ let g:coc_global_extensions = [
 	\ 'coc-tsserver',
 	\ 'coc-yaml',
 	\ 'coc-emmet',
-        \ 'coc-fzf',
 	\ 'coc-tabnine']
 
 "Tagbar
