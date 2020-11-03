@@ -435,6 +435,11 @@ nmap <silent> gr <Plug>(coc-references)
 
 "coc rename
 nmap <leader>r <Plug>(coc-rename)
+nmap <leader>rf <Plug>(coc-refactor)
+
+"coc cursors-operator
+nmap <leader>x :CocCommand document.renameCurrentWord<CR>
+
 "cocaction & quick fix
 nmap <leader>ac <Plug>(coc-codeaction)
 nmap <leader>qf <Plug>(coc-fix-current)
