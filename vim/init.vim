@@ -461,6 +461,9 @@ let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = '<C-P>'
 noremap <C-s> :<C-U>Leaderf rg <CR>
 
+"分割线的颜色
+let g:indentLine_color_gui = '#A4E57E'
+
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
