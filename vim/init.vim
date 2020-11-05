@@ -346,7 +346,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
-Plug 'kkoomen/vim-doge'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/seoul256.vim'
 Plug 'alpertuna/vim-header'
@@ -371,7 +370,8 @@ let g:coc_global_extensions = [
 	\ 'coc-tsserver',
 	\ 'coc-yaml',
 	\ 'coc-emmet',
-	\ 'coc-tabnine']
+	\ 'coc-tabnine',
+	\ 'coc-git']
 
 "Tagbar
 let g:tagbar_width=25
