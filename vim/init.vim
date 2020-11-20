@@ -1,6 +1,7 @@
 "sets how many lines of history VIM has to remember
 set history=500
 set nu
+set mouse=a
 
 " Enable filetype plugins
 filetype plugin on
@@ -371,6 +372,7 @@ let g:coc_global_extensions = [
 	\ 'coc-yaml',
 	\ 'coc-emmet',
 	\ 'coc-tabnine',
+	\ 'coc-project',
 	\ 'coc-git']
 
 "Tagbar
