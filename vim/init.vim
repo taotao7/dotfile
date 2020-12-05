@@ -349,7 +349,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/seoul256.vim'
-Plug 'alpertuna/vim-header'
+"Plug 'alpertuna/vim-header'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
 Plug 'wakatime/vim-wakatime'
 call plug#end()
@@ -471,11 +471,11 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "设置自动加载头文件
-let g:header_field_author = 'tao7'
-let g:header_field_author_email = 'moca_tao7@foxmail.com'
-let g:header_field_timestamp_format = '%Y.%m.%d'
-let g:header_field_modified_timestamp_format = '%Y.%m.%d'
-map <F4> :AddHeader<CR>
+"let g:header_field_author = 'tao7'
+"let g:header_field_author_email = 'moca_tao7@foxmail.com'
+"let g:header_field_timestamp_format = '%Y.%m.%d'
+"let g:header_field_modified_timestamp_format = '%Y.%m.%d'
+"map <F4> :AddHeader<CR>
 
 "leaderf
 let g:Lf_WindowPosition = 'popup'
