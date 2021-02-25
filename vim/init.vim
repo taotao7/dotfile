@@ -2,6 +2,7 @@
 set history=500
 set nu
 set mouse=a
+set conceallevel=0
 
 " Enable filetype plugins
 filetype plugin on
