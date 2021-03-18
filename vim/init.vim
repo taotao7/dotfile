@@ -349,10 +349,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/seoul256.vim'
+Plug 'ajmwagar/vim-deus'
 "Plug 'alpertuna/vim-header'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
-Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -494,4 +493,4 @@ let g:indentLine_color_gui = '#A4E57E'
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
 let g:rainbow_active = 1
-colorscheme seoul256
+colorscheme deus
