@@ -351,6 +351,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ajmwagar/vim-deus'
 "Plug 'alpertuna/vim-header'
+Plug 'neoclide/jsonc.vim'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
 call plug#end()
 
@@ -421,6 +422,11 @@ augroup mygroup
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
+
+"json
+augroup JsonToJsonc
+  autocmd! FileType json set filetype=jsonc
+augroup END
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
