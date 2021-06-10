@@ -351,7 +351,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ajmwagar/vim-deus'
 "Plug 'alpertuna/vim-header'
-Plug 'neoclide/jsonc.vim'
+"Plug 'neoclide/jsonc.vim'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
 call plug#end()
 
