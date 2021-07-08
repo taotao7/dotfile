@@ -490,6 +490,13 @@ let g:Lf_PreviewInPopup = 1
 let g:Lf_ShortcutF = '<C-P>'
 noremap <C-s> :<C-U>Leaderf rg <CR>
 
+"leaderf 取消搜索node_module dist文件夹
+let g:Lf_RgConfig = [
+    \ "--max-columns=150",
+    \ "--glob=!node_modules/*",
+    \ "--glob=!dist/*",
+    \ ]
+
 "分割线的颜色
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']                                                             
 let g:indentLine_color_term = 222                                                                             
