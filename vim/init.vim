@@ -349,7 +349,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
-Plug 'ajmwagar/vim-deus'
+"Plug 'ajmwagar/vim-deus'
+Plug 'NLKNguyen/papercolor-theme'
 "Plug 'alpertuna/vim-header'
 "Plug 'neoclide/jsonc.vim'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
@@ -504,6 +505,6 @@ let g:indentLine_color_gui = '#A4E57E'
 
 "editorconfig设置
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
-
 let g:rainbow_active = 1
-colorscheme deus
+set background=dark
+colorscheme PaperColor
