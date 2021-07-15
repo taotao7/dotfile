@@ -350,6 +350,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 "Plug 'ajmwagar/vim-deus'
+Plug 'junegunn/seoul256.vim'
 Plug 'NLKNguyen/papercolor-theme'
 "Plug 'alpertuna/vim-header'
 "Plug 'neoclide/jsonc.vim'
@@ -507,4 +508,6 @@ let g:indentLine_color_gui = '#A4E57E'
 "let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 let g:rainbow_active = 1
 set background=dark
+"let g :seoul256_background = 234
+"colorscheme seoul256
 colorscheme PaperColor
