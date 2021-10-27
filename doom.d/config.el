@@ -55,3 +55,6 @@
 ;; maximized
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (setq doom-font (font-spec :family "DaddyTimeMono Nerd Font" :size 14 :weight 'light))
+;; (setq-default left-margin-width 1)
+;; (set-window-buffer nil (current-buffer))
+;;(add-hook! 'doom-init-ui-hook (fringe-mode nil))
