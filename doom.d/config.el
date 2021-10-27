@@ -54,3 +54,4 @@
 ;; they are implemented.
 ;; maximized
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(setq doom-font (font-spec :family "DaddyTimeMono Nerd Font" :size 14 :weight 'light))
