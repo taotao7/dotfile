@@ -53,7 +53,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;; maximized
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(if (eq initial-window-system 'x)
+         (toggle-frame-maximized)
+       (toggle-frame-fullscreen))
 (setq doom-font (font-spec :family "DaddyTimeMono Nerd Font" :size 14 :weight 'light))
 ;; (setq-default left-margin-width 1)
 ;; (set-window-buffer nil (current-buffer))
