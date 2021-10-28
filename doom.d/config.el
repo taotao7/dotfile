@@ -52,11 +52,13 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
 ;; maximized
 (if (eq initial-window-system 'x)
          (toggle-frame-maximized)
        (toggle-frame-fullscreen))
-(setq doom-font (font-spec :family "DaddyTimeMono Nerd Font" :size 14 :weight 'light))
-;; (setq-default left-margin-width 1)
-;; (set-window-buffer nil (current-buffer))
-;;(add-hook! 'doom-init-ui-hook (fringe-mode nil))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 14 :weight 'light))
+;; show time
+(display-time-mode t)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
