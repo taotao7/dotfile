@@ -136,8 +136,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -340,7 +340,7 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 "设置插件安装
 call plug#begin('~/.vim/plugged')
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 "Plug 'majutsushi/tagbar'
 Plug 'liuchengxu/vista.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -354,12 +354,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive',{'branch': 'master'}
+"Plug 'dracula/vim', { 'as': 'dracula' } 
 "Plug 'junegunn/seoul256.vim'
 "Plug 'ajmwagar/vim-deus'
 "Plug 'alpertuna/vim-header'
 "Plug 'neoclide/jsonc.vim'
-Plug 'NLKNguyen/papercolor-theme'
-"Plug 'challenger-deep-theme/vim'
+"Plug 'lifepillar/vim-gruvbox8'
+Plug 'joshdick/onedark.vim'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
 call plug#end()
 
@@ -367,12 +368,12 @@ let g:coc_global_extensions = [
 	\ 'coc-actions',
 	\ 'coc-css',
 	\ 'coc-pairs',
+  \ 'coc-git',
 	\ 'coc-diagnostic',
 	\ 'coc-explorer',
 	\ 'coc-gitignore',
 	\ 'coc-html',
 	\ 'coc-json',
-	\ 'coc-git',
 	\ 'coc-lists',
 	\ 'coc-prettier',
 	\ 'coc-snippets',
@@ -380,6 +381,8 @@ let g:coc_global_extensions = [
 	\ 'coc-tslint-plugin',
 	\ 'coc-tsserver',
 	\ 'coc-yaml',
+	\ 'coc-cmake',
+	\ 'coc-clangd',
 	\ 'coc-emmet',
 	\ 'coc-tabnine',
 	\ 'coc-project']
@@ -412,8 +415,7 @@ set updatetime=100
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-
-" 前端可以调用prettier.
+"自动格式化代码，针对前端
 nnoremap <silent><nowait> <space>f  :<C-u>CocCommand prettier.formatFile<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
@@ -427,7 +429,6 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Search current file.
 nnoremap <silent><nowait> <space>w  :<C-u>CocList words<cr>
-
 
 augroup mygroup
   autocmd!
@@ -525,9 +526,9 @@ let g:airline_right_alt_sep = '❮'
 
 
 "分割线的颜色
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']                                                             
-let g:indentLine_color_term = 202
-let g:indentLine_color_gui = '#A4E57E' 
+"let g:indentLine_char_list = ['|', '¦', '┆', '┊']                                                             
+"let g:indentLine_color_term = 202
+"let g:indentLine_color_gui = '#A4E57E' 
 
 "vista
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
@@ -554,5 +555,5 @@ let g:vista#renderer#icons = {
 let g:rainbow_active = 1
 "set background=dark
 "let g:seoul256_background = 234
-"colorscheme challenger_deep
-colorscheme PaperColor
+colorscheme onedark
+
