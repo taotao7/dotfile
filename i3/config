@@ -8,8 +8,8 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
-new_float normal
+default_border pixel 1
+default_floating_border normal
 
 # Hide borders
 hide_edge_borders none
@@ -32,9 +32,6 @@ bindsym $mod+Return exec terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
-
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
@@ -42,11 +39,11 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+#exec --no-startup-id volumeicon
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id pa-applet
+bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -56,14 +53,13 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec palemoon
+bindsym $mod+F2 exec microsoft-edge-dev
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec gksu pcmanfm
+bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym $mod+t exec --no-startup-id pkill picom
+bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
@@ -75,7 +71,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+p focus up
+#bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -112,7 +108,6 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -141,14 +136,16 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
+set $ws1  "1:term"
+set $ws2  "2:web"
+set $ws3  "3:files"
+set $ws4  "4:code"
+set $ws5  "5:docs"
+set $ws6  "6:gfx"
+set $ws7  "7:misc"
+set $ws8  "8:media"
+set $ws9  "9:music"
+set $ws10 "10:downl"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -191,6 +188,7 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
+for_window [class="fpakman"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
@@ -261,28 +259,26 @@ mode "resize" {
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-
+#
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_grey
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker i3lock-fancy
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -291,63 +287,60 @@ exec_always --no-startup-id fix_xcursor
 # https://i3wm.org/docs/userguide.html#xresources
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
+set_from_resource       $foreground foreground  #FF0000
+set_from_resource       $background background  #FF0000
+set_from_resource       $color0     color0      #FF0000
+set_from_resource       $color1     color1      #FF0000
+set_from_resource       $color2     color2      #FF0000
+set_from_resource       $color3     color3      #FF0000
+set_from_resource       $color4     color4      #FF0000
+set_from_resource       $color5     color5      #FF0000
+set_from_resource       $color6     color6      #FF0000
+set_from_resource       $color7     color7      #FF0000
+set_from_resource       $color8     color8      #FF0000
+set_from_resource       $color15    color15     #FF0000
+set_from_resource       $accentC    accentColor #FF0000
+set_from_resource       $urgentC    urgentColor #FF0000
+set                     $t0         #00000000
+set                     $t10        #0000001A
+set                     $t25        #00000040
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
-	status_command i3status
-	position top
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
-
+    status_command          i3blocks
+    position                top
+    tray_output             primary
+    tray_padding            4
+    separator_symbol        " "
+    workspace_buttons       yes
+    workspace_min_width     32
+    strip_workspace_numbers yes
+#   strip_workspace_name    yes
+    binding_mode_indicator  yes
     colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
-
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+        background          $background
+        statusline          $foreground
+        separator           $color8
+        #                   BORDER      BG          TEXT
+        focused_workspace   $background $background $accentC
+        active_workspace    $background $background $color8 
+        inactive_workspace  $background $background $color8 
+        urgent_workspace    $urgentC    $urgentC    $color0
     }
 }
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
+
+# personal startup
+exec fcitx
+exec --no-startup-id    dunst
+# keybind
+bindsym $mod+l exec --no-startup-id i3lock-fancy
+bindsym $mod+d                exec "rofi -show run -theme gruvbox-dark -show-icons "
+bindsym $mod+Tab              exec "rofi -show window -show-icons"
+bindsym $mod+e               exec pcmanfm
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
@@ -364,15 +357,9 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
+gaps inner 8 
 gaps outer -2
 
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
@@ -415,8 +402,4 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-exec sslocal -s 144.168.58.249 -k 123456 -p 6667 -m chacha20 -l 1080
-exec setxkbmap -option "ctrl:swapcaps"
-exec --no-startup-id 'fcitx'
-exec redshift
-bindsym Ctrl+Mod1+a exec deepin-screenshot
+

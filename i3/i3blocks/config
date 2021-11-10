@@ -1,0 +1,28 @@
+align=left
+markup=pango
+min_width=48
+interval=1
+
+[mediaplayer]
+command=~/.config/i3blocks/mediaplayer/mediaplayer
+instance=mpd
+min_width=0
+#signal=10
+
+[cpu]
+command=~/.config/i3blocks/cpu_usage/cpu_usage
+T_WARN=50
+T_CRIT=75
+DECIMALS=0
+LABEL= 
+
+[memory]
+command=~/.config/i3blocks/memory -f '﬙ {pused}%' -tw '{pused}' '>' 49 -tc '{pused}' '>' 74 
+
+[date]
+command=date "+%a, %b %d"
+label= 
+
+[time]
+command=date "+%H:%M "
+label= 
