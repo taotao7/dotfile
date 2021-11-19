@@ -1,0 +1,8 @@
+# i3blocks-modules color configuration
+
+# Set your default colors
+color_def="#eeffff"
+color_good="#c3e88d"
+color_warn="#ffcb6b"
+color_crit="#f07178"
+color_info="#82aaff"
