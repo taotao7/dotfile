@@ -4,6 +4,7 @@ set nu
 set mouse=a
 set conceallevel=0
 set cursorline
+set fillchars-=vert:\| | set fillchars+=vert:\ 
 
 " Enable filetype plugins
 filetype plugin on
