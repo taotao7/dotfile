@@ -418,6 +418,8 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 "自动格式化代码，针对前端
 nnoremap <silent><nowait> <space>f  :<C-u>CocCommand prettier.formatFile<cr>
+"show file
+nnoremap <silent><nowait> <space><space>  :<C-u>CocList files<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
