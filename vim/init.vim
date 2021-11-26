@@ -355,12 +355,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive',{'branch': 'master'}
-"Plug 'dracula/vim', { 'as': 'dracula' } 
-"Plug 'junegunn/seoul256.vim'
-"Plug 'ajmwagar/vim-deus'
+Plug 'dracula/vim', { 'as': 'dracula' } 
+Plug 'junegunn/seoul256.vim'
+Plug 'ajmwagar/vim-deus'
 "Plug 'alpertuna/vim-header'
 "Plug 'neoclide/jsonc.vim'
-"Plug 'lifepillar/vim-gruvbox8'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'joshdick/onedark.vim'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
 call plug#end()
@@ -386,6 +386,7 @@ let g:coc_global_extensions = [
 	\ 'coc-clangd',
 	\ 'coc-emmet',
 	\ 'coc-tabnine',
+	\ 'coc-todolist',
 	\ 'coc-project']
 
 "Tagbar
@@ -420,6 +421,8 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent><nowait> <space>f  :<C-u>CocCommand prettier.formatFile<cr>
 "show file
 nnoremap <silent><nowait> <space><space>  :<C-u>CocList files<cr>
+"todo 
+nnoremap <silent><nowait> <space>t  :<C-u>CocList todolist<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
@@ -557,6 +560,6 @@ let g:vista#renderer#icons = {
 
 let g:rainbow_active = 1
 "set background=dark
-"let g:seoul256_background = 234
-colorscheme onedark
+"let g:seoul256_background = 236
+colorscheme dracula
 
