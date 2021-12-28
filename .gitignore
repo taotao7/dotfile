@@ -2,4 +2,4 @@
 # DotfilesSh.gitignore:
 local-patch
 patched-src
-plugin/*
+plugin/
