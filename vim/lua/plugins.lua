@@ -9,5 +9,6 @@ return require('packer').startup(function()
   use {'tpope/vim-fugitive'}
   use {'glepnir/dashboard-nvim'}
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+  use {'SmiteshP/nvim-gps', requires = 'nvim-treesitter/nvim-treesitter' }
 end)
 
