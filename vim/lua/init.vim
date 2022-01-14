@@ -3,9 +3,13 @@ lua require('plugins')
 
 lua require('plug-config/treesitter')
 lua require('plug-config/coc')
+lua require('plug-config/galaxyline')
 
-set background=dark
-colorscheme dracula
+
+"let g:seoul256_background=235
+let g:everforest_background = 'hard'
+let g:everforest_enable_italic = 1
+colorscheme everforest
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
