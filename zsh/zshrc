@@ -127,8 +127,12 @@ export NODIST_NODE_MIRROR=https://npm.taobao.org/mirrors/node
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NPM_MIRROR=https://npm.taobao.org/mirrors/npm
+
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 # End of mirror-config-china
 export JAVA_HOME=/Users/xvtao/Library/Java/JavaVirtualMachines/liberica-1.8.0_302
+
+alias cat=bat
+alias ls=exa
