@@ -4,6 +4,7 @@ lua require('plugins')
 lua require('plug-config/treesitter')
 lua require('plug-config/coc')
 lua require('plug-config/galaxyline')
+lua require('plug-config/bufferline')
 
 
 "let g:seoul256_background=235
