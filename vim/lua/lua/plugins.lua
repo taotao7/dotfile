@@ -11,5 +11,6 @@ return require('packer').startup(function()
   use {'glepnir/galaxyline.nvim', branch = 'main', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   use {'SmiteshP/nvim-gps', requires = 'nvim-treesitter/nvim-treesitter' }
   use {'sainnhe/everforest'}
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 end)
 
