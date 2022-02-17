@@ -391,19 +391,6 @@ gls.left[15] = {
 --   }
 -- }
 
-gls.left[17] = {
-nvimGPS = {
-        provider = function()
-            return gps.get_location()
-        end,
-        condition = function()
-            return gps.is_available()
-        end,
-        icon = '  ',
-        highlight = {colors.yellow,colors.bg},
-    }
-}
-
 gls.right[1]= {
   FileFormat = {
     provider = 'FileFormat',
@@ -445,14 +432,14 @@ gls.right[5] = {
 --   }
 -- }
 --
--- gls.right[3] = {
---   Vista = {
---     provider = VistaPlugin,
---     separator = ' ',
---     separator_highlight = {colors.bg,colors.line_bg},
---     highlight = {colors.fg,colors.line_bg,'bold'},
---   }
--- }
+gls.right[3] = {
+  Vista = {
+    provider = VistaPlugin,
+    separator = ' ',
+    separator_highlight = {colors.bg,colors.line_bg},
+    highlight = {colors.fg,colors.line_bg,'bold'},
+  }
+}
 
 gls.short_line_left[1] = {
   BufferType = {
