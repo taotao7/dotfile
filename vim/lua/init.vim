@@ -8,9 +8,12 @@ lua require('plug-config/bufferline')
 
 
 "let g:seoul256_background=235
-let g:everforest_background = 'hard'
-let g:everforest_enable_italic = 1
-colorscheme everforest
+" let g:everforest_background = 'soft'
+" let g:everforest_enable_italic = 1
+let g:tokyonight_style = "storm"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_italic_variables = 1
+colorscheme tokyonight
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT

@@ -12,5 +12,6 @@ return require('packer').startup(function()
   use {'SmiteshP/nvim-gps', requires = 'nvim-treesitter/nvim-treesitter' }
   use {'sainnhe/everforest'}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+  use {'folke/tokyonight.nvim'}
 end)
 
