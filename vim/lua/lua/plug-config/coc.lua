@@ -1,5 +1,4 @@
 vim.g.coc_global_extensions ={
-'coc-actions',
 'coc-css',
 'coc-pairs',
 'coc-git',
