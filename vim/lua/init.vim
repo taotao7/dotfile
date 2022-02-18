@@ -125,6 +125,9 @@ augroup end
 "自动格式化代码，针对所有支持的文件
 nmap <leader>f <Plug>(coc-format) 
 
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocActionAsync('format')
+
 "coc的tab下个参数
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
