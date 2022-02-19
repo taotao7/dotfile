@@ -15,6 +15,8 @@ let g:tokyonight_italic_functions = 1
 let g:tokyonight_italic_variables = 1
 colorscheme tokyonight
 
+" use system clipboard
+set clipboard=unnamedplus
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
