@@ -20,6 +20,7 @@ set clipboard=unnamedplus
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 set listchars=tab:▸\ ,eol:¬
+set laststatus=0
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
