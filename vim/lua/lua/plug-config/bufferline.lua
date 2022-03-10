@@ -1,7 +1,6 @@
 require('bufferline').setup {
   options = {
     numbers = "both" ,
-    number_style = "superscript",
     close_command = "bdelete! %d",
     right_mouse_command = "bdelete! %d",
     left_mouse_command = "buffer %d",

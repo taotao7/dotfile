@@ -3,24 +3,29 @@ lua require('plugins')
 
 lua require('plug-config/treesitter')
 lua require('plug-config/coc')
-lua require('plug-config/galaxyline')
-lua require('plug-config/bufferline')
+"lua require('plug-config/galaxyline')
+"lua require('plug-config/bufferline')
 
 
 "let g:seoul256_background=235
 " let g:everforest_background = 'soft'
 " let g:everforest_enable_italic = 1
-let g:tokyonight_style = "storm"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_italic_variables = 1
-colorscheme tokyonight
+" let g:tokyonight_style = "day"
+" let g:tokyonight_italic_functions = 1
+" let g:tokyonight_italic_variables = 1
+let g:gruvbox_italic=1
+set background=light
+colorscheme gruvbox
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
+
 
 " use system clipboard
 set clipboard=unnamedplus
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 set listchars=tab:▸\ ,eol:¬
-set laststatus=0
+" set laststatus=0
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
