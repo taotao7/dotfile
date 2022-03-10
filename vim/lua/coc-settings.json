@@ -4,7 +4,7 @@
   "explorer.width": 30,
   "explorer.previewAction.onHover": "labeling",
   "explorer.icon.enableNerdfont": true,
-  "coc.preferences.formatOnSaveFiletypes": ["cpp"],
+  "coc.preferences.formatOnSaveFiletypes": ["cpp","go"],
   //"coc.preferences.hoverTarget": "preview",
   "coc.preferences.enableFloatHighlight": true,
   "coc.preferences.extensionUpdateCheck": "daily",
