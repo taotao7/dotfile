@@ -1,0 +1,9 @@
+set clipboard+=unnamed
+set history=500
+set nu
+set mouse=a
+set conceallevel=0
+let mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
