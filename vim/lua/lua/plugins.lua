@@ -9,7 +9,7 @@ return require('packer').startup(function()
   use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
   use {'numToStr/Comment.nvim', config = function() require('Comment').setup() end}
   use {'tpope/vim-fugitive'}
-  use {'airblade/vim-gitgutter'}
+  -- use {'airblade/vim-gitgutter'}
   use {'glepnir/dashboard-nvim'}
   use {'morhetz/gruvbox'}
   -- use {'glepnir/galaxyline.nvim', branch = 'main', requires = {'kyazdani42/nvim-web-devicons', opt = true}}

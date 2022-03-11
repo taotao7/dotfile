@@ -211,6 +211,8 @@ let g:dashboard_custom_shortcut={
 \ 'find_word'          : '',
 \ 'book_marks'         : '',
 \ }
+"airline git count or some other
+let g:airline_section_b="%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}"
 
 let g:dashboard_custom_header = [
       \'     ⠀⠀⠀⠀⠀⠀⠀⡴⠞⠉⢉⣭⣿⣿⠿⣳⣤⠴⠖⠛⣛⣿⣿⡷⠖⣶⣤⡀⠀⠀⠀  ',
