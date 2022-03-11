@@ -13,6 +13,7 @@ lua require('plug-config/coc')
 " let g:tokyonight_style = "day"
 " let g:tokyonight_italic_functions = 1
 " let g:tokyonight_italic_variables = 1
+set nolist
 let g:gruvbox_italic=1
 set background=light
 colorscheme gruvbox
