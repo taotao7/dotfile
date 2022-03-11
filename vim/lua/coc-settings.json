@@ -32,7 +32,7 @@
   //"leetcode.language": "javascript",
   //"leetcode.enabled": true,
   "git.showCommitInFloating": true,
-  "git.enableGutters": false,
+  "git.enableGutters": true,
   "git.branchCharacter": "\uf418",
   "git.addGBlameToBufferVar": true,
   "git.addGBlameToVirtualText": true,
