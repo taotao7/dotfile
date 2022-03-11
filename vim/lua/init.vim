@@ -24,7 +24,7 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 set clipboard=unnamedplus
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
-set listchars=tab:▸\ ,eol:¬
+"set listchars=tab:▸\ ,eol:¬
 " set laststatus=0
 
 " Use K to show documentation in preview window.
