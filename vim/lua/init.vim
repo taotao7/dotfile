@@ -19,13 +19,16 @@ colorscheme gruvbox
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 
-
 " use system clipboard
 set clipboard=unnamedplus
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 "set listchars=tab:▸\ ,eol:¬
 " set laststatus=0
+
+" coc-todo add new todo 
+map <leader>ad :CocCommand todolist.create <cr>
+map <leader>t :CocList todolist <cr>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
