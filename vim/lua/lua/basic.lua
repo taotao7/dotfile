@@ -31,8 +31,8 @@ vim.o.wildmenu = true
 vim.o.so = 7
 vim.g.dashboard_default_executive = 'telescope'
 
-vim.o.list = true
-vim.o.listchars = "space:·"
+vim.o.list = false
+-- vim.o.listchars = "space:·"
 
 
 -- 键位
