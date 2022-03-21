@@ -57,7 +57,7 @@
 (if (eq initial-window-system 'x)
          (toggle-frame-maximized)
        (toggle-frame-fullscreen))
-(setq doom-font (font-spec :family "JetBrains Mono" :size 14 :weight 'light))
+(setq doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 14 :weight 'light))
 ;; show time
 (display-time-mode t)
 (setq display-time-24hr-format t)
