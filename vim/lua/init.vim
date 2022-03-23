@@ -13,9 +13,9 @@ lua require('plug-config/coc')
 " let g:tokyonight_style = "day"
 " let g:tokyonight_italic_functions = 1
 " let g:tokyonight_italic_variables = 1
-let g:gruvbox_italic=1
-set background=light
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+set background=dark
+colorscheme papercolor
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 
