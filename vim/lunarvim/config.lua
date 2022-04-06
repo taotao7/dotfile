@@ -14,6 +14,9 @@ lvim.leader = ","
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<cr>"
 
+-- copilot 
+vim.g.copilot_assume_mapped = true
+
 -- builtin
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -48,6 +51,7 @@ lvim.plugins = {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline"
   },
+  {"github/copilot.vim"}
 }
 
 -- lsp
