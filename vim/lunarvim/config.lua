@@ -14,7 +14,7 @@ lvim.leader = ","
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<cr>"
 
--- copilot 
+-- copilot
 vim.g.copilot_assume_mapped = true
 
 -- builtin
@@ -48,19 +48,19 @@ lvim.plugins = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
-        command = 'prettier',
+        exe = 'prettier',
         args = {"--print-width", "100"},
         filetypes = {
             "typescript", "javascript", "typescriptreact", "javascriptreact"
         }
-    }, {command = 'lua-format', filetypes = {"lua"}}
+    }, {exe = 'lua-format', filetypes = {"lua"}}
 }
 
 -- linter
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        command = 'eslint',
+        exe= 'eslint',
         args = {"--fix-dry-run"},
         filetypes = {
             "typescript", "javascript", "typescriptreact", "javascriptreact"
