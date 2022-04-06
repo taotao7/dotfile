@@ -48,19 +48,19 @@ lvim.plugins = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
-        exe = 'prettier',
-        args = {"--print-width", "100"},
+        command = 'prettier',
+        args = {"--print-width", "80"},
         filetypes = {
             "typescript", "javascript", "typescriptreact", "javascriptreact"
         }
-    }, {exe = 'lua-format', filetypes = {"lua"}}
+    }, {command = 'lua-format', filetypes = {"lua"}}
 }
 
 -- linter
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        exe= 'eslint',
+        command= 'eslint',
         args = {"--fix-dry-run"},
         filetypes = {
             "typescript", "javascript", "typescriptreact", "javascriptreact"
