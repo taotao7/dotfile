@@ -27,40 +27,42 @@ lvim.builtin.nvimtree.show_icons.git = 0
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx",
+    "css", "rust", "java", "yaml"
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.ignore_install = {"haskell"}
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- plugins
 lvim.plugins = {
-  {"folke/tokyonight.nvim"},
-  {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline"
-  },
-  {"github/copilot.vim"}
+    {"folke/tokyonight.nvim"},
+    {"simrat39/symbols-outline.nvim", cmd = "SymbolsOutline"},
+    {"github/copilot.vim"}
 }
 
 -- lsp
-local formatters = require "lvim.lsp.null-ls.formatters"
 
-formatters.setup{
-  {
-    command = 'prettier',
-    args = {"--print-width", "100"},
-    filetypes = {"typescript", "typescript", "javascript"}
-  },
+-- formatters
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+    {
+        command = 'prettier',
+        args = {"--print-width", "100"},
+        filetypes = {
+            "typescript", "javascript", "typescriptreact", "javascriptreact"
+        }
+    }, {command = 'lua-format', filetypes = {"lua"}}
+}
+
+-- linter
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+    {
+        command = 'eslint',
+        args = {"--fix-dry-run"},
+        filetypes = {
+            "typescript", "javascript", "typescriptreact", "javascriptreact"
+        }
+    }
 }
