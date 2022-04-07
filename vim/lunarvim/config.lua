@@ -49,7 +49,6 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
         command = 'prettier',
-        args = {"--print-width", "80"},
         filetypes = {
             "typescript", "javascript", "typescriptreact", "javascriptreact"
         }
@@ -60,8 +59,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        command= 'eslint',
-        args = {"--fix-dry-run"},
+        command = 'eslint',
         filetypes = {
             "typescript", "javascript", "typescriptreact", "javascriptreact"
         }
