@@ -7,6 +7,7 @@ vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_italic_variables = true
 vim.opt.cmdheight = 1;
 vim.opt.showtabline = 2;
+vim.opt.wrap = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
@@ -15,7 +16,7 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<cr>"
 
 -- copilot
-vim.g.copilot_assume_mapped = true
+-- vim.g.copilot_assume_mapped = true
 
 -- builtin
 lvim.builtin.alpha.active = true
@@ -39,7 +40,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.plugins = {
     {"folke/tokyonight.nvim"},
     {"simrat39/symbols-outline.nvim", cmd = "SymbolsOutline"},
-    {"github/copilot.vim"}
+    -- {"github/copilot.vim"}
 }
 
 -- lsp
