@@ -16,7 +16,19 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<cr>"
 
 -- copilot
--- vim.g.copilot_assume_mapped = true
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_tab_fallback = ""
+local cmp = require "cmp"
+lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
+  cmp.mapping.abort()
+  local copilot_keys = vim.fn["copilot#Accept"]("")
+  if copilot_keys ~= "" then
+    vim.api.nvim_feedkeys(copilot_keys, "i", true)
+  else
+    fallback()
+  end
+end
 
 -- builtin
 lvim.builtin.alpha.active = true
@@ -40,7 +52,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.plugins = {
     {"folke/tokyonight.nvim"},
     {"simrat39/symbols-outline.nvim", cmd = "SymbolsOutline"},
-    -- {"github/copilot.vim"}
+    {"github/copilot.vim"}
 }
 
 -- lsp
