@@ -1,10 +1,14 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "tokyonight"
-vim.g.tokyonight_style = "storm"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_italic_variables = true
+lvim.colorscheme = "gruvbox"
+vim.g.background = "dark"
+vim.g.gruvbox_bold = 1;
+vim.g.gruvbox_italic = 1;
+vim.g.gruvbox_contrast_dark = "soft"
+-- vim.g.tokyonight_style = "storm"
+-- vim.g.tokyonight_italic_functions = true
+-- vim.g.tokyonight_italic_variables = true
 vim.opt.cmdheight = 1;
 vim.opt.showtabline = 2;
 vim.opt.wrap = true
@@ -12,8 +16,8 @@ vim.opt.wrap = true
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<cr>"
+lvim.keys.normal_mode["<C-s>"] = ":Telescope live_grep<cr>"
 
 -- copilot
 vim.g.copilot_no_tab_map = true
@@ -52,7 +56,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.plugins = {
     {"folke/tokyonight.nvim"},
     {"simrat39/symbols-outline.nvim", cmd = "SymbolsOutline"},
-    {"github/copilot.vim"}
+    {"github/copilot.vim"}, {"ellisonleao/gruvbox.nvim"}
 }
 
 -- lsp
