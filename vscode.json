@@ -2,6 +2,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorBlinking": "smooth",
   "editor.smoothScrolling": true,
+  "editor.lineNumbers": "interval",
   // "editor.semanticTokenColorCustomizations": {
   //   "enabled": true,
   //   "rules": {
@@ -14,6 +15,11 @@
   //   }
   // },
   "mochaExplorer.files": "test/**/*.js",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true, // this allows ESLint to auto fix on save
+    "source.organizeImports": false
+  },
   "emmet.includeLanguages": {
     "javascript": "javascriptreact,typescriptreact"
   },
@@ -41,14 +47,14 @@
       "background": "red",
       "icon": "beaker",
       "rulerColour": "red",
-      "iconColour": "red",
+      "iconColour": "red"
     },
     "BUG": {
       "background": "green",
       "icon": "issue-closed",
       "rulerColour": "green",
-      "iconColour": "green",
-    },
+      "iconColour": "green"
+    }
   },
   "todo-tree.general.tags": [
     "BUG",
@@ -80,16 +86,18 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "editor.minimap.enabled": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "window.titleBarStyle": "custom",
+  "window.dialogStyle": "custom",
   "settingsSync.ignoredExtensions": [
     "ms-python.vscode-pylance",
     "ms-python.python",
-    "withfig.fig"
+    "withfig.fig",
+    "ms-vscode-remote.remote-wsl"
   ],
   "audioCues.lineHasWarning": "auto",
   "[jsonc]": {
@@ -210,5 +218,87 @@
     "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.json, env.d.ts, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
     "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, cssnano.config.*, cypress.json, env.d.ts, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
   },
-  "workbench.colorTheme": "One Dark Pro",
+  "files.eol": "\n",
+  "security.workspace.trust.untrustedFiles": "open",
+  "search.exclude": {
+    "**/.git": true,
+    "**/.github": true,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/tmp": true,
+    "**/yarn.lock": true
+  },
+  "githubIssues.workingIssueFormatScm": "#${issueNumberLabel}",
+  "githubPullRequests.fileListLayout": "tree",
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": {
+      "blame": true,
+      "compare": false
+    },
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "scm": {
+      "authors": true
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  },
+  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "editor.guides.indentation": false,
+  "workbench.colorTheme": "Vitesse Dark",
+  "workbench.preferredDarkColorTheme": "Vitesse Dark Soft",
+  "workbench.preferredLightColorTheme": "Vitesse Light Soft",
+  "window.autoDetectColorScheme": true,
+  "editor.formatOnSave": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "SauceCodePro Nerd Font"
 }
+
