@@ -6,7 +6,6 @@ set conceallevel=0
 set cursorline
 set fillchars-=vert:\| | set fillchars+=vert:\ 
 set clipboard=unnamed
-colorscheme desert
 
 " Enable filetype plugins
 filetype plugin on
@@ -372,6 +371,8 @@ let g:coc_global_extensions = [
 
 "explorer
 nnoremap <F3> :CocCommand explorer<CR>
+"outline
+nnoremap <F2> :CocOutline<CR>
 
 
 
@@ -385,7 +386,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :
 set updatetime=100
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>ShowDocumentation<CR>
+nnoremap <silent> K :call ShowDocumentation()<CR>
 
 "自动格式化代码，针对前端
 nnoremap <silent><nowait> <space>f  :<C-u>CocCommand prettier.formatFile<cr>
