@@ -5,6 +5,8 @@ set mouse=a
 set conceallevel=0
 set cursorline
 set fillchars-=vert:\| | set fillchars+=vert:\ 
+set clipboard=unnamed
+colorscheme desert
 
 " Enable filetype plugins
 filetype plugin on
@@ -339,30 +341,10 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
-"设置插件安装
+
 call plug#begin('~/.vim/plugged')
-"Plug 'Yggdroot/indentLine'
-"Plug 'majutsushi/tagbar'
-Plug 'liuchengxu/vista.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'luochen1990/rainbow'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
-Plug 'preservim/nerdcommenter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'mhinz/vim-startify'
-Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive',{'branch': 'master'}
-Plug 'dracula/vim', { 'as': 'dracula' } 
-Plug 'junegunn/seoul256.vim'
-Plug 'ajmwagar/vim-deus'
-"Plug 'alpertuna/vim-header'
-"Plug 'neoclide/jsonc.vim'
-Plug 'lifepillar/vim-gruvbox8'
-Plug 'joshdick/onedark.vim'
-Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -386,23 +368,11 @@ let g:coc_global_extensions = [
 	\ 'coc-clangd',
 	\ 'coc-emmet',
 	\ 'coc-tabnine',
-	\ 'coc-todolist',
 	\ 'coc-project']
 
-"Tagbar
-"let g:tagbar_width=25
-"let g:tagbar_autofocus=1
-"let g:tagbar_iconchars = ['▸', '▾']
-nnoremap <F2> :Vista!!<CR>
 "explorer
 nnoremap <F3> :CocCommand explorer<CR>
 
-
-"代码折叠
-set foldmethod=indent
-set foldlevel=0
-"取消预览窗口
-"set completeopt=longest,menu 
 
 
 "自动格式化代码，针对所有支持的文件
@@ -415,7 +385,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :
 set updatetime=100
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>ShowDocumentation<CR>
 
 "自动格式化代码，针对前端
 nnoremap <silent><nowait> <space>f  :<C-u>CocCommand prettier.formatFile<cr>
@@ -449,13 +419,11 @@ augroup JsonToJsonc
   autocmd! FileType json set filetype=jsonc
 augroup END
 
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
     call CocActionAsync('doHover')
   else
-    execute '!' . &keywordprg . " " . expand('<cword>')
+    call feedkeys('K', 'in')
   endif
 endfunction
 
@@ -464,10 +432,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "coc的tab下个参数
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
       \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -496,70 +464,3 @@ nmap <leader>qf <Plug>(coc-fix-current)
 "[diagnostic]
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-"设置自动加载头文件
-"let g:header_field_author = 'tao7'
-"let g:header_field_author_email = 'moca_tao7@foxmail.com'
-"let g:header_field_timestamp_format = '%Y.%m.%d'
-"let g:header_field_modified_timestamp_format = '%Y.%m.%d'
-"map <F4> :AddHeader<CR>
-
-"leaderf
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-"let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
-let g:Lf_ShortcutF = '<C-P>'
-noremap <C-s> :<C-U>Leaderf rg <CR>
-
-"leaderf 取消搜索node_module dist文件夹
-let g:Lf_RgConfig = [
-    \ "--max-columns=150",
-    \ "--glob=!node_modules/*",
-    \ "--glob=!dist/*",
-    \ ]
-"设置statusLine
-let g:airline#extensions#tabline#enabled = 1
-"这个是安装字体后 必须设置此项" 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled=1    "Smarter tab line: 显示窗口tab和buffer
-"let g:airline#extensions#tabline#left_sep = ' '  "separater
-"let g:airline#extensions#tabline#left_alt_sep = '|'  "separater
-"let g:airline#extensions#tabline#formatter = 'default'  "formater
-let g:airline_left_sep = '▶'
-let g:airline_left_alt_sep = '❯'
-let g:airline_right_sep = '◀'
-let g:airline_right_alt_sep = '❮'
-
-
-"分割线的颜色
-"let g:indentLine_char_list = ['|', '¦', '┆', '┊']                                                             
-"let g:indentLine_color_term = 202
-"let g:indentLine_color_gui = '#A4E57E' 
-
-"vista
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'coc'
-let g:vista_executive_for = {
-  \ 'cpp': 'vim_lsp',
-  \ 'php': 'vim_lsp',
-  \ }
-let g:vista_ctags_cmd = {
-      \ 'haskell': 'hasktags -x -o - -c',
-      \ }
-let g:vista_fzf_preview = ['right:50%']
-let g:vista#renderer#enable_icon = 1
-let g:vista#renderer#icons = {
-\   "function": "\uf794",
-\   "variable": "\uf71b",
-\  }
-
-
-
-"editorconfig设置
-"let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
-
-let g:rainbow_active = 1
-"set background=dark
-"let g:seoul256_background = 236
-colorscheme dracula
-
