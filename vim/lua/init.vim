@@ -5,7 +5,7 @@ set mouse=a
 set conceallevel=0
 set cursorline
 set fillchars-=vert:\| | set fillchars+=vert:\ 
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 " 色彩
 if has('termguicolors')
    set termguicolors
@@ -227,7 +227,7 @@ set laststatus=2
 
 " Format the status line
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+"set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
 
 
 
@@ -351,6 +351,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive',{'branch': 'master'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/everforest',{'branch':'master'}
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 let g:coc_global_extensions = [
