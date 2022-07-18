@@ -352,8 +352,9 @@ Plug 'tpope/vim-fugitive',{'branch': 'master'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sainnhe/everforest',{'branch':'master'}
 Plug 'nvim-lualine/lualine.nvim'
-" If you want to have icons in your statusline choose one of these
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 let g:coc_global_extensions = [
