@@ -357,7 +357,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 let g:coc_global_extensions = [
-	\ 'coc-actions',
 	\ 'coc-css',
 	\ 'coc-pairs',
   \ 'coc-git',
@@ -369,6 +368,7 @@ let g:coc_global_extensions = [
 	\ 'coc-lists',
 	\ 'coc-prettier',
 	\ 'coc-snippets',
+  \ 'coc-eslint',
 	\ 'coc-syntax',
 	\ 'coc-tslint-plugin',
 	\ 'coc-tsserver',
@@ -413,7 +413,7 @@ nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>s  :<C-u>CocList grep<cr>
 " Search current file.
 nnoremap <silent><nowait> <space>w  :<C-u>CocList words<cr>
 
