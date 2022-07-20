@@ -100,7 +100,7 @@ endif
 
 
 " Add a bit extra margin to the left
-set foldcolumn=0
+set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
