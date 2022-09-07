@@ -100,7 +100,7 @@ endif
 
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+"set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -355,6 +355,8 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'preservim/nerdcommenter'
+Plug 'sainnhe/gruvbox-material'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -442,6 +444,9 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+"coc 
+set signcolumn=yes
+
 "coc的tab下个参数
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
@@ -481,6 +486,6 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "theme
-colorscheme everforest
+colorscheme onedark
 
 lua require('plugin')
