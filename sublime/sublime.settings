@@ -1,0 +1,19 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"ignored_packages": [],
+	"font_face": "SauceCodePro Nerd Font",
+	"tab_size": 2,
+	"font_size": 14,
+	"index_files": false,
+	"folder_exclude_patterns": [
+		"node_modules/**"
+	],
+	"lsp_code_actions_on_save": {
+		"source.fixAll.eslint": true,
+	},
+	"lsp_format_on_save": true,
+	"theme": "Adaptive.sublime-theme",
+	"vintage_use_clipboard": true,
+	"vintage_start_in_command_mode": true
+}
