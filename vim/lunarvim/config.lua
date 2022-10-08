@@ -30,8 +30,6 @@ end
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
 -- add your own keymapping
-lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<cr>"
-lvim.keys.normal_mode["<C-s>"] = ":Telescope live_grep<cr>"
 
 -- copilot
 --vim.g.copilot_no_tab_map = true
@@ -49,7 +47,7 @@ lvim.keys.normal_mode["<C-s>"] = ":Telescope live_grep<cr>"
 --end
 
 -- builtin
-lvim.builtin.alpha.active = true
+lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.alpha.dashboard.section.header.val = {
   " ████████╗ █████╗  ██████╗       ███████╗",
@@ -77,9 +75,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- plugins
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
-  { "simrat39/symbols-outline.nvim", cmd = "SymbolsOutline" },
-  -- { "github/copilot.vim" },
-  { "ellisonleao/gruvbox.nvim" }, { "NLKNguyen/papercolor-theme" }
 }
 
 -- lsp
