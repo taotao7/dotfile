@@ -47,7 +47,7 @@ lvim.leader = ","
 --end
 
 -- builtin
-lvim.builtin.alpha.active = false
+lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.alpha.dashboard.section.header.val = {
   " ████████╗ █████╗  ██████╗       ███████╗",
@@ -57,7 +57,6 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   "    ██║   ██║  ██║╚██████╔╝      ███████║",
   "    ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚══════╝",
 }
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
