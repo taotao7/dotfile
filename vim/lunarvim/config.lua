@@ -2,15 +2,15 @@
 lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "github_dimmed"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
 -- vim.g.gruvbox_italic = 1;
 -- vim.g.gruvbox_contrast_dark = "soft"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_italic_variables = true
+-- vim.g.tokyonight_italic_functions = true
+-- vim.g.tokyonight_italic_variables = true
 vim.opt.cmdheight = 1;
-vim.opt.showtabline = 2;
+vim.opt.showtabline = 1;
 vim.opt.wrap = true
 
 -- wsl2
@@ -74,6 +74,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- plugins
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
+  { 'projekt0n/github-nvim-theme' }
 }
 
 -- lsp
