@@ -9,8 +9,8 @@ lvim.colorscheme = "github_dimmed"
 -- vim.g.gruvbox_contrast_dark = "soft"
 -- vim.g.tokyonight_italic_functions = true
 -- vim.g.tokyonight_italic_variables = true
+vim.opt.hidden = false
 vim.opt.cmdheight = 1;
-vim.opt.showtabline = 1;
 vim.opt.wrap = true
 
 -- wsl2
