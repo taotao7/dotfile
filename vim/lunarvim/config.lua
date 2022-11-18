@@ -64,7 +64,7 @@ lvim.builtin.dap.active = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx",
+  "bash", "c", "cpp", "javascript", "json", "lua", "python", "typescript", "tsx",
   "css", "rust", "java", "yaml"
 }
 
@@ -74,7 +74,33 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- plugins
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
-  { 'projekt0n/github-nvim-theme' }
+  { 'projekt0n/github-nvim-theme' },
+  {
+    "karb94/neoscroll.nvim",
+    event = "WinScrolled",
+    config = function()
+      require('neoscroll').setup({
+        -- All these keys will be mapped to their corresponding default scrolling animation
+        mappings = { '<C-u>', '<C-d>', '<C-b>', '<C-f>',
+          '<C-y>', '<C-e>', 'zt', 'zz', 'zb' },
+        hide_cursor = true, -- Hide cursor while scrolling
+        stop_eof = true, -- Stop at <EOF> when scrolling downwards
+        use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+        respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+        cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+        easing_function = nil, -- Default easing function
+        pre_hook = nil, -- Function to run before the scrolling animation starts
+        post_hook = nil, -- Function to run after the scrolling animation ends
+      })
+    end
+  }, {
+    "f-person/git-blame.nvim",
+    event = "BufRead",
+    config = function()
+      vim.cmd "highlight default link gitblame SpecialComment"
+      vim.g.gitblame_enabled = 0
+    end,
+  },
 }
 
 -- lsp
