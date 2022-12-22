@@ -358,6 +358,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'sainnhe/gruvbox-material'
 Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
 call plug#end()
 
 let g:coc_global_extensions = [
