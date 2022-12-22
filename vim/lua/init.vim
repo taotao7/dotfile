@@ -357,6 +357,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'preservim/nerdcommenter'
 Plug 'sainnhe/gruvbox-material'
 Plug 'joshdick/onedark.vim'
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -486,6 +487,6 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "theme
-colorscheme onedark
+colorscheme github_dimmed
 
 lua require('plugin')
