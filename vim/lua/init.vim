@@ -375,12 +375,14 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
 	\ 'coc-syntax',
 	\ 'coc-tslint-plugin',
+	\ 'coc-import-cost',
 	\ 'coc-tsserver',
 	\ 'coc-yaml',
 	\ 'coc-cmake',
 	\ 'coc-clangd',
 	\ 'coc-emmet',
 	\ 'coc-tabnine',
+	\ 'coc-stylelint',
 	\ 'coc-project']
 
 "explorer
