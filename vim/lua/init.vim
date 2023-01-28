@@ -360,6 +360,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -377,7 +378,6 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
 	\ 'coc-syntax',
 	\ 'coc-tslint-plugin',
-	\ 'coc-import-cost',
 	\ 'coc-tsserver',
 	\ 'coc-yaml',
 	\ 'coc-cmake',
@@ -491,6 +491,6 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "theme
-colorscheme github_dimmed
+colorscheme everforest
 
 lua require('plugin')

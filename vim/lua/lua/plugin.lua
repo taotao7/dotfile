@@ -17,8 +17,8 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    --theme = 'everforest',
-    theme = "github_dimmed",
+    theme = 'everforest',
+    --theme = "github_dimmed",
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -175,4 +175,16 @@ require('todo-comments').setup {
     -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
   },
 }
+
+-- indent line
+vim.opt.list = true
+--vim.opt.listchars:append "space:⋅"
+--vim.opt.listchars:append "eol:↴"
+
+require("indent_blankline").setup {
+    --space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+
 
