@@ -83,8 +83,8 @@ lvim.builtin.indentlines.options.show_current_context_start = true
 lvim.plugins = {
     { 'sainnhe/everforest' },
     { 'sainnhe/sonokai' },
-    { 'joshdick/onedark.vim' }
-
+    { 'joshdick/onedark.vim' },
+    { 'easymotion/vim-easymotion' }
 }
 
 -- lsp

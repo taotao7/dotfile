@@ -4,6 +4,8 @@ set nu
 set mouse=a
 set conceallevel=0
 let mapleader = ","
+set easymotion
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
