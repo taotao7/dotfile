@@ -3,9 +3,9 @@ set history=500
 set nu
 set mouse=a
 set conceallevel=0
-let mapleader = ","
+let mapleader=","
 set easymotion
+set incsearch
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
