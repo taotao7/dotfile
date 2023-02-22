@@ -16,19 +16,20 @@ vim.opt.wrap = true
 -- wsl2
 if vim.fn.has "wsl" == 1 then
   vim.g.clipboard = {
-      copy = {
-          ["+"] = "win32yank.exe -i --crlf",
-          ["*"] = "win32yank.exe -i --crlf",
-      },
-      paste = {
-          ["+"] = "win32yank.exe -o --lf",
-          ["*"] = "win32yank.exe -o --lf",
-      },
+    copy = {
+      ["+"] = "win32yank.exe -i --crlf",
+      ["*"] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+      ["+"] = "win32yank.exe -o --lf",
+      ["*"] = "win32yank.exe -o --lf",
+    },
   }
 end
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
+lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<CR>"
 -- add your own keymapping
 
 -- copilot
@@ -50,12 +51,12 @@ lvim.leader = ","
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.alpha.dashboard.section.header.val = {
-    " ████████╗ █████╗  ██████╗       ███████╗",
-    " ╚══██╔══╝██╔══██╗██╔═══██╗      ██╔════╝",
-    "    ██║   ███████║██║   ██║█████╗███████╗",
-    "    ██║   ██╔══██║██║   ██║╚════╝╚════██║",
-    "    ██║   ██║  ██║╚██████╔╝      ███████║",
-    "    ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚══════╝",
+  " ████████╗ █████╗  ██████╗       ███████╗",
+  " ╚══██╔══╝██╔══██╗██╔═══██╗      ██╔════╝",
+  "    ██║   ███████║██║   ██║█████╗███████╗",
+  "    ██║   ██╔══██║██║   ██║╚════╝╚════██║",
+  "    ██║   ██║  ██║╚██████╔╝      ███████║",
+  "    ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚══════╝",
 }
 lvim.builtin.terminal.active = false
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -64,8 +65,8 @@ lvim.builtin.dap.active = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-    "bash", "c", "cpp", "javascript", "json", "lua", "python", "typescript", "tsx",
-    "css", "rust", "java", "yaml"
+  "bash", "c", "cpp", "javascript", "json", "lua", "python", "typescript", "tsx",
+  "css", "rust", "java", "yaml"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -79,12 +80,21 @@ lvim.builtin.indentlines.options.space_char_blankline = " "
 lvim.builtin.indentlines.options.show_current_context = true
 lvim.builtin.indentlines.options.show_current_context_start = true
 
+
 -- plugins
 lvim.plugins = {
-    { 'sainnhe/everforest' },
-    { 'sainnhe/sonokai' },
-    { 'joshdick/onedark.vim' },
-    { 'easymotion/vim-easymotion' }
+  { 'sainnhe/everforest' },
+  { 'sainnhe/sonokai' },
+  { 'joshdick/onedark.vim' },
+  { 'easymotion/vim-easymotion' },
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup {
+        width = 20
+      }
+    end
+  },
 }
 
 -- lsp
@@ -92,21 +102,21 @@ lvim.plugins = {
 -- formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-    {
-        command = 'prettier',
-        filetypes = {
-            "typescript", "javascript", "typescriptreact", "javascriptreact"
-        }
+  {
+    command = 'prettier',
+    filetypes = {
+      "typescript", "javascript", "typescriptreact", "javascriptreact"
     }
+  }
 }
 
 -- linter
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-    {
-        command = 'eslint',
-        filetypes = {
-            "typescript", "javascript", "typescriptreact", "javascriptreact"
-        }
+  {
+    command = 'eslint',
+    filetypes = {
+      "typescript", "javascript", "typescriptreact", "javascriptreact"
     }
+  }
 }
