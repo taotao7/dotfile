@@ -3,8 +3,8 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "onedark"
-lvim.builtin.lualine.options.theme = "onedark"
+lvim.colorscheme = "github_dark"
+lvim.builtin.lualine.options.theme = "github_dark"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
 -- vim.g.gruvbox_italic = 1;
@@ -88,13 +88,16 @@ lvim.plugins = {
   { 'joshdick/onedark.vim' },
   { 'easymotion/vim-easymotion' },
   {
+    'projekt0n/github-nvim-theme'
+  },
+  {
     "simrat39/symbols-outline.nvim",
     config = function()
       require('symbols-outline').setup {
-        width = 20
+        width = 15
       }
     end
-  },
+  }
 }
 
 -- lsp
