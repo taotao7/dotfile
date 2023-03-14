@@ -3,8 +3,8 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "github_dark"
-lvim.builtin.lualine.options.theme = "github_dark"
+lvim.colorscheme = "vitesse"
+lvim.builtin.lualine.options.theme = "vitesse"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
 -- vim.g.gruvbox_italic = 1;
@@ -88,6 +88,19 @@ lvim.plugins = {
   { 'sainnhe/sonokai' },
   { 'joshdick/onedark.vim' },
   { 'easymotion/vim-easymotion' },
+  {
+    "2nthony/vitesse.nvim",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim"
+    },
+    config = function()
+      require("vitesse").setup {
+        comment_italics = true,
+        transparnet_background = true,
+        reverse_visual = false,
+      }
+    end
+  },
   {
     'projekt0n/github-nvim-theme'
   },
