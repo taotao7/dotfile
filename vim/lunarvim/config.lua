@@ -3,8 +3,8 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "vitesse"
-lvim.builtin.lualine.options.theme = "vitesse"
+lvim.colorscheme = "hardhacker"
+lvim.builtin.lualine.options.theme = "auto"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
 -- vim.g.gruvbox_italic = 1;
@@ -77,9 +77,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
 -- indent blackline
-lvim.builtin.indentlines.options.space_char_blankline = " "
-lvim.builtin.indentlines.options.show_current_context = true
-lvim.builtin.indentlines.options.show_current_context_start = true
+-- lvim.builtin.indentlines.options.space_char_blankline = " "
+-- lvim.builtin.indentlines.options.show_current_context = true
+-- lvim.builtin.indentlines.options.show_current_context_start = true
 
 
 -- plugins
@@ -100,6 +100,12 @@ lvim.plugins = {
         reverse_visual = false,
       }
     end
+  },
+  {
+    'hardhackerlabs/theme-vim',
+    config = function()
+      vim.cmd.colorscheme 'hardhacker'
+    end,
   },
   {
     'projekt0n/github-nvim-theme'
