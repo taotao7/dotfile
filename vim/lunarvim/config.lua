@@ -62,7 +62,7 @@ lvim.builtin.alpha.dashboard.section.header.val = {
 lvim.builtin.terminal.active = false
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
-lvim.builtin.dap.active = false
+lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -176,10 +176,25 @@ lvim.plugins = {
         },
       }
     end,
-  }
+  },
+  "ChristianChiarulli/swenv.nvim",
+  "stevearc/dressing.nvim",
+  "mfussenegger/nvim-dap-python",
+  "nvim-neotest/neotest",
+  "nvim-neotest/neotest-python",
 }
 
 -- lsp
+
+-- dap
+
+-- python
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+pcall(function()
+  require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+end)
+
+
 
 -- formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
