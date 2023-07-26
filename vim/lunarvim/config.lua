@@ -3,7 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "hardhacker"
+lvim.colorscheme = "onedark"
 lvim.builtin.lualine.options.theme = "auto"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
@@ -12,6 +12,9 @@ lvim.builtin.lualine.options.theme = "auto"
 vim.opt.hidden = false
 vim.opt.cmdheight = 1;
 vim.opt.wrap = true
+vim.opt.termguicolors = true
+
+
 
 -- wsl2
 if vim.fn.has "wsl" == 1 then
@@ -59,9 +62,8 @@ lvim.builtin.alpha.dashboard.section.header.val = {
   "    ██║   ██║  ██║╚██████╔╝      ███████║",
   "    ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚══════╝",
 }
-lvim.builtin.terminal.active = false
+lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
--- lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
@@ -77,9 +79,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.gitsigns.opts.current_line_blame = true
 
 -- indent blackline
--- lvim.builtin.indentlines.options.space_char_blankline = " "
--- lvim.builtin.indentlines.options.show_current_context = true
--- lvim.builtin.indentlines.options.show_current_context_start = true
+lvim.builtin.indentlines.options.space_char_blankline = " "
+lvim.builtin.indentlines.options.show_current_context = true
+lvim.builtin.indentlines.options.show_current_context_start = true
 
 
 -- plugins
@@ -100,12 +102,6 @@ lvim.plugins = {
         reverse_visual = false,
       }
     end
-  },
-  {
-    'hardhackerlabs/theme-vim',
-    config = function()
-      vim.cmd.colorscheme 'hardhacker'
-    end,
   },
   {
     'projekt0n/github-nvim-theme'
