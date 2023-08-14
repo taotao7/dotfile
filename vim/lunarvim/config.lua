@@ -254,7 +254,7 @@ dap.configurations.go = {
 -- js
 require("dap-vscode-js").setup({
   debugger_path = (os.getenv("HOME") .. "/.local/share/lunarvim/site/pack/lazy/opt/vscode-js-debug"),
-  adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' },
+  adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node', 'chrome' },
 })
 
 for _, language in ipairs({ "typescript", "javascript" }) do
@@ -272,6 +272,14 @@ for _, language in ipairs({ "typescript", "javascript" }) do
       name = "Attach",
       processId = require 'dap.utils'.pick_process,
       cwd = "${workspaceFolder}",
+    },
+    {
+      type = "pwa-chrome",
+      request = "launch",
+      name = "Start Chrome with \"localhost\"",
+      url = "http://localhost:5173",
+      webRoot = "${workspaceFolder}",
+      userDataDir = "${workspaceFolder}/.vscode/vscode-firefox-debug-userdatadir"
     }
   }
 end
