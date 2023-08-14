@@ -178,6 +178,8 @@ lvim.plugins = {
   "mfussenegger/nvim-dap-python",
   "nvim-neotest/neotest",
   "nvim-neotest/neotest-python",
+  "mxsdev/nvim-dap-vscode-js",
+  { "microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" }
 }
 
 -- lsp
@@ -249,31 +251,56 @@ dap.configurations.go = {
   },
 }
 
+-- js
+require("dap-vscode-js").setup({
+  debugger_path = (os.getenv("HOME") .. "/.local/share/lunarvim/site/pack/lazy/opt/vscode-js-debug"),
+  adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost' },
+})
+
+for _, language in ipairs({ "typescript", "javascript" }) do
+  dap.configurations[language] = {
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Launch file",
+      program = "${file}",
+      cwd = "${workspaceFolder}",
+    },
+    {
+      type = "pwa-node",
+      request = "attach",
+      name = "Attach",
+      processId = require 'dap.utils'.pick_process,
+      cwd = "${workspaceFolder}",
+    }
+  }
+end
+
 -- node
-dap.adapters.node2 = {
-  type = 'executable',
-  command = 'node',
-  args = { mason_path .. 'packages/node-debug2-adapter/out/src/nodeDebug.js' },
-}
-dap.configurations.javascript = {
-  {
-    name = 'Launch',
-    type = 'node2',
-    request = 'launch',
-    program = '${file}',
-    cwd = vim.fn.getcwd(),
-    sourceMaps = true,
-    protocol = 'inspector',
-    console = 'integratedTerminal',
-  },
-  {
-    -- For this to work you need to make sure the node process is started with the `--inspect` flag.
-    name = 'Attach to process',
-    type = 'node2',
-    request = 'attach',
-    processId = require 'dap.utils'.pick_process,
-  },
-}
+-- dap.adapters.node2 = {
+--   type = 'executable',
+--   command = 'node',
+--   args = { mason_path .. 'packages/node-debug2-adapter/out/src/nodeDebug.js' },
+-- }
+-- dap.configurations.javascript = {
+--   {
+--     name = 'Launch',
+--     type = 'node2',
+--     request = 'launch',
+--     program = '${file}',
+--     cwd = vim.fn.getcwd(),
+--     sourceMaps = true,
+--     protocol = 'inspector',
+--     console = 'integratedTerminal',
+--   },
+--   {
+--     -- For this to work you need to make sure the node process is started with the `--inspect` flag.
+--     name = 'Attach to process',
+--     type = 'node2',
+--     request = 'attach',
+--     processId = require 'dap.utils'.pick_process,
+--   },
+-- }
 
 
 -- formatters
