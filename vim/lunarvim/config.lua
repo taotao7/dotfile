@@ -3,7 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "github_dark"
+lvim.colorscheme = "vitesse"
 lvim.builtin.lualine.options.theme = "auto"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
@@ -13,6 +13,7 @@ vim.opt.hidden = false
 vim.opt.cmdheight = 1;
 vim.opt.wrap = true
 vim.opt.termguicolors = true
+
 
 
 
@@ -97,9 +98,17 @@ lvim.plugins = {
     },
     config = function()
       require("vitesse").setup {
-        comment_italics = true,
         transparnet_background = true,
-        reverse_visual = false,
+        comment_italics = true,
+        transparent_background = true,
+        transparent_float_background = true, -- aka pum(popup menu) background
+        reverse_visual = true,
+        dim_nc = true,
+        cmp_cmdline_disable_search_highlight_group = true, -- disable search highlight group for cmp item
+        -- if `transparent_float_background` false, make telescope border color same as float background
+        telescope_border_follow_float_background = true,
+        -- diagnostic virtual text background, like error lens
+        diagnostic_virtual_text_background = true,
       }
     end
   },
@@ -254,7 +263,7 @@ dap.configurations.go = {
 -- js
 require("dap-vscode-js").setup({
   debugger_path = (os.getenv("HOME") .. "/.local/share/lunarvim/site/pack/lazy/opt/vscode-js-debug"),
-  adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node', 'chrome' },
+  adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node', 'firefox' },
 })
 
 for _, language in ipairs({ "typescript", "javascript" }) do
