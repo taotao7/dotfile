@@ -126,6 +126,12 @@ lvim.plugins = {
     end
   },
   {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { "markdown" },
+  },
+  {
     "folke/todo-comments.nvim",
     event = "BufRead",
     config = function()
