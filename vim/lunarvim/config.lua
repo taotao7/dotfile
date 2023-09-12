@@ -3,7 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "vitesse"
+lvim.colorscheme = "catppuccin"
 lvim.builtin.lualine.options.theme = "auto"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
@@ -31,7 +31,7 @@ end
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
-lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<CR>"
+-- lvim.keys.normal_mode["<leader>o>"] = ":SymbolsOutline<CR>"
 lvim.keys.normal_mode["<leader>t"] = ":TodoLocList<CR>"
 -- add your own keymapping
 
@@ -84,60 +84,61 @@ lvim.builtin.indentlines.options.show_current_context_start = true
 
 -- copilot
 
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.g.copilot_tab_fallback = ""
-local cmp = require "cmp"
-
-lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
-  if cmp.visible() then
-    cmp.select_next_item()
-  else
-    local copilot_keys = vim.fn["copilot#Accept"]()
-    if copilot_keys ~= "" then
-      vim.api.nvim_feedkeys(copilot_keys, "i", true)
-    else
-      fallback()
-    end
-  end
-end
+--vim.g.copilot_no_tab_map = true
+--vim.g.copilot_assume_mapped = true
+--vim.g.copilot_tab_fallback = ""
+--local cmp = require "cmp"
+--
+--lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
+--  if cmp.visible() then
+--    cmp.select_next_item()
+--  else
+--    local copilot_keys = vim.fn["copilot#Accept"]()
+--    if copilot_keys ~= "" then
+--      vim.api.nvim_feedkeys(copilot_keys, "i", true)
+--    else
+--      fallback()
+--    end
+--  end
+--end
 
 
 -- plugins
 lvim.plugins = {
-  { 'sainnhe/everforest' },
-  { 'sainnhe/sonokai' },
-  { 'joshdick/onedark.vim' },
-  { 'easymotion/vim-easymotion' },
-  { "github/copilot.vim" },
+  -- { 'sainnhe/everforest' },
+  -- { 'sainnhe/sonokai' },
+  -- { 'joshdick/onedark.vim' },
   -- {
-  --   'Exafunction/codeium.vim',
-  --   event = 'BufEnter'
+  --   'projekt0n/github-nvim-theme'
   -- },
+  { 'easymotion/vim-easymotion' },
+  -- { "github/copilot.vim" },
+  { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
   {
-    "2nthony/vitesse.nvim",
-    dependencies = {
-      "tjdevries/colorbuddy.nvim"
-    },
-    config = function()
-      require("vitesse").setup {
-        transparnet_background = true,
-        comment_italics = true,
-        transparent_background = true,
-        transparent_float_background = true, -- aka pum(popup menu) background
-        reverse_visual = true,
-        dim_nc = true,
-        cmp_cmdline_disable_search_highlight_group = true, -- disable search highlight group for cmp item
-        -- if `transparent_float_background` false, make telescope border color same as float background
-        telescope_border_follow_float_background = true,
-        -- diagnostic virtual text background, like error lens
-        diagnostic_virtual_text_background = true,
-      }
-    end
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
   },
-  {
-    'projekt0n/github-nvim-theme'
-  },
+  -- {
+  --   "2nthony/vitesse.nvim",
+  --   dependencies = {
+  --     "tjdevries/colorbuddy.nvim"
+  --   },
+  --   config = function()
+  --     require("vitesse").setup {
+  --       transparnet_background = true,
+  --       comment_italics = true,
+  --       transparent_background = true,
+  --       transparent_float_background = true, -- aka pum(popup menu) background
+  --       reverse_visual = true,
+  --       dim_nc = true,
+  --       cmp_cmdline_disable_search_highlight_group = true, -- disable search highlight group for cmp item
+  --       -- if `transparent_float_background` false, make telescope border color same as float background
+  --       telescope_border_follow_float_background = true,
+  --       -- diagnostic virtual text background, like error lens
+  --       diagnostic_virtual_text_background = true,
+  --     }
+  --   end
+  -- },
   {
     "simrat39/symbols-outline.nvim",
     config = function()
