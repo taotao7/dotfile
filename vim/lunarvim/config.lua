@@ -68,8 +68,10 @@ lvim.builtin.dap.active = true
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash", "c", "cpp", "javascript", "json", "lua", "python", "typescript", "tsx",
-  "css", "rust", "java", "yaml"
+  "css", "rust", "java", "yaml", "dart"
 }
+
+-- auto install
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
@@ -101,6 +103,18 @@ lvim.builtin.indentlines.options.show_current_context_start = true
 --    end
 --  end
 --end
+
+-- flutter
+lvim.builtin.which_key.mappings["F"] = {
+  name = "+Flutter",
+  c = { "<cmd>Telescope flutter commands<cr>", "Open Flutter Commans" },
+  d = { "<cmd>FlutterDevices<cr>", "Flutter Devices" },
+  e = { "<cmd>FlutterEmulators<cr>", "Flutter Emulators" },
+  r = { "<cmd>FlutterReload<cr>", "Hot Reload App" },
+  R = { "<cmd>FlutterRestart<cr>", "Hot Restart app" },
+  q = { "<cmd>FlutterQuit<cr>", "Quit running application" },
+  v = { "<cmd>Telescope flutter fvm<cr>", "Flutter version" },
+}
 
 
 -- plugins
@@ -229,6 +243,76 @@ lvim.plugins = {
         pre_hook = nil,              -- Function to run before the scrolling animation starts
         post_hook = nil,             -- Function to run after the scrolling animation ends
       })
+    end
+  },
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
+    config = function()
+      require('flutter-tools').setup {
+        -- flutter_path = "~/development/flutter",
+        fvm = true, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
+        ui = {
+          -- the border type to use for all floating windows, the same options/formats
+          -- used for ":h nvim_open_win" e.g. "single" | "shadow" | {<table-of-eight-chars>}
+          border = "rounded",
+          -- This determines whether notifications are show with `vim.notify` or with the plugin's custom UI
+          -- please note that this option is eventually going to be deprecated and users will need to
+          -- depend on plugins like `nvim-notify` instead.
+          notification_style = "plugin",
+        },
+        decorations = {
+          statusline = {
+            -- set to true to be able use the 'flutter_tools_decorations.app_version' in your statusline
+            -- this will show the current version of the flutter app from the pubspec.yaml file
+            app_version = true,
+            -- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
+            -- this will show the currently running device if an application was started with a specific
+            -- device
+            device = true,
+          },
+        },
+        outline = {
+          open_cmd = "30vnew", -- command to use to open the outline buffer
+          auto_open = false,   -- if true this will open the outline automatically when it is first populated
+        },
+        debugger = {
+          enabled = true,
+          run_via_dap = true,
+          register_configurations = function(_)
+            local dap = require("dap")
+            -- dap.adapters.dart = {
+            -- 	type = "executable",
+            -- 	command = "node",
+            -- 	args = { debugger_path, "flutter" },
+            -- }
+            dap.set_log_level("TRACE")
+            dap.configurations.dart = {}
+            require("dap.ext.vscode").load_launchjs()
+          end,
+        },
+        dev_log = {
+          enabled = false,
+          -- open_cmd = "tabedit", -- command to use to open the log buffer
+        },
+        lsp = {
+          color = { -- show the derived colours for dart variables
+            enabled = true, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
+            background = false, -- highlight the background
+            foreground = false, -- highlight the foreground
+            virtual_text = true, -- show the highlight using virtual text
+            virtual_text_str = "■", -- the virtual text character to highlight
+          },
+          settings = {
+            showTodos = true,
+            completeFunctionCalls = true,
+            renameFilesWithClasses = "prompt", -- "always"
+            enableSnippets = true,
+            enableSdkFormatter = true,
+          },
+        },
+
+      }
     end
   },
   "ChristianChiarulli/swenv.nvim",
@@ -388,5 +472,12 @@ linters.setup {
     filetypes = {
       "typescript", "javascript", "typescriptreact", "javascriptreact"
     }
+  }
+}
+
+-- Flutter .arb files should be concidered as json files
+vim.filetype.add {
+  extension = {
+    arb = 'json',
   }
 }
