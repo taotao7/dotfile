@@ -321,7 +321,7 @@ lvim.plugins = {
   "nvim-neotest/neotest",
   "nvim-neotest/neotest-python",
   "mxsdev/nvim-dap-vscode-js",
-  { "microsoft/vscode-js-debug", build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" }
+  { "microsoft/vscode-js-debug", build = "npm install && npx gulp vsDebugServerBundle && mv dist out" }
 }
 
 -- lsp
