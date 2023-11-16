@@ -496,7 +496,7 @@ formatters.setup {
   {
     command = 'prettier',
     filetypes = {
-      "typescript", "javascript", "typescriptreact", "javascriptreact", 'vue'
+      "typescript", "javascript", "typescriptreact", "javascriptreact", 'vue', 'html', 'json'
     }
   }
 }
