@@ -37,21 +37,6 @@ lvim.leader = ","
 lvim.keys.normal_mode["<leader>t"] = ":TodoLocList<CR>"
 -- add your own keymapping
 
--- origin copilot
--- vim.g.copilot_no_tab_map = true
--- vim.g.copilot_assume_mapped = true
--- vim.g.copilot_tab_fallback = ""
--- local cmp = require "cmp"
--- lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
---   cmp.mapping.abort()
---   local copilot_keys = vim.fn["copilot#Accept"]("")
---   if copilot_keys ~= "" then
---     vim.api.nvim_feedkeys(copilot_keys, "i", true)
---   else
---     fallback()
---   end
--- end
-
 -- copilot cmp
 local ok, copilot = pcall(require, "copilot")
 if not ok then
@@ -71,6 +56,21 @@ copilot.setup {
 
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "<c-s>", "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
+
+-- copilot
+--vim.g.copilot_no_tab_map = true
+--vim.g.copilot_assume_mapped = true
+--vim.g.copilot_tab_fallback = ""
+--local cmp = require "cmp"
+--lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
+--  cmp.mapping.abort()
+--  local copilot_keys = vim.fn["copilot#Accept"]("")
+--  if copilot_keys ~= "" then
+--    vim.api.nvim_feedkeys(copilot_keys, "i", true)
+--  else
+--    fallback()
+--  end
+--end
 
 -- builtin
 lvim.builtin.alpha.active = true
@@ -94,6 +94,7 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 -- auto install
+
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -177,16 +178,17 @@ lvim.plugins = {
     },
     config = function()
       require("vitesse").setup {
+        transparnet_background = true,
         comment_italics = true,
         transparent_background = true,
         transparent_float_background = true, -- aka pum(popup menu) background
-        reverse_visual = false,
-        dim_nc = false,
-        cmp_cmdline_disable_search_highlight_group = false, -- disable search highlight group for cmp item
+        reverse_visual = true,
+        dim_nc = true,
+        cmp_cmdline_disable_search_highlight_group = true, -- disable search highlight group for cmp item
         -- if `transparent_float_background` false, make telescope border color same as float background
-        telescope_border_follow_float_background = false,
+        telescope_border_follow_float_background = true,
         -- diagnostic virtual text background, like error lens
-        diagnostic_virtual_text_background = false,
+        diagnostic_virtual_text_background = true,
       }
     end
   },
@@ -496,7 +498,7 @@ formatters.setup {
   {
     command = 'prettier',
     filetypes = {
-      "typescript", "javascript", "typescriptreact", "javascriptreact", 'vue', 'html', 'json'
+      "typescript", "javascript", "typescriptreact", "javascriptreact", "html", "vue", "json"
     }
   }
 }
