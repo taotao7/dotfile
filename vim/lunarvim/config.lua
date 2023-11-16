@@ -3,7 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "catppuccin"
+lvim.colorscheme = "vitesse"
 lvim.builtin.lualine.options.theme = "auto"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
@@ -13,6 +13,8 @@ vim.opt.hidden = false
 vim.opt.cmdheight = 1;
 vim.opt.wrap = true
 vim.opt.termguicolors = true
+vim.opt.winblend = 0
+vim.opt.pumblend = 0
 
 
 -- wsl2
@@ -35,20 +37,40 @@ lvim.leader = ","
 lvim.keys.normal_mode["<leader>t"] = ":TodoLocList<CR>"
 -- add your own keymapping
 
--- copilot
---vim.g.copilot_no_tab_map = true
---vim.g.copilot_assume_mapped = true
---vim.g.copilot_tab_fallback = ""
---local cmp = require "cmp"
---lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
---  cmp.mapping.abort()
---  local copilot_keys = vim.fn["copilot#Accept"]("")
---  if copilot_keys ~= "" then
---    vim.api.nvim_feedkeys(copilot_keys, "i", true)
---  else
---    fallback()
---  end
---end
+-- origin copilot
+-- vim.g.copilot_no_tab_map = true
+-- vim.g.copilot_assume_mapped = true
+-- vim.g.copilot_tab_fallback = ""
+-- local cmp = require "cmp"
+-- lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
+--   cmp.mapping.abort()
+--   local copilot_keys = vim.fn["copilot#Accept"]("")
+--   if copilot_keys ~= "" then
+--     vim.api.nvim_feedkeys(copilot_keys, "i", true)
+--   else
+--     fallback()
+--   end
+-- end
+
+-- copilot cmp
+local ok, copilot = pcall(require, "copilot")
+if not ok then
+  return
+end
+
+copilot.setup {
+  suggestion = {
+    keymap = {
+      accept = "<c-l>",
+      next = "<c-j>",
+      prev = "<c-k>",
+      dismiss = "<c-h>",
+    },
+  },
+}
+
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("n", "<c-s>", "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
 
 -- builtin
 lvim.builtin.alpha.active = true
@@ -72,7 +94,6 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 -- auto install
-
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -128,31 +149,47 @@ lvim.plugins = {
   { 'easymotion/vim-easymotion' },
   -- { "github/copilot.vim" },
   { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
-  {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter'
-  },
   -- {
-  --   "2nthony/vitesse.nvim",
-  --   dependencies = {
-  --     "tjdevries/colorbuddy.nvim"
-  --   },
-  --   config = function()
-  --     require("vitesse").setup {
-  --       transparnet_background = true,
-  --       comment_italics = true,
-  --       transparent_background = true,
-  --       transparent_float_background = true, -- aka pum(popup menu) background
-  --       reverse_visual = true,
-  --       dim_nc = true,
-  --       cmp_cmdline_disable_search_highlight_group = true, -- disable search highlight group for cmp item
-  --       -- if `transparent_float_background` false, make telescope border color same as float background
-  --       telescope_border_follow_float_background = true,
-  --       -- diagnostic virtual text background, like error lens
-  --       diagnostic_virtual_text_background = true,
-  --     }
-  --   end
+  --   'Exafunction/codeium.vim',
+  --   event = 'BufEnter'
   -- },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false }
+      })
+    end
+  },
+  {
+    "2nthony/vitesse.nvim",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim"
+    },
+    config = function()
+      require("vitesse").setup {
+        comment_italics = true,
+        transparent_background = true,
+        transparent_float_background = true, -- aka pum(popup menu) background
+        reverse_visual = false,
+        dim_nc = false,
+        cmp_cmdline_disable_search_highlight_group = false, -- disable search highlight group for cmp item
+        -- if `transparent_float_background` false, make telescope border color same as float background
+        telescope_border_follow_float_background = false,
+        -- diagnostic virtual text background, like error lens
+        diagnostic_virtual_text_background = false,
+      }
+    end
+  },
   {
     "simrat39/symbols-outline.nvim",
     config = function()
@@ -459,7 +496,7 @@ formatters.setup {
   {
     command = 'prettier',
     filetypes = {
-      "typescript", "javascript", "typescriptreact", "javascriptreact"
+      "typescript", "javascript", "typescriptreact", "javascriptreact", 'vue'
     }
   }
 }
