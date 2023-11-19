@@ -33,44 +33,14 @@ end
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
+
 -- lvim.keys.normal_mode["<leader>o>"] = ":SymbolsOutline<CR>"
 lvim.keys.normal_mode["<leader>t"] = ":TodoLocList<CR>"
 -- add your own keymapping
 
--- copilot cmp
-local ok, copilot = pcall(require, "copilot")
-if not ok then
-  return
-end
+-- auto install lsp server
+lvim.lsp.installer.setup.automatic_servers_installation = true
 
-copilot.setup {
-  suggestion = {
-    keymap = {
-      accept = "<c-l>",
-      next = "<c-j>",
-      prev = "<c-k>",
-      dismiss = "<c-h>",
-    },
-  },
-}
-
-local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<c-s>", "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
-
--- copilot
---vim.g.copilot_no_tab_map = true
---vim.g.copilot_assume_mapped = true
---vim.g.copilot_tab_fallback = ""
---local cmp = require "cmp"
---lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
---  cmp.mapping.abort()
---  local copilot_keys = vim.fn["copilot#Accept"]("")
---  if copilot_keys ~= "" then
---    vim.api.nvim_feedkeys(copilot_keys, "i", true)
---  else
---    fallback()
---  end
---end
 
 -- builtin
 lvim.builtin.alpha.active = true
@@ -106,25 +76,6 @@ lvim.builtin.indentlines.options.space_char_blankline = " "
 lvim.builtin.indentlines.options.show_current_context = true
 lvim.builtin.indentlines.options.show_current_context_start = true
 
--- copilot
-
---vim.g.copilot_no_tab_map = true
---vim.g.copilot_assume_mapped = true
---vim.g.copilot_tab_fallback = ""
---local cmp = require "cmp"
---
---lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
---  if cmp.visible() then
---    cmp.select_next_item()
---  else
---    local copilot_keys = vim.fn["copilot#Accept"]()
---    if copilot_keys ~= "" then
---      vim.api.nvim_feedkeys(copilot_keys, "i", true)
---    else
---      fallback()
---    end
---  end
---end
 
 -- flutter
 -- lvim.builtin.which_key.mappings["F"] = {
@@ -265,25 +216,6 @@ lvim.plugins = {
       }
     end,
   },
-  {
-    "karb94/neoscroll.nvim",
-    event = "WinScrolled",
-    config = function()
-      require('neoscroll').setup({
-        -- All these keys will be mapped to their corresponding default scrolling animation
-        mappings = { '<C-u>', '<C-d>', '<C-b>', '<C-f>',
-          '<C-y>', '<C-e>', 'zt', 'zz', 'zb' },
-        hide_cursor = true,          -- Hide cursor while scrolling
-        stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-        use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
-        respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
-        cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-        easing_function = nil,       -- Default easing function
-        pre_hook = nil,              -- Function to run before the scrolling animation starts
-        post_hook = nil,             -- Function to run after the scrolling animation ends
-      })
-    end
-  },
   --{
   --  "akinsho/flutter-tools.nvim",
   --  dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
@@ -362,6 +294,29 @@ lvim.plugins = {
   "mxsdev/nvim-dap-vscode-js",
   { "microsoft/vscode-js-debug", build = "npm install && npx gulp vsDebugServerBundle && mv dist out" }
 }
+
+-- autocomplete
+
+-- -- copilot cmp
+local ok, copilot = pcall(require, "copilot")
+if not ok then
+  return
+end
+
+copilot.setup {
+  suggestion = {
+    keymap = {
+      accept = "<c-l>",
+      next = "<c-j>",
+      prev = "<c-k>",
+      dismiss = "<c-h>",
+    },
+  },
+}
+
+local copilot_opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("n", "<c-s>", "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<CR>", copilot_opts)
+
 
 -- lsp
 
