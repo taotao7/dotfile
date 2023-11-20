@@ -3,7 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- vim.cmd('set background=light')
 -- lvim.colorscheme = "github_dimmed"
-lvim.colorscheme = "vitesse"
+lvim.colorscheme = "kanagawa"
 lvim.builtin.lualine.options.theme = "auto"
 -- vim.background = "light"
 -- vim.g.gruvbox_bold = 1;
@@ -100,7 +100,7 @@ lvim.plugins = {
   -- },
   { 'easymotion/vim-easymotion' },
   -- { "github/copilot.vim" },
-  { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
+  -- { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
   -- {
   --   'Exafunction/codeium.vim',
   --   event = 'BufEnter'
@@ -121,6 +121,35 @@ lvim.plugins = {
         panel = { enabled = false }
       })
     end
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    config = function()
+      require('kanagawa').setup({
+        compile = false,  -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
+        commentStyle = { italic = true },
+        functionStyle = {},
+        keywordStyle = { italic = true },
+        statementStyle = { bold = true },
+        typeStyle = {},
+        transparent = false,   -- do not set background color
+        dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = {             -- add/modify theme and palette colors
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        },
+        overrides = function(colors) -- add/modify highlights
+          return {}
+        end,
+        theme = "wave",  -- Load "wave" theme when 'background' option is not set
+        background = {   -- map the value of 'background' option to a theme
+          dark = "wave", -- try "dragon" !
+          light = "lotus"
+        },
+      })
+    end,
   },
   {
     "2nthony/vitesse.nvim",
