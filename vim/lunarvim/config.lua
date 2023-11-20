@@ -216,6 +216,16 @@ lvim.plugins = {
       }
     end,
   },
+  {
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+      local colorizer = require("colorizer")
+      colorizer.setup {
+        filetypes = { "*" },
+        user_default_options = { mode = "background", },
+      }
+    end
+  },
   --{
   --  "akinsho/flutter-tools.nvim",
   --  dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
