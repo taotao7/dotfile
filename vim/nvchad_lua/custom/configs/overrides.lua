@@ -45,9 +45,10 @@ M.mason = {
     "pyright",
 
     -- golang
-    "gopls",
+    -- "gopls",
     -- c/c++
     "clangd",
+    "clang-format",
   },
 }
 

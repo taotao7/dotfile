@@ -8,9 +8,22 @@ M.ui = {
   theme = "onedark",
   theme_toggle = { "onedark", "one_light" },
   statusline = {
-    theme = "vscode_colored",
+    theme = "minimal",
   },
-
+  nvdash = {
+    header = {
+      " ████████╗ █████╗  ██████╗       ███████╗",
+      " ╚══██╔══╝██╔══██╗██╔═══██╗      ██╔════╝",
+      "    ██║   ███████║██║   ██║█████╗███████╗",
+      "    ██║   ██╔══██║██║   ██║╚════╝╚════██║",
+      "    ██║   ██║  ██║╚██████╔╝      ███████║",
+      "    ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚══════╝",
+    },
+    load_on_startup = true,
+    buttons = {
+      bg_color = "none",
+    },
+  },
   hl_override = highlights.override,
   hl_add = highlights.add,
 }
@@ -19,8 +32,5 @@ M.plugins = "custom.plugins"
 
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
-
--- normal settings
-vim.g.mapleader = ","
 
 return M
