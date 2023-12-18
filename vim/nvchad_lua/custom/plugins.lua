@@ -46,10 +46,35 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
   {
     "NvChad/nvim-colorizer.lua",
     enabled = true,
+  },
+  {
+
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "custom.configs.dap-config"
+    end,
+  },
+  {
+    "mxsdev/nvim-dap-vscode-js",
+    dependencies = {
+      { "mfussenegger/nvim-dap" },
+    },
+  },
+  {
+    "microsoft/vscode-js-debug",
+    build = "npm install && npx gulp vsDebugServerBundle && mv dist out",
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    config = function()
+      require("dapui").setup()
+    end,
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
   },
   {
     "zbirenbaum/copilot.lua",
