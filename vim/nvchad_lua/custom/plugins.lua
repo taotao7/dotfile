@@ -105,6 +105,24 @@ local plugins = {
       },
     },
   },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+    },
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = "LazyGit",
+  },
+  {
+    "smoka7/hop.nvim",
+    cmd = { "HopWord", "HopLine", "HopLineStart", "HopWordCurrentLine", "HopNodes" },
+    config = function()
+      require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+      dofile(vim.g.base46_cache .. "hop")
+    end,
+  },
 
   -- All NvChad plugins are lazy-loaded by default
   -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`

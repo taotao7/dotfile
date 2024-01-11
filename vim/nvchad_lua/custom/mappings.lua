@@ -26,6 +26,11 @@ M.general = {
     ["<leader>dI"] = { ":lua require'dap.ui.variables'.hover({focusable=false})<CR>", "hover" },
     ["<leader>dh"] = { ":lua require'dapui'.toggle()<CR>", "toggle ui" },
     ["<leader>dl"] = { ":lua require'dapui'.toggle()<CR>", "toggle ui" },
+    ["<leader>gg"] = { "<CMD>LazyGit<CR>", "  LazyGit" },
+    ["<leader><leader>w"] = { "<CMD> HopWord <CR>", "󰸱 Hint all words" },
+    ["<leader><leader>t"] = { "<CMD> HopNodes <CR>", " Hint Tree" },
+    ["<leader><leader>c"] = { "<CMD> HopLineStart<CR>", "󰕭 Hint Columns" },
+    ["<leader><leader>l"] = { "<CMD> HopWordCurrentLine<CR>", "󰗉 Hint Line" },
   },
   v = {
     [">"] = { ">gv", "indent" },
