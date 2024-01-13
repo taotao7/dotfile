@@ -31,7 +31,9 @@ local async_formatting = function(bufnr)
 end
 
 local sources = {
-
+  b.diagnostics.eslint.with {
+    filetypes = { "html", "markdown", "css", "typescript", "javascriptreact", "typescriptreact", "javascript", "vue" },
+  },
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with {
