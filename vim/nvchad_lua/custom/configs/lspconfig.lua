@@ -10,6 +10,7 @@ local servers = {
   "tsserver",
   "tailwindcss",
   "volar",
+  "emmet_language_server",
 }
 
 for _, lsp in ipairs(servers) do
