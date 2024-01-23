@@ -35,20 +35,20 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "deno",
-    "prettier",
+    -- "deno",
+    "prettierd",
     "tailwindcss-language-server",
-    "eslint-lsp",
+    "eslint_d",
     "vue-language-server",
 
     -- python
-    "pyright",
+    -- "pyright",
 
     -- golang
     -- "gopls",
     -- c/c++
-    "clangd",
-    "clang-format",
+    -- "clangd",
+    -- "clang-format",
   },
 }
 
