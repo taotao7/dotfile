@@ -7,7 +7,7 @@ local highlights = require "custom.highlights"
 M.ui = {
   theme = "onedark",
   theme_toggle = { "onedark", "one_light" },
-  transparency = true,
+  transparency = false,
   statusline = {
     theme = "minimal",
   },

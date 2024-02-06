@@ -42,7 +42,8 @@ M.mason = {
     "vue-language-server",
 
     -- python
-    -- "pyright",
+    "pyright",
+    "black",
 
     -- golang
     -- "gopls",
