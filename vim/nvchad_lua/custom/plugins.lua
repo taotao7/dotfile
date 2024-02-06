@@ -117,7 +117,6 @@ local plugins = {
 	},
 	{
 		"smoka7/hop.nvim",
-		branch = "v2",
 		cmd = { "HopWord", "HopLine", "HopLineStart", "HopWordCurrentLine", "HopNodes" },
 		config = function()
 			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
