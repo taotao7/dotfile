@@ -38,8 +38,8 @@ M.mason = {
     -- "deno",
     "prettier",
     "tailwindcss-language-server",
-    "eslint_d",
     "vue-language-server",
+    "emmet-language-server",
 
     -- python
     "pyright",
