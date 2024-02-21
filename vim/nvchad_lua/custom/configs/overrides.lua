@@ -45,6 +45,10 @@ M.mason = {
     "pyright",
     "black",
 
+    -- other
+    "yaml-language-server",
+    "dockerfile-language-server",
+
     -- golang
     -- "gopls",
     -- c/c++

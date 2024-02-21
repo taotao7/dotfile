@@ -12,6 +12,8 @@ local servers = {
   "volar",
   "emmet_language_server",
   "pyright",
+  "yamlls",
+  "dockerls",
 }
 
 for _, lsp in ipairs(servers) do
