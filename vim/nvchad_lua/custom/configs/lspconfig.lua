@@ -14,6 +14,7 @@ local servers = {
   "pyright",
   "yamlls",
   "dockerls",
+  "eslint",
 }
 
 for _, lsp in ipairs(servers) do
