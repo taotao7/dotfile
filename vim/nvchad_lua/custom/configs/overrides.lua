@@ -40,6 +40,7 @@ M.mason = {
     "tailwindcss-language-server",
     "vue-language-server",
     "emmet-language-server",
+    "eslint-lsp",
 
     -- python
     "pyright",
