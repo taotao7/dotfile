@@ -5,6 +5,7 @@ M.treesitter = {
     "vim",
     "lua",
     "html",
+    "yaml",
     "css",
     "javascript",
     "typescript",

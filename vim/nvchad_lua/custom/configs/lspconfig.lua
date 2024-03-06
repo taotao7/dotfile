@@ -9,7 +9,7 @@ local servers = {
   "cssls",
   "tsserver",
   "tailwindcss",
-  "volar",
+  "vuels",
   "emmet_language_server",
   "pyright",
   "yamlls",
