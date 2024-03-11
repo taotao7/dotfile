@@ -9,7 +9,6 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.tailwindcss" },
