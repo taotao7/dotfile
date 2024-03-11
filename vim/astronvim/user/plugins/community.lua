@@ -24,5 +24,5 @@ return {
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   -- indent
-  { import = "astrocommunity.indent/indent-blankline-nvim" },
+  -- { import = "astrocommunity.indent/indent-blankline-nvim" },
 }
