@@ -5,7 +5,9 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- themes
-  { import = "astrocommunity.colorscheme.catppuccin" },
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
+  -- { import = "astrocommunity.colorscheme.everforest" },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- completion
   { import = "astrocommunity.completion.codeium-vim" },
   --  pack
@@ -21,7 +23,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.cs" },
-  { import = "astrocommunity.pack.markdown" },
+  -- { import = "astrocommunity.pack.markdown" },
   -- motion
   { import = "astrocommunity.motion.hop-nvim" },
   -- lsp
