@@ -6,7 +6,8 @@ return {
 
   -- themes
   { import = "astrocommunity.colorscheme.catppuccin" },
-
+  -- completion
+  { import = "astrocommunity.completion.codeium-vim" },
   --  pack
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
@@ -19,12 +20,16 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.cs" },
+  { import = "astrocommunity.pack.markdown" },
   -- motion
   { import = "astrocommunity.motion.hop-nvim" },
   -- lsp
   { import = "astrocommunity.lsp.garbage-day-nvim" },
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  -- diagnostics
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- indent
   -- { import = "astrocommunity.indent/indent-blankline-nvim" },
 }
