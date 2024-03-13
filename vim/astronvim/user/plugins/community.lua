@@ -30,6 +30,7 @@ return {
   { import = "astrocommunity.lsp.garbage-day-nvim" },
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- indent
