@@ -22,7 +22,7 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.cs" },
+  -- { import = "astrocommunity.pack.cs" },
   -- { import = "astrocommunity.pack.markdown" },
   -- motion
   { import = "astrocommunity.motion.hop-nvim" },
