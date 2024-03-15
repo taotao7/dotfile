@@ -33,6 +33,8 @@ return {
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- diagnostics
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  -- markdown-and-latex
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- indent
   -- { import = "astrocommunity.indent/indent-blankline-nvim" },
 }
