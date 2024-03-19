@@ -14,5 +14,19 @@ export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NPM_MIRROR=https://npm.taobao.org/mirrors/npm
 
+plugins=(
+  git
+  z
+  fd
+  node
+  npm
+  cp
+  tmux
+  yarn
+  nvm
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
 eval "$(starship init zsh)"
 
