@@ -38,4 +38,5 @@ return {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- indent
   -- { import = "astrocommunity.indent/indent-blankline-nvim" },
+  { import = "astrocommunity.indent/mini-indentscope" },
 }
