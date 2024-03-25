@@ -39,4 +39,6 @@ return {
   -- indent
   -- { import = "astrocommunity.indent/indent-blankline-nvim" },
   { import = "astrocommunity.indent/mini-indentscope" },
+  -- scrolling
+  { import = "astrocommunity.scrolling/neoscroll-nvim" },
 }
