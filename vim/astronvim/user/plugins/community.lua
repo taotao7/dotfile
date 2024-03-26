@@ -6,9 +6,9 @@ return {
 
   -- themes
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.everforest" },
+  -- { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  { import = "astrocommunity.colorscheme.gruvbox-baby" },
+  -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
   -- completion
   { import = "astrocommunity.completion.codeium-vim" },
   --  pack

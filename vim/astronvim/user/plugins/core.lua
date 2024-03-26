@@ -15,6 +15,28 @@ return {
       return opts
     end,
   },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+    opts = function(_, opts)
+      opts.highlights = {
+        Comment = { italic = true },
+        Directory = { bold = true },
+        ErrorMsg = { italic = true, bold = true },
+      }
+      opts.styles = {
+        tags = "italic",
+        types = "bold",
+        methods = "bold",
+        functions = "bold",
+        keywords = "bold,italic",
+        comments = "italic",
+        parameters = "italic",
+        conditionals = "italic",
+        virtual_text = "italic",
+      }
+    end,
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
