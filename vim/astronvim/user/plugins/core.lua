@@ -15,6 +15,13 @@ return {
       return opts
     end,
   },
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#000000",
+    },
+  },
+
   -- {
   --   "catppuccin/nvim",
   --   name = "catppuccin",
