@@ -5,10 +5,13 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- themes
-  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.everforest" },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
+  -- colors
+  { import = "astrocommunity.color.transparent-nvim" },
   -- completion
   { import = "astrocommunity.completion.codeium-vim" },
   --  pack
