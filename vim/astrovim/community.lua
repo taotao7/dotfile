@@ -10,13 +10,13 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   -- themes
-  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  -- { import = "astrocommunity.colorscheme.neosolarized-nvim" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.everforest" },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
   -- colors
-  { import = "astrocommunity.color.transparent-nvim" },
+  -- { import = "astrocommunity.color.transparent-nvim" },
   -- completion
   { import = "astrocommunity.completion.codeium-vim" },
   --  pack
@@ -49,4 +49,3 @@ return {
   -- scrolling
   { import = "astrocommunity.scrolling/neoscroll-nvim" },
 }
-
