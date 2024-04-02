@@ -78,10 +78,6 @@ return {
     end,
   },
   {
-    "rcarriga/nvim-notify",
-    config = function(_, opts) opts.background_colour = "#000000" end,
-  },
-  {
     "lukas-reineke/indent-blankline.nvim",
     enabled = false,
   },

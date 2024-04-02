@@ -40,7 +40,7 @@ return {
   { import = "astrocommunity.lsp.lsp-lens-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- diagnostics
-  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  -- { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- markdown-and-latex
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- indent
