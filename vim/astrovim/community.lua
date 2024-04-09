@@ -37,7 +37,7 @@ return {
   { import = "astrocommunity.motion.hop-nvim" },
   -- lsp
   { import = "astrocommunity.lsp.garbage-day-nvim" },
-  { import = "astrocommunity.lsp.lsp-lens-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-lens-nvim" },
   -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- diagnostics
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
@@ -47,5 +47,5 @@ return {
   -- { import = "astrocommunity.indent/indent-blankline-nvim" },
   { import = "astrocommunity.indent/mini-indentscope" },
   -- scrolling
-  { import = "astrocommunity.scrolling/neoscroll-nvim" },
+  -- { import = "astrocommunity.scrolling/neoscroll-nvim" },
 }
