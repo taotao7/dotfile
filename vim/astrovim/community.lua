@@ -11,6 +11,7 @@ return {
   -- import/override with your plugins folder
   -- themes
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.everforest" },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
@@ -38,7 +39,7 @@ return {
   -- lsp
   { import = "astrocommunity.lsp.garbage-day-nvim" },
   -- { import = "astrocommunity.lsp.lsp-lens-nvim" },
-  -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  { import = "astrocommunity.lsp.lsp-signature-nvim" },
   -- diagnostics
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- markdown-and-latex
