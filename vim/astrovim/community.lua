@@ -49,4 +49,7 @@ return {
   { import = "astrocommunity.indent/mini-indentscope" },
   -- scrolling
   -- { import = "astrocommunity.scrolling/neoscroll-nvim" },
+  -- dap
+  { import = "astrocommunity.debugging/nvim-dap-repl-highlights" },
+  { import = "astrocommunity.debugging/nvim-dap-virtual-text" },
 }
