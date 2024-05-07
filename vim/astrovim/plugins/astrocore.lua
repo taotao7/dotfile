@@ -29,9 +29,10 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
-        spell = true, -- sets vim.opt.spell
+        spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = true, -- sets vim.opt.wrap
+        -- guifont = "CartographCF Nerd Font:h16",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
