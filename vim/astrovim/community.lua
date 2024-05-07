@@ -47,10 +47,17 @@ return {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- indent
   -- { import = "astrocommunity.indent/indent-blankline-nvim" },
-  { import = "astrocommunity.indent/mini-indentscope" },
+  { import = "astrocommunity.indent.mini-indentscope" },
   -- scrolling
   -- { import = "astrocommunity.scrolling/neoscroll-nvim" },
   -- dap
-  { import = "astrocommunity.debugging/nvim-dap-repl-highlights" },
-  { import = "astrocommunity.debugging/nvim-dap-virtual-text" },
+  { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  -- recipes
+  { import = "astrocommunity.recipes.vscode-icons" },
+  { import = "astrocommunity.recipes.telescope-nvchad-theme" },
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  --search
+  { import = "astrocommunity.search.nvim-hlslens" },
 }
