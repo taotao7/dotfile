@@ -13,13 +13,14 @@ return {
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.everforest" },
-  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+  -- { import = "astrocommunity.colorscheme.everforest" },
+  -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
   -- colors
   -- { import = "astrocommunity.color.transparent-nvim" },
   -- completion
   { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.completion.coq_nvim" },
   --  pack
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
@@ -62,5 +63,5 @@ return {
   --project
   -- { import = "astrocommunity.project.project-nvim" },
   --terminal
-  { import = "astrocommunity.terminal-integration.flatten-nvim" },
+  -- { import = "astrocommunity.terminal-integration.flatten-nvim" },
 }
