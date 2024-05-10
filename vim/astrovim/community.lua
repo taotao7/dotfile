@@ -57,7 +57,7 @@ return {
   -- recipes
   { import = "astrocommunity.recipes.vscode-icons" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
-  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   --search
   { import = "astrocommunity.search.nvim-hlslens" },
   --project
