@@ -19,8 +19,8 @@ return {
   -- colors
   -- { import = "astrocommunity.color.transparent-nvim" },
   -- completion
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
-  -- { import = "astrocommunity.completion.codeium-vim" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.codeium-vim" },
   -- { import = "astrocommunity.completion.coq_nvim" },
   --  pack
   { import = "astrocommunity.pack.docker" },
