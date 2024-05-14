@@ -91,6 +91,7 @@ return {
         --   desc = "Declaration of current symbol",
         --   cond = "textDocument/declaration",
         -- },
+        --     function astrolsp.toggles.buffer_inlay_hints(bufnr?: integer, silent?: boolean)
         -- ["<Leader>uY"] = {
         --   function() require("astrolsp.toggles").buffer_semantic_tokens() end,
         --   desc = "Toggle LSP semantic highlight (buffer)",
