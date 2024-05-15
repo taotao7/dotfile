@@ -60,7 +60,7 @@ return {
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   --search
-  { import = "astrocommunity.search.nvim-hlslens" },
+  -- { import = "astrocommunity.search.nvim-hlslens" },
   --project
   -- { import = "astrocommunity.project.project-nvim" },
   --terminal
