@@ -82,4 +82,9 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     enabled = false,
   },
+  {
+
+    "AstroNvim/astrocommunity",
+    version = "8.3.0",
+  },
 }
