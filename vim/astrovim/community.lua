@@ -16,7 +16,7 @@ return {
   -- { import = "astrocommunity.colorscheme.everforest" },
   -- { import = "astrocommunity.colorscheme.gruvbox-nvim" },
   -- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  -- { import = "astrocommunity.colorscheme.gruvbox-baby" },
+  { import = "astrocommunity.colorscheme.gruvbox-baby" },
   -- colors
   -- { import = "astrocommunity.color.transparent-nvim" },
   -- completion
