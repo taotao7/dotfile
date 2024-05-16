@@ -42,8 +42,8 @@ return {
   -- lsp
   { import = "astrocommunity.lsp.garbage-day-nvim" },
   -- { import = "astrocommunity.lsp.lsp-lens-nvim" },
-  { import = "astrocommunity.lsp.lsp-signature-nvim" },
-  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  -- { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   -- diagnostics
   -- { import = "astrocommunity.diagnostics.error-lens-nvim" },
   -- markdown-and-latex
