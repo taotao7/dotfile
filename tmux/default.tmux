@@ -1,0 +1,47 @@
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+# set -g @plugin 'seebi/tmux-colors-solarized'
+set -g @plugin 'erikw/tmux-dark-notify'
+set -g @plugin 'erikw/tmux-powerline'
+# set -g @plugin 'catppuccin/tmux'
+# set -g @plugin 'seebi/tmux-colors-solarized'
+# set -g @plugin 'erikw/tmux-dark-notify'
+# set -g @plugin 'tmux-plugins/tmux-sensible'
+# set -g @plugin 'tmux-plugins/tmux-cpu'
+# set -g @plugin 'tmux-plugins/tmux-battery'
+# set -g @plugin 'xamut/tmux-weather'
+
+
+set -g default-terminal "xterm"
+set-option -ga terminal-overrides ",*256col*:Tc"
+tmux_conf_copy_to_os_clipboard=true
+set-option -g status "on"
+set -g mouse on
+
+# if-shell "test -e ~/.local/state/tmux/tmux-dark-notify-theme.conf" \
+# 	"source-file ~/.local/state/tmux/tmux-dark-notify-theme.conf"
+#
+# set -g @dark-notify-theme-path-light '$HOME/.tmux/plugins/tmux-colors-solarized/tmuxcolors-light.conf'
+# set -g @dark-notify-theme-path-dark '$HOME/.tmux/plugins/tmux-colors-solarized/tmuxcolors-dark.conf'
+
+# set -g @catppuccin_status_background "default"
+# set -g @catppuccin_window_right_separator "█ "
+# set -g @catppuccin_window_number_position "right"
+# set -g @catppuccin_window_middle_separator " | "
+#
+# set -g @catppuccin_window_default_fill "none"
+#
+# set -g @catppuccin_window_current_fill "all"
+#
+# set -g @catppuccin_status_modules_right "application session cpu date_time"
+# set -g @catppuccin_status_left_separator "█"
+# set -g @catppuccin_status_right_separator "█"
+
+
+# set -g @catppuccin_date_time_text "%Y-%m-%d %H:%M:%S"
+
+
+
+
+run '~/.tmux/plugins/tpm/tpm'
+
