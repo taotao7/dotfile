@@ -17,7 +17,6 @@ return {
     },
     options = {
       opt = {
-
         relativenumber = true,
         number = true,
         spell = false,
