@@ -1,52 +1,73 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local gpus = wezterm.gui.enumerate_gpus()
 
-local config = {
-  font = wezterm.font("CartographCF Nerd Font"),
-  color_scheme = "Kanagawa (Gogh)",
-  -- color_scheme = "carbonfox",
-  font_size = 14,
-  check_for_updates = false,
-  use_ime = true,
-  ime_preedit_rendering = "Builtin",
-  use_dead_keys = false,
-  warn_about_missing_glyphs = false,
-  -- enable_kitty_graphics = false,
-  animation_fps = 1,
-  cursor_blink_ease_in = "Constant",
-  cursor_blink_ease_out = "Constant",
-  cursor_blink_rate = 0,
-  -- https://github.com/wez/wezterm/issues/4972
-  -- enable_wayland = enable_wayland(),
-  enable_wayland = false,
-  -- enable_wayland = false,
-  hide_tab_bar_if_only_one_tab = true,
-  adjust_window_size_when_changing_font_size = false,
-  selection_word_boundary = " \t\n{}[]()\"'`,;:│=&!%",
-  window_padding = {
-    left = 0,
-    right = 0,
-    top = 0,
-    bottom = 0,
-  },
-  use_fancy_tab_bar = false,
-  exit_behavior = "CloseOnCleanExit",
-  tab_bar_at_bottom = false,
-  window_close_confirmation = "AlwaysPrompt",
-  -- window_background_opacity = 0.8,
-  disable_default_key_bindings = true,
-  visual_bell = {
-    fade_in_function = "EaseIn",
-    fade_in_duration_ms = 150,
-    fade_out_function = "EaseOut",
-    fade_out_duration_ms = 150,
-  },
-  -- separate <Tab> <C-i>
-  enable_csi_u_key_encoding = true,
-  leader = { key = "Space", mods = "CTRL|SHIFT" },
-  webgpu_preferred_adapter = gpus[1],
-  front_end = "OpenGL",
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+config.automatically_reload_config = true
+
+config.color_scheme = "Batman"
+config.font = wezterm.font("CartographCF Nerd Font")
+config.font_size = 14
+config.window_padding = {
+	left = 2,
+	right = 2,
+	top = 0,
+	bottom = 10,
+}
+config.window_frame = {
+	font = wezterm.font("Roboto"),
+	font_size = 14,
 }
 
+config.line_height = 1.1
+
+config.window_frame = {
+	border_left_width = "0",
+	border_right_width = "0",
+	border_bottom_height = "0",
+	border_top_height = "0",
+}
+
+config.term = "xterm-256color"
+config.animation_fps = 60
+config.max_fps = 60
+config.front_end = "WebGpu"
+config.webgpu_power_preference = "HighPerformance"
+
+-- scrollbar
+config.enable_scroll_bar = true
+config.min_scroll_bar_height = "3cell"
+config.colors = {
+	scrollbar_thumb = "#34354D",
+}
+
+-- tab bar
+config.enable_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = false
+config.use_fancy_tab_bar = true
+config.tab_max_width = 25
+config.show_tab_index_in_tab_bar = true
+config.switch_to_last_active_tab_when_closing_tab = true
+
+-- cursor
+config.default_cursor_style = "BlinkingBlock"
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
+config.cursor_blink_rate = 700
+
+-- window
+config.adjust_window_size_when_changing_font_size = false
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.initial_cols = 120
+config.initial_rows = 24
+config.window_padding = {
+	left = 5,
+	right = 10,
+	top = 12,
+	bottom = 7,
+}
+config.window_close_confirmation = "AlwaysPrompt"
+config.inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 }
+
+-- and finally, return the configuration to wezterm
 return config
