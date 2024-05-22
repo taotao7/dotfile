@@ -2,7 +2,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.colorscheme.gruvbox-baby" },
   { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
