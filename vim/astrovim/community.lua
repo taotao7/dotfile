@@ -1,9 +1,9 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.completion.codeium-vim" },
   -- { import = "astrocommunity.completion.coq_nvim" },
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.json" },
@@ -18,7 +18,7 @@ return {
   { import = "astrocommunity.motion.hop-nvim" },
   -- { import = "astrocommunity.lsp.garbage-day-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-  -- { import = "astrocommunity.indent.mini-indentscope" },
+  { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
   -- { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
