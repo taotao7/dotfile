@@ -3,6 +3,8 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.completion.coq_nvim" },
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.json" },
