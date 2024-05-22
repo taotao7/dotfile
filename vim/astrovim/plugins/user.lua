@@ -49,4 +49,10 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     enabled = false,
   },
+  {
+    "2nthony/vitesse.nvim",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim",
+    },
+  },
 }
