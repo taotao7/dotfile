@@ -54,5 +54,17 @@ return {
     dependencies = {
       "tjdevries/colorbuddy.nvim",
     },
+    opts = function(_, opts)
+      opts.comment_italics = true
+      opts.transparent_background = false
+      opts.transparent_float_background = false
+      opts.reverse_visual = true
+      opts.dim_nc = true
+      opts.cmp_cmdline_disable_search_highlight_group = true
+      opts.telescope_border_follow_float_background = true
+      opts.lspsaga_border_follow_float_background = true
+      opts.diagnostic_virtual_text_background = true
+      return opts
+    end,
   },
 }
