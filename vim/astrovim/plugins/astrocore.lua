@@ -12,8 +12,9 @@ return {
       notifications = true,
     },
     diagnostics = {
-      virtual_text = true,
+      virtual_text = false,
       underline = true,
+      signs = false,
     },
     options = {
       opt = {
