@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
 config.color_scheme = "Oxocarbon Dark"
-config.font = wezterm.font("CartographCF Nerd Font")
+config.font = wezterm.font("SauceCodePro Nerd Font Mono")
 config.font_size = 14
 config.window_padding = {
 	left = 2,
@@ -19,7 +19,7 @@ config.window_frame = {
 	font_size = 14,
 }
 
-config.line_height = 1.1
+config.line_height = 1.2
 
 config.window_frame = {
 	border_left_width = "0",
@@ -64,7 +64,7 @@ config.window_padding = {
 	left = 5,
 	right = 10,
 	top = 12,
-	bottom = 7,
+	bottom = 4,
 }
 config.window_close_confirmation = "AlwaysPrompt"
 config.inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 }
