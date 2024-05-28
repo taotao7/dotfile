@@ -7,7 +7,7 @@ config.automatically_reload_config = true
 
 config.color_scheme = "Oxocarbon Dark"
 config.font = wezterm.font("CartographCF Nerd Font")
-config.font_size = 16
+config.font_size = 14
 config.window_padding = {
 	left = 2,
 	right = 2,
@@ -35,7 +35,7 @@ config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
 -- scrollbar
-config.enable_scroll_bar = true
+config.enable_scroll_bar = false
 config.min_scroll_bar_height = "3cell"
 config.colors = {
 	scrollbar_thumb = "#34354D",
