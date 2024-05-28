@@ -24,4 +24,5 @@ return {
   -- { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }
