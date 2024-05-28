@@ -5,9 +5,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
-config.color_scheme = "Afterglow"
+config.color_scheme = "Oxocarbon Dark"
 config.font = wezterm.font("CartographCF Nerd Font")
-config.font_size = 14
+config.font_size = 16
 config.window_padding = {
 	left = 2,
 	right = 2,

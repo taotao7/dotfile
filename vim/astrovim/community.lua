@@ -1,7 +1,8 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  { import = "astrocommunity.completion.copilot-cmp" },
   -- { import = "astrocommunity.completion.coq_nvim" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.docker" },
