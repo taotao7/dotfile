@@ -5,7 +5,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
-config.color_scheme = "Oxocarbon Dark (Gogh)"
+config.color_scheme = "Solarized (light) (terminal.sexy)"
 config.font = wezterm.font("SauceCodePro Nerd Font Mono")
 config.font_size = 14
 config.window_padding = {
@@ -64,7 +64,7 @@ config.window_padding = {
 	left = 5,
 	right = 10,
 	top = 12,
-	bottom = 4,
+	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"
 config.inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 }
