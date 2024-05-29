@@ -15,10 +15,10 @@ return {
       return opts
     end,
   },
-  -- {
-  --   "lukas-reineke/indent-blankline.nvim",
-  --   enabled = false,
-  -- },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    enabled = false,
+  },
   -- {
   --   "2nthony/vitesse.nvim",
   --   dependencies = {
