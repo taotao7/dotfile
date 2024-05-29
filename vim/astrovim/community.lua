@@ -1,7 +1,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
+  -- { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.completion.copilot-cmp" },
   -- { import = "astrocommunity.diagnostics.error-lens-nvim" },
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
