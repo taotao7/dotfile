@@ -13,7 +13,7 @@ return {
     diagnostics = {
       virtual_text = false,
       underline = true,
-      signs = false,
+      signs = true,
     },
     options = {
       opt = {
