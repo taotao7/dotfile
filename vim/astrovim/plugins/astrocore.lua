@@ -10,11 +10,6 @@ return {
       highlighturl = true,
       notifications = true,
     },
-    diagnostics = {
-      virtual_text = false,
-      underline = true,
-      signs = true,
-    },
     options = {
       opt = {
         relativenumber = true,
