@@ -8,18 +8,12 @@ config.automatically_reload_config = true
 config.color_scheme = "Solarized (light) (terminal.sexy)"
 config.font = wezterm.font("SauceCodePro Nerd Font Mono")
 config.font_size = 14
-config.window_padding = {
-	left = 2,
-	right = 2,
-	top = 0,
-	bottom = 10,
-}
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
 }
 
-config.line_height = 1.2
+config.line_height = 1
 
 config.window_frame = {
 	border_left_width = "0",
@@ -61,10 +55,10 @@ config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.initial_cols = 120
 config.initial_rows = 24
 config.window_padding = {
-	left = 5,
-	right = 10,
-	top = 12,
-	bottom = 0,
+	left = 4,
+	right = 4,
+	top = 4,
+	bottom = 4,
 }
 config.window_close_confirmation = "AlwaysPrompt"
 config.inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 }
