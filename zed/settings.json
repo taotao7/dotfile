@@ -7,14 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Vitesse Dark",
+  "theme": "Solarized Light",
   "features": {
-    "copilot": false
+    "copilot": true
   },
   "vim_mode": true,
   "ui_font_size": 14,
   "buffer_font_size": 14,
-  "buffer_font_family": "CartographCF Nerd Font",
+  "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "cursor_blink": false,
   "relative_line_numbers": true,
   "scrollbar": { "show": "never" },
