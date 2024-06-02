@@ -35,5 +35,15 @@
       "type": "openai",
       "api_url": "https://openai.api2d.net/v1"
     }
+  },
+  "languages": {
+    "Python": {
+      "format_on_save": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      }
+    }
   }
 }
