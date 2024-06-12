@@ -6,6 +6,9 @@ return {
 
   ---@type AstroLSPOpts
   opts = {
+    features = {
+      -- inlay_hints = true,
+    },
     ---@type any
     config = {
       eslint = {

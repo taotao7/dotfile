@@ -3,7 +3,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "everforest",
+    colorscheme = "onedark_vivid",
     status = {
       separators = {
         left = { "", " " }, -- separator for the left side of the statusline
