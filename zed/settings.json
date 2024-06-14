@@ -7,13 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Solarized Light",
+  "theme": "One Dark",
   "features": {
     "copilot": true
   },
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "cursor_blink": false,
   "relative_line_numbers": true,
@@ -25,7 +25,7 @@
     "highlight_active_indent": false
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_type_hints": true,
     "show_parameter_hints": true,
     "show_other_hints": true,
@@ -48,6 +48,9 @@
           "arguments": ["-"]
         }
       }
+    },
+    "TypeScript": {
+      "language_servers": ["!typescript-language-server", "vtsls", ".."]
     }
   }
 }
