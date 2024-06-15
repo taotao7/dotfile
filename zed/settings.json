@@ -7,7 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark",
   "features": {
     "copilot": true
   },
@@ -48,9 +47,6 @@
           "arguments": ["-"]
         }
       }
-    },
-    "TypeScript": {
-      "language_servers": ["!typescript-language-server", "vtsls", ".."]
     }
   }
 }
