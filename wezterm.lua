@@ -7,7 +7,7 @@ config.automatically_reload_config = true
 
 config.color_scheme = "One Dark (Gogh)"
 config.font = wezterm.font("SauceCodePro Nerd Font Mono")
-config.font_size = 16
+config.font_size = 18
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
