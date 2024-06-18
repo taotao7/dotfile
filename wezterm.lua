@@ -7,7 +7,7 @@ config.automatically_reload_config = true
 
 config.color_scheme = "One Dark (Gogh)"
 config.font = wezterm.font("SauceCodePro Nerd Font Mono")
-config.font_size = 14
+config.font_size = 16
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
@@ -36,7 +36,7 @@ config.colors = {
 }
 
 -- tab bar
-config.enable_tab_bar = true
+config.enable_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = false
 config.use_fancy_tab_bar = true
 config.tab_max_width = 25
@@ -51,7 +51,7 @@ config.cursor_blink_rate = 700
 
 -- window
 config.adjust_window_size_when_changing_font_size = false
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+-- config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.initial_cols = 120
 config.initial_rows = 24
 config.window_padding = {
