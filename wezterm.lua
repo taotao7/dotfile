@@ -5,7 +5,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
-config.color_scheme = "One Dark (Gogh)"
+config.color_scheme = "Gruvbox Dark (Gogh)"
 config.font = wezterm.font("SauceCodePro Nerd Font Mono")
 config.font_size = 18
 config.window_frame = {
