@@ -10,7 +10,6 @@ return {
         right = { " ", "" }, -- separator for the right side of the statusline
         tab = { "|", "" },
       },
-
       attributes = {
         mode = { bold = true },
       },
