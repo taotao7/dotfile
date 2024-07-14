@@ -5,9 +5,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
-config.color_scheme = "Gruvbox Dark (Gogh)"
+config.color_scheme = 'Horizon Dark (Gogh)'
 config.font = wezterm.font("SauceCodePro Nerd Font Mono")
-config.font_size = 18
+config.font_size = 14
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
@@ -57,7 +57,7 @@ config.initial_rows = 24
 config.window_padding = {
 	left = 4,
 	right = 4,
-	top = 10,
+	top = 0,
 	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"
