@@ -6,8 +6,8 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
 config.color_scheme = 'Horizon Dark (Gogh)'
-config.font = wezterm.font("SauceCodePro Nerd Font Mono")
-config.font_size = 14
+config.font = wezterm.font("UbuntuMono Nerd Font Mono")
+config.font_size = 16
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
