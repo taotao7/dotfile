@@ -7,21 +7,31 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "features": {
-    "copilot": true
-  },
+  "theme": "Horizon",
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 18,
-  "buffer_font_family": "SauceCodePro Nerd Font Mono",
+  "buffer_font_size": 16,
+  "buffer_font_family": "UbuntuMono Nerd Font Mono",
   "cursor_blink": false,
   "relative_line_numbers": true,
-  "scrollbar": { "show": "never" },
+  "scrollbar": {
+    "show": "never"
+  },
   "vertical_scroll_margin": 0,
   "line_numbers": false,
   "indent_guides": {
     "enabled": false,
-    "highlight_active_indent": false
+    "highlight_active_indent": true,
+    "active_line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "indent_aware"
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true
   },
   "inlay_hints": {
     "enabled": false,
@@ -34,6 +44,7 @@
   "assistant": {
     "version": "1",
     "provider": {
+      "default_model": "gpt-3.5-turbo",
       "name": "openai",
       "type": "openai",
       "api_url": "https://openai.api2d.net/v1"
