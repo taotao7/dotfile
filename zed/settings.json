@@ -7,27 +7,18 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "version": "2",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-3.5-turbo"
+    }
+  },
   "language_models": {
     "openai": {
       "api_url": "https://openai.api2d.net/v1"
     }
   },
-  // "assistant": {
-  //   "enabled": true,
-  //   "version": "1",
-  //   "provider": {
-  //     "name": "openai",
-  //     "api_url": "https://api.groq.com/openai/v1",
-  //     "available_models": [
-  //       {
-  //         "custom": {
-  //           "name": "mixtral-8x7b-32768",
-  //           "max_token": 32768
-  //         }
-  //       }
-  //     ]
-  //   }
-  // },
   "outline_panel": {
     "button": true,
     "default_width": 240,
@@ -78,14 +69,6 @@
     "show_other_hints": true,
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "openai",
-      "model": "gpt-3.5-turbo"
-    },
-    "version": "2",
-    "provider": null
   },
   "languages": {
     "Python": {
