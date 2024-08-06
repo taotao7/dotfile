@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "Rosé Pine Dawn",
   "assistant": {
     "version": "2",
     "default_model": {
@@ -31,7 +32,6 @@
     "auto_fold_dirs": true
   },
   "auto_signature_help": true,
-  "theme": "Horizon",
   "vim_mode": true,
   "ui_font_size": 14,
   "buffer_font_size": 14,
