@@ -7,16 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Rosé Pine Dawn",
+  "theme": "Panda",
   "assistant": {
     "version": "2",
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-3.5-turbo"
+      "provider": "copilot_chat",
+      "model": "gpt-4"
     }
   },
   "language_models": {
     "openai": {
+      "version": "1",
       "api_url": "https://openai.api2d.net/v1"
     }
   },
