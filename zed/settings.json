@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Horizon",
+  "theme": "Andromeda",
   "assistant": {
     "version": "2",
     "default_model": {
@@ -32,12 +32,12 @@
     "auto_reveal_entries": true,
     "auto_fold_dirs": true
   },
-  "auto_signature_help": true,
+  "auto_signature_help": false,
   "vim_mode": true,
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "buffer_font_family": "SauceCodePro Nerd Font Mono",
-  "cursor_blink": false,
+  "cursor_blink": true,
   "relative_line_numbers": true,
   "scrollbar": {
     "show": "never"
@@ -65,7 +65,7 @@
     "quick_actions": true
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_type_hints": true,
     "show_parameter_hints": true,
     "show_other_hints": true,
