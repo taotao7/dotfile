@@ -1,4 +1,3 @@
-
 return {
   "akinsho/horizon.nvim",
   pin = true,

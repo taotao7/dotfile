@@ -1,33 +1,15 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrolsp",
-  tag = "stable",
-  pin = true,
-
   ---@type AstroLSPOpts
   opts = {
+    -- Configuration table of features provided by AstroLSP
     features = {
-      -- inlay_hints = true,
+      codelens = true, -- enable/disable codelens refresh on start
+      inlay_hints = false, -- enable/disable inlay hints on start
+      semantic_tokens = true, -- enable/disable semantic token highlighting
     },
-    ---@type any
-    config = {
-      eslint = {
-        filetypes = {
-          "javascript",
-          "javascript.jsx",
-          "javascriptreact",
-          "typescript",
-          "typescript.tsx",
-          "typescriptreact",
-          "vue",
-        },
-      },
-      volar = { filetypes = { "vue" } },
-      clangd = {
-        filetypes = { "c", "cpp", "cuda", "objc", "objcpp" },
-      },
-    },
-
+    -- customize lsp formatting options
     formatting = {
       async = false,
       format_on_save = { enabled = true },

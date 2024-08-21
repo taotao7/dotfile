@@ -4,17 +4,6 @@ return {
   ---@type AstroUIOpts
   opts = {
     colorscheme = "horizon",
-    status = {
-      separators = {
-        left = { "", " " }, -- separator for the left side of the statusline
-        right = { " ", "" }, -- separator for the right side of the statusline
-        tab = { "|", "" },
-      },
-      attributes = {
-        mode = { bold = true },
-      },
-    },
-
     icons = {
       ActiveLSP = "",
       ActiveTS = " ",
