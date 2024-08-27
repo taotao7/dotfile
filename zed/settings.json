@@ -7,12 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Andromeda",
+  "theme": "Vitesse Dark Soft",
   "assistant": {
     "version": "2",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4"
+      "model": "gpt-4o"
     }
   },
   "language_models": {
