@@ -7,10 +7,10 @@ config.automatically_reload_config = true
 
 config.color_scheme = "Horizon Dark (Gogh)"
 config.font = wezterm.font("Monaspace Argon")
-config.font_size = 14
+config.font_size = 13
 config.window_frame = {
 	font = wezterm.font("Roboto"),
-	font_size = 14,
+	font_size = 13,
 }
 
 config.line_height = 1
