@@ -3,7 +3,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "horizon",
+    colorscheme = "vitesse",
     icons = {
       ActiveLSP = "",
       ActiveTS = " ",
