@@ -6,11 +6,11 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
 config.color_scheme = "Horizon Dark (Gogh)"
-config.font = wezterm.font("Monaspace Argon")
-config.font_size = 13
+config.font = wezterm.font("UbuntuMono Nerd Font Mono")
+config.font_size = 16
 config.window_frame = {
 	font = wezterm.font("Roboto"),
-	font_size = 13,
+	font_size = 16,
 }
 
 config.line_height = 1
@@ -57,7 +57,7 @@ config.initial_rows = 24
 config.window_padding = {
 	left = 4,
 	right = 4,
-	top = 0,
+	top = 10,
 	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"

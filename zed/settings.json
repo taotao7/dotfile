@@ -35,8 +35,8 @@
   "auto_signature_help": false,
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_size": 14,
-  "buffer_font_family": "SauceCodePro Nerd Font Mono",
+  "buffer_font_size": 16,
+  "buffer_font_family": "UbuntuMono Nerd Font Mono",
   "cursor_blink": true,
   "relative_line_numbers": true,
   "scrollbar": {
