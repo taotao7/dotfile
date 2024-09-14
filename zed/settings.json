@@ -8,19 +8,42 @@
 // from the command palette or from `Zed` application menu.
 {
   "theme": "Dracula",
-  "assistant": {
-    "version": "2",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    }
-  },
   "language_models": {
     "openai": {
       "version": "1",
-      "api_url": "https://openai.api2d.net/v1"
+      "available_models": [
+        {
+          "name": "deepseek-coder",
+          "max_tokens": 128000
+        },
+        {
+          "name": "deepseek-chat",
+          "max_tokens": 128000
+        }
+      ],
+      "api_url": "https://api.deepseek.com/beta"
     }
   },
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "deepseek-chat"
+    },
+    "version": "2"
+  },
+  // "assistant": {
+  //   "version": "2",
+  //   "default_model": {
+  //     "provider": "copilot_chat",
+  //     "model": "gpt-4o"
+  //   }
+  // },
+  // "language_models": {
+  //   "openai": {
+  //     "version": "1",
+  //     "api_url": "https://openai.api2d.net/v1"
+  //   }
+  // },
   "outline_panel": {
     "button": true,
     "default_width": 240,
@@ -35,7 +58,7 @@
   "auto_signature_help": false,
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 18,
+  "buffer_font_size": 16,
   "buffer_font_family": "UbuntuMono Nerd Font Mono",
   "cursor_blink": true,
   "relative_line_numbers": true,
