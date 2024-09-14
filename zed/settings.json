@@ -26,8 +26,8 @@
   },
   "assistant": {
     "default_model": {
-      "provider": "openai",
-      "model": "deepseek-chat"
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
     },
     "version": "2"
   },
