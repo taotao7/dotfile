@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Dracula",
+  "theme": "Solarized Light",
   "language_models": {
     "openai": {
       "version": "1",
@@ -44,6 +44,7 @@
   //     "api_url": "https://openai.api2d.net/v1"
   //   }
   // },
+  "soft_wrap": "editor_width",
   "outline_panel": {
     "button": true,
     "default_width": 240,
@@ -89,9 +90,9 @@
   },
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": true,
+    "show_type_hints": false,
     "show_parameter_hints": true,
-    "show_other_hints": false,
+    "show_other_hints": true,
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50
   },
