@@ -69,7 +69,7 @@
   "vertical_scroll_margin": 0,
   "line_numbers": false,
   "indent_guides": {
-    "enabled": true,
+    "enabled": false,
     "highlight_active_indent": true,
     "active_line_width": 3,
     "coloring": "indent_aware",
