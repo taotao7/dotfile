@@ -4,12 +4,12 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = "Dracula (Gogh)"
-config.font = wezterm.font("UbuntuMono Nerd Font Mono")
-config.font_size = 18
+config.color_scheme = "Fideloper"
+config.font = wezterm.font("FiraCode Nerd Font Mono")
+config.font_size = 13
 config.window_frame = {
 	font = wezterm.font("Roboto"),
-	font_size = 16,
+	font_size = 14,
 }
 
 config.line_height = 1
