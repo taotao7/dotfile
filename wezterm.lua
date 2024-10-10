@@ -54,9 +54,9 @@ config.adjust_window_size_when_changing_font_size = false
 config.initial_cols = 120
 config.initial_rows = 24
 config.window_padding = {
-	left = 4,
-	right = 4,
-	top = 10,
+	left = 8,
+	right = 8,
+	top = 12,
 	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"
