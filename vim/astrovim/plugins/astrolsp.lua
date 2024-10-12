@@ -1,3 +1,11 @@
+local inlayHints = {
+  parameterNames = { enabled = "all" },
+  parameterTypes = { enabled = true },
+  variableTypes = { enabled = true },
+  propertyDeclarationTypes = { enabled = false },
+  functionLikeReturnTypes = { enabled = true },
+  enumMemberValues = { enabled = false },
+}
 ---@type LazySpec
 return {
   "AstroNvim/astrolsp",
@@ -6,6 +14,12 @@ return {
 
   ---@type AstroLSPOpts
   opts = {
+    features = {
+      codelens = true,
+      inlay_hints = true,
+      semantic_tokens = true,
+      signature_help = false,
+    },
     ---@type any
     config = {
       eslint = {
@@ -28,25 +42,11 @@ return {
         settings = {
           typescript = {
             updateImportsOnFileMove = { enabled = "always" },
-            inlayHints = {
-              parameterNames = { enabled = "all" },
-              parameterTypes = { enabled = true },
-              variableTypes = { enabled = true },
-              propertyDeclarationTypes = { enabled = true },
-              functionLikeReturnTypes = { enabled = true },
-              enumMemberValues = { enabled = true },
-            },
+            inlayHints = inlayHints,
           },
           javascript = {
             updateImportsOnFileMove = { enabled = "always" },
-            inlayHints = {
-              parameterNames = { enabled = "literals" },
-              parameterTypes = { enabled = true },
-              variableTypes = { enabled = true },
-              propertyDeclarationTypes = { enabled = true },
-              functionLikeReturnTypes = { enabled = true },
-              enumMemberValues = { enabled = true },
-            },
+            inlayHints = inlayHints,
           },
         },
       },
@@ -56,6 +56,14 @@ return {
             tsserver = {
               globalPlugins = {},
             },
+          },
+          typescript = {
+            updateImportsOnFileMove = { enabled = "always" },
+            inlayHints = inlayHints,
+          },
+          javascript = {
+            updateImportsOnFileMove = { enabled = "always" },
+            inlayHints = inlayHints,
           },
         },
         before_init = function(_, config)

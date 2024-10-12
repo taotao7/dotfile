@@ -26,6 +26,7 @@ return {
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   { import = "astrocommunity.editing-support.copilotchat-nvim" },
+  -- { import = "astrocommunity.editing-support.copilotchat-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
