@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Vitesse Dark",
+  "theme": "Catppuccin Mocha",
   "language_models": {
     "openai": {
       "version": "1",
@@ -69,6 +69,7 @@
   "vertical_scroll_margin": 0,
   "line_numbers": false,
   "indent_guides": {
+    "line_width": 1,
     "enabled": false,
     "highlight_active_indent": true,
     "active_line_width": 3,
