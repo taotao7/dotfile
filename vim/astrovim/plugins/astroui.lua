@@ -3,7 +3,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "vitesse",
+    colorscheme = "onedark_vivid",
     icons = {
       ActiveLSP = "",
       ActiveTS = " ",
