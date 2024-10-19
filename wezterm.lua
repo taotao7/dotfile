@@ -4,7 +4,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = 'One Dark (Gogh)'
+config.color_scheme = "OneDark (base16)"
 config.font = wezterm.font("BlexMono Nerd Font Mono")
 config.font_size = 13
 config.window_frame = {
