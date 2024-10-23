@@ -13,7 +13,7 @@ return {
   -- { import = "astrocommunity.completion.coq_nvim" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
