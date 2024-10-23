@@ -4,9 +4,9 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = "OneDark (base16)"
-config.font = wezterm.font("BlexMono Nerd Font Mono")
-config.font_size = 14
+config.color_scheme = "Oxocarbon Dark (Gogh)"
+config.font = wezterm.font("CartographCF Nerd Font")
+config.font_size = 13
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
@@ -56,7 +56,7 @@ config.initial_rows = 24
 config.window_padding = {
 	left = 8,
 	right = 8,
-	top = 12,
+	top = 0,
 	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"
