@@ -1,0 +1,76 @@
+{
+  "models": [
+    {
+      "title": "DeepSeek Chat",
+      "provider": "deepseek",
+      "model": "deepseek-chat",
+      "apiKey": "xxx",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses. Always respond in Chinese."
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "DeepSeek Coder",
+    "provider": "deepseek",
+    "model": "deepseek-coder",
+    "apiKey": "xxx"
+  },
+  "customCommands": [
+    {
+      "name": "test",
+      "prompt": "{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+      "description": "Write unit tests for highlighted code"
+    }
+  ],
+  "contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    },
+    {
+      "name": "folder",
+      "params": {}
+    },
+    {
+      "name": "codebase",
+      "params": {}
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "edit",
+      "description": "修改选中的代码"
+    },
+    {
+      "name": "comment",
+      "description": "给选中代码添加注释"
+    },
+    {
+      "name": "share",
+      "description": "导出当前的对话到Markdown"
+    },
+    {
+      "name": "cmd",
+      "description": "生成Shell命令"
+    },
+    {
+      "name": "commit",
+      "description": "生成git commit消息"
+    }
+  ]
+}
