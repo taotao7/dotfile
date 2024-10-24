@@ -131,6 +131,7 @@ export GEMINI_KEY="AIzaSyD9CPxDdpngD3QUntRBzVDtIvCkjHiN35g"
 export DEEPSEEK_API_KEY="sk-ada719ac7b0d401b82158f5d946816fb"
 export AIDER_CHAT_LANGUAGE="Chinese"
 export AIDER_DARK_MODE=True
+export AIDER_DEEPSEEK=True
 
 
 
