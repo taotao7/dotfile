@@ -1,6 +1,10 @@
 return {
   "yetone/avante.nvim",
   build = ":AvanteBuild",
+  init = function()
+    local config = require "avante.config"
+    config.auto_suggestions_provider = "deepseek"
+  end,
   cmd = {
     "AvanteAsk",
     "AvanteBuild",
@@ -102,6 +106,13 @@ return {
           require("avante.providers").openai.parse_response(data_stream, event_state, opts)
         end,
       },
+    },
+    behaviour = {
+      auto_suggestions = true, -- Experimental stage
+      auto_set_highlight_group = true,
+      auto_set_keymaps = true,
+      auto_apply_diff_after_generation = false,
+      support_paste_from_clipboard = false,
     },
   },
   specs = {},
