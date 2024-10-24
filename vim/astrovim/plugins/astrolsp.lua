@@ -1,9 +1,9 @@
 local inlayHints = {
-  parameterNames = { enabled = "all" },
+  parameterNames = { enabled = "literals" },
   parameterTypes = { enabled = true },
-  variableTypes = { enabled = true },
+  variableTypes = { enabled = false },
   propertyDeclarationTypes = { enabled = false },
-  functionLikeReturnTypes = { enabled = true },
+  functionLikeReturnTypes = { enabled = false },
   enumMemberValues = { enabled = false },
 }
 ---@type LazySpec
