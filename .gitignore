@@ -3,3 +3,4 @@
 local-patch
 patched-src
 plugin/
+.aider*
