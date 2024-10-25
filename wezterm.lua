@@ -32,7 +32,9 @@ config.enable_scroll_bar = false
 config.min_scroll_bar_height = "3cell"
 config.colors = {
 	scrollbar_thumb = "#34354D",
+	background = "rgba(0, 0, 0, 0.3)",
 }
+config.macos_window_background_blur = 25
 
 -- tab bar
 config.enable_tab_bar = false

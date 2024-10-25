@@ -16,24 +16,30 @@ return {
     "AvanteClear",
   },
   dependencies = {
-    "stevearc/dressing.nvim",
     {
-      -- make sure `Avante` is added as a filetype
-      "MeanderingProgrammer/render-markdown.nvim",
-      optional = true,
-      opts = function(_, opts)
-        if not opts.file_types then opts.filetypes = { "markdown" } end
-        opts.file_types = require("astrocore").list_insert_unique(opts.file_types, { "Avante" })
-      end,
+      -- support for image pasting
+      "HakonHarnes/img-clip.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- recommended settings
+        default = {
+          embed_image_as_base64 = false,
+          prompt_for_file_name = false,
+          drag_and_drop = {
+            insert_mode = true,
+          },
+          -- required for Windows users
+          use_absolute_path = true,
+        },
+      },
     },
     {
-      -- make sure `Avante` is added as a filetype
-      "OXY2DEV/markview.nvim",
-      optional = true,
-      opts = function(_, opts)
-        if not opts.filetypes then opts.filetypes = { "markdown", "quarto", "rmd" } end
-        opts.filetypes = require("astrocore").list_insert_unique(opts.filetypes, { "Avante" })
-      end,
+      -- Make sure to set this up properly if you have lazy=true
+      "MeanderingProgrammer/render-markdown.nvim",
+      opts = {
+        file_types = { "markdown", "Avante" },
+      },
+      ft = { "markdown", "Avante" },
     },
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
