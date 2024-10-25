@@ -4,3 +4,4 @@ local-patch
 patched-src
 plugin/
 .aider*
+.env
