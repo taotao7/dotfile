@@ -99,7 +99,15 @@ return {
             body = {
               model = opts.model,
               messages = { -- you can make your own message, but this is very advanced
-                { role = "system", content = code_opts.system_prompt },
+                {
+                  role = "system",
+                  content = [[
+Act as an expert software developer.
+Always use best practices when coding.
+Respect and use existing conventions, libraries, etc that are already present in the code base.
+Always respond in Chinese.
+]],
+                },
                 { role = "user", content = require("avante.providers.openai").get_user_message(code_opts) },
               },
               temperature = 0,
