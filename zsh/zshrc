@@ -111,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
+alias setproxy="export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890"
+alias unsetproxy="unset https_proxy http_proxy all_proxy"
 # alias cat="bat"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:/Users/tao/.local/bin:/Users/tao/flutter/bin:/opt/homebrew/opt/binutils/bin:/$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
@@ -127,8 +129,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 alias x86="$env /usr/bin/arch -x86_64 /bin/zsh ---login"
 alias arm="$env /usr/bin/arch -arm64 /bin/zsh ---login"
-export GEMINI_KEY="AIzaSyD9CPxDdpngD3QUntRBzVDtIvCkjHiN35g"
-export DEEPSEEK_API_KEY="sk-ada719ac7b0d401b82158f5d946816fb"
+export GEMINI_KEY="xxxx"
+export DEEPSEEK_API_KEY="xxxxx"
 export AIDER_CHAT_LANGUAGE="Chinese"
 export AIDER_DARK_MODE=True
 export AIDER_DEEPSEEK=True
