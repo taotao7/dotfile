@@ -1,10 +1,10 @@
 return {
   "yetone/avante.nvim",
   build = ":AvanteBuild",
-  init = function()
-    local config = require "avante.config"
-    config.auto_suggestions_provider = "deepseek"
-  end,
+  -- init = function()
+  --   local config = require "avante.config"
+  --   config.auto_suggestions_provider = "deepseek"
+  -- end,
   cmd = {
     "AvanteAsk",
     "AvanteBuild",
@@ -122,7 +122,7 @@ Always respond in Chinese.
       },
     },
     behaviour = {
-      auto_suggestions = true, -- Experimental stage
+      auto_suggestions = false, -- Experimental stage
       auto_set_highlight_group = true,
       auto_set_keymaps = true,
       auto_apply_diff_after_generation = false,
