@@ -89,6 +89,11 @@ return {
         model = "deepseek-coder",
         api_key_name = "DEEPSEEK_API_KEY",
         parse_curl_args = function(opts, code_opts)
+          code_opts.system_prompt = [[Act as an expert software developer.
+Always use best practices when coding.
+Respect and use existing conventions, libraries, etc that are already present in the code base.
+Always respond in Chinese.]]
+
           return {
             url = opts.endpoint,
             headers = {
@@ -98,18 +103,7 @@ return {
             },
             body = {
               model = opts.model,
-              messages = { -- you can make your own message, but this is very advanced
-                {
-                  role = "system",
-                  content = [[
-Act as an expert software developer.
-Always use best practices when coding.
-Respect and use existing conventions, libraries, etc that are already present in the code base.
-Always respond in Chinese.
-]],
-                },
-                { role = "user", content = require("avante.providers.openai").get_user_message(code_opts) },
-              },
+              messages = require("avante.providers.openai").parse_messages(code_opts),
               temperature = 0,
               max_tokens = 4096,
               stream = true, -- this will be set by default.

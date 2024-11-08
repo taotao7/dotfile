@@ -5,3 +5,4 @@ patched-src
 plugin/
 .aider*
 .env
+.python-version
