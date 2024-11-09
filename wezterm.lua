@@ -4,7 +4,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = "Oxocarbon Dark (Gogh)"
+config.color_scheme = "Solarized Dark (Gogh)"
 config.font = wezterm.font("UbuntuMono Nerd Font")
 config.font_size = 18
 config.window_frame = {
@@ -32,8 +32,10 @@ config.enable_scroll_bar = false
 config.min_scroll_bar_height = "3cell"
 config.colors = {
 	scrollbar_thumb = "#34354D",
-	background = "rgba(0, 0, 0, 0.3)",
+	-- background = "rgba(0, 0, 0, 0.6)",
 }
+config.window_background_opacity = 0.3
+
 config.macos_window_background_blur = 25
 
 -- tab bar
