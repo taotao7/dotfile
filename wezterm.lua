@@ -34,7 +34,7 @@ config.colors = {
 	scrollbar_thumb = "#34354D",
 	-- background = "rgba(0, 0, 0, 0.6)",
 }
-config.window_background_opacity = 0.3
+config.window_background_opacity = 0.8
 
 config.macos_window_background_blur = 25
 
