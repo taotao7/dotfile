@@ -82,38 +82,12 @@ return {
     },
   },
   opts = {
-    provider = "deepseek",
-    vendors = {
-      deepseek = {
-        endpoint = "https://api.deepseek.com/chat/completions",
-        model = "deepseek-coder",
-        api_key_name = "DEEPSEEK_API_KEY",
-        parse_curl_args = function(opts, code_opts)
-          code_opts.system_prompt = [[Act as an expert software developer.
-Always use best practices when coding.
-Respect and use existing conventions, libraries, etc that are already present in the code base.
-Always respond in Chinese.]]
-
-          return {
-            url = opts.endpoint,
-            headers = {
-              ["Accept"] = "application/json",
-              ["Content-Type"] = "application/json",
-              ["Authorization"] = "Bearer " .. os.getenv(opts.api_key_name),
-            },
-            body = {
-              model = opts.model,
-              messages = require("avante.providers.openai").parse_messages(code_opts),
-              temperature = 0,
-              max_tokens = 4096,
-              stream = true, -- this will be set by default.
-            },
-          }
-        end,
-        parse_response_data = function(data_stream, event_state, opts)
-          require("avante.providers").openai.parse_response(data_stream, event_state, opts)
-        end,
-      },
+    provider = "claude",
+    claude = {
+      endpoint = "https://api.302.ai",
+      model = "claude-3-5-sonnet-20241022",
+      temperature = 0,
+      max_tokens = 4096,
     },
     behaviour = {
       auto_suggestions = false, -- Experimental stage

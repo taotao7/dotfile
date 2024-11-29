@@ -3,7 +3,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "solarized-osaka",
+    colorscheme = "catppuccin-macchiato",
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal

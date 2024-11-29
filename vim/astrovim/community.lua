@@ -11,7 +11,7 @@ return {
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
   -- { import = "astrocommunity.completion.coq_nvim" },
-  { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.completion.supermaven-nvim" },
