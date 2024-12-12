@@ -3,7 +3,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "astrodark",
+    colorscheme = "monokai-pro",
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal

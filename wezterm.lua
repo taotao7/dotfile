@@ -4,9 +4,9 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = "Solarized Dark (Gogh)"
+config.color_scheme = "Monokai Pro (Gogh)"
 config.font = wezterm.font("UbuntuMono Nerd Font")
-config.font_size = 17
+config.font_size = 16
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
@@ -34,7 +34,7 @@ config.colors = {
 	scrollbar_thumb = "#34354D",
 	-- background = "rgba(0, 0, 0, 0.6)",
 }
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.5
 
 config.macos_window_background_blur = 25
 
@@ -60,7 +60,7 @@ config.initial_rows = 24
 config.window_padding = {
 	left = 8,
 	right = 8,
-	top = 28,
+	top = 16,
 	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"
