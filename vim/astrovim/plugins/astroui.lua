@@ -2,6 +2,7 @@
 return {
   "AstroNvim/astroui",
   opts = {
+    colorscheme = "monokai-pro",
     highlights = {
       init = {
         -- 基础透明设置
@@ -111,15 +112,10 @@ return {
         BufferLineSeparatorSelected = { bg = "none", fg = "none" },
 
         -- Neo-tree 标签区域完整透明设置
-        NeoTreeTabInactive = { bg = "none", fg = "grey" },
-        NeoTreeTabActive = { bg = "none", bold = true },
         NeoTreeTabOuter = { bg = "none" },
         NeoTreeTabOuterActive = { bg = "none" },
         NeoTreeTabOuterInactive = { bg = "none" },
-        NeoTreeTabSeparatorActive = { bg = "none", fg = "none" },
-        NeoTreeTabSeparatorInactive = { bg = "none", fg = "none" },
-        NeoTreeTitleBar = { bg = "none" },
-        
+
         -- Extmarks 相关设置
         NeoTreeTabInactiveInner = { bg = "none" },
         NeoTreeTabActiveInner = { bg = "none" },
@@ -133,26 +129,8 @@ return {
         NeoTreeTabExtmark = { bg = "none" },
         NeoTreeTabExtmarkActive = { bg = "none" },
         NeoTreeTabExtmarkInactive = { bg = "none" },
-        
-        -- 标签页额外设置
-        TabLine = { bg = "none", fg = "grey" },
-        TabLineFill = { bg = "none" },
-        TabLineSel = { bg = "none", bold = true },
-        
-        -- 分隔符和边框设置
         Separator = { bg = "none", fg = "none" },
-        VertSplit = { bg = "none", fg = "none" },
-        WinSeparator = { bg = "none", fg = "none" },
-        FloatBorder = { bg = "none", fg = "none" },
-        
-        -- 标签栏额外背景设置
-        NeoTreeTabActive = { bg = "none", bold = true },
-        NeoTreeTabInactive = { bg = "none", fg = "grey" },
         NeoTreeTabSeparator = { bg = "none", fg = "none" },
-        NeoTreeTabSeparatorActive = { bg = "none", fg = "none" },
-        NeoTreeTabSeparatorInactive = { bg = "none", fg = "none" },
-        
-        -- 新增可能的高亮组
         NeoTreeTabContainer = { bg = "none" },
         NeoTreeTabContainerActive = { bg = "none" },
         NeoTreeTabContainerInactive = { bg = "none" },
@@ -173,6 +151,12 @@ return {
         ExtmarkText = { bg = "none" },
         ExtmarkTextActive = { bg = "none" },
         ExtmarkTextInactive = { bg = "none" },
+
+        -- 补全菜单透明设置
+        Pmenu = { bg = "none" },
+        PmenuSel = { bg = "none" },
+        PmenuSbar = { bg = "none" },
+        PmenuThumb = { bg = "none" },
       },
     },
   },
