@@ -9,7 +9,7 @@ return {
         NormalNC = { bg = "none" },
         NormalFloat = { bg = "none" },
         FloatBorder = { bg = "none" },
-        
+
         -- Neo-tree 完整透明设置
         NeoTreeNormal = { bg = "none" },
         NeoTreeNormalNC = { bg = "none" },
@@ -28,7 +28,7 @@ return {
         NeoTreeGitStaged = { bg = "none" },
         NeoTreeGitUnstaged = { bg = "none" },
         NeoTreeWindowsHidden = { bg = "none" },
-        
+
         -- Neo-tree 边框完整透明设置
         NeoTreeWinSeparator = { bg = "none", fg = "none" },
         NeoTreeEndOfBuffer = { bg = "none" },
@@ -37,14 +37,13 @@ return {
         NeoTreeTabSeparatorInactive = { bg = "none", fg = "none" },
         NeoTreeTabActive = { bg = "none" },
         NeoTreeTabInactive = { bg = "none" },
-        NeoTreeFloatBorder = { bg = "none", fg = "none" },
         WinSeparator = { bg = "none", fg = "none" },
-        
+
         -- 确保分割线也透明
         VertSplit = { bg = "none", fg = "none" },
         WinBar = { bg = "none" },
         WinBarNC = { bg = "none" },
-        
+
         -- Telescope 完整透明设置
         TelescopeNormal = { bg = "none" },
         TelescopeBorder = { bg = "none" },
@@ -61,7 +60,7 @@ return {
         TelescopePreviewLine = { bg = "none" },
         TelescopePromptPrefix = { bg = "none" },
         TelescopeMatching = { bg = "none" },
-        
+
         -- 其他必要的透明设置
         SignColumn = { bg = "none" },
         LineNr = { bg = "none" },
