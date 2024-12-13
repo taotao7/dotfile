@@ -57,7 +57,18 @@
   font-family: "UbuntuMono Nerd Font", monospace !important;
   font-size: 14px !important;
   font-weight: 400 !important;
+}
+
+/* 暗色主题文字颜色 */
+[data-vscode-theme-kind="vscode-dark"] .monaco-tree .monaco-tree-row .label-name,
+[data-vscode-theme-kind="vscode-dark"] .monaco-list .monaco-list-row .monaco-icon-label .label-name {
   color: #fff !important;
+}
+
+/* 亮色主题文字颜色 */
+[data-vscode-theme-kind="vscode-light"] .monaco-tree .monaco-tree-row .label-name,
+[data-vscode-theme-kind="vscode-light"] .monaco-list .monaco-list-row .monaco-icon-label .label-name {
+  color: #333 !important;
 }
 
 /* Sidebar top shadow */
@@ -106,21 +117,43 @@
 .monaco-hover {
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
   padding: 10px !important;
-  background-image: linear-gradient(#2d2a2e 0%, #403e41 100%) !important;
-  backdrop-filter: blur(3px) !important;
   border-radius: 20px !important;
   border: none !important;
 }
 
+/* 暗色主题 */
+[data-vscode-theme-kind="vscode-dark"] .monaco-editor-hover,
+[data-vscode-theme-kind="vscode-dark"] .monaco-hover {
+  background-color: rgba(45, 42, 46, 0.8) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+/* 亮色主题 */
+[data-vscode-theme-kind="vscode-light"] .monaco-editor-hover,
+[data-vscode-theme-kind="vscode-light"] .monaco-hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
 
 /* Search Label */
 .search-label {
   font-family: "UbuntuMono Nerd Font" !important;
   font-size: 16px !important;
-  color: #fff;
   display: block;
   text-align: center !important;
   margin: 0 auto !important;
+}
+
+/* 暗色主题搜索标签颜色 */
+[data-vscode-theme-kind="vscode-dark"] .search-label {
+  color: #fff;
+}
+
+/* 亮色主题搜索标签颜色 */
+[data-vscode-theme-kind="vscode-light"] .search-label {
+  color: #333;
 }
 
 /* Search icon */
@@ -143,9 +176,21 @@
   top: 50% !important;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.45) !important;
   padding: 10px 10px 18px 10px !important;
-  background-image: linear-gradient(#2d2a2e 0%, #403e41 100%) !important;
-  backdrop-filter: blur(3px) !important;
   border-radius: 20px !important;
+}
+
+/* 暗色主题 */
+[data-vscode-theme-kind="vscode-dark"] .quick-input-widget {
+  background-color: rgba(45, 42, 46, 0.8) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+/* 亮色主题 */
+[data-vscode-theme-kind="vscode-light"] .quick-input-widget {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
 }
 
 /* Remove background for lists */
@@ -168,25 +213,46 @@
   border-radius: 12px !important;
   padding: 8px !important;
   border: none !important;
-  background-color: rgba(34, 34, 34, 0.4) !important;
   font-family: "UbuntuMono Nerd Font" !important;
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
 
 #command-blur {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.15);
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(8px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
-/* Command palette's input box placeholder. */
-.monaco-inputbox input::placeholder {
+
+/* 暗色主题输入框背景 */
+[data-vscode-theme-kind="vscode-dark"] .quick-input-filter .monaco-inputbox {
+  background-color: rgba(34, 34, 34, 0.4) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+/* 亮色主题输入框背景 */
+[data-vscode-theme-kind="vscode-light"] .quick-input-filter .monaco-inputbox {
+  background-color: rgba(240, 240, 240, 0.4) !important;
+  backdrop-filter: blur(3px) !important;
+  -webkit-backdrop-filter: blur(3px) !important;
+}
+
+/* Command palette's input box placeholder */
+/* 暗色主题占位符颜色 */
+[data-vscode-theme-kind="vscode-dark"] .monaco-inputbox input::placeholder {
   color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* 亮色主题占位符颜色 */
+[data-vscode-theme-kind="vscode-light"] .monaco-inputbox input::placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
 }
 
 /* .monaco-workbench label {
