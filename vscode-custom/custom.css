@@ -5,7 +5,7 @@
 }
 
 /* 暗色主题样式保持不变 */
-.vs-dark .mtk1 {
+/* .vs-dark .mtk1 {
     color: #f8f8f2;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0), 0 0 3px rgba(0, 0, 0, 0), 0 0 5px rgba(0, 0, 0, 0), 0 0 8px #f8f8f2;
 }
@@ -46,8 +46,8 @@
 }
 
 /* 亮色主题样式 */
-.mtk1 {
-    color: #2d2d2d;
+/* .mtk1 {
+    /* color: #2d2d2d;
     text-shadow: 0 0 2px rgba(45, 45, 45, 0.2), 0 0 3px rgba(45, 45, 45, 0.2);
 }
 
@@ -83,7 +83,7 @@
  .mtk13 {
     color: #c17900;
     text-shadow: 0 0 2px rgba(193, 121, 0, 0.3), 0 0 4px rgba(193, 121, 0, 0.2);
-}
+}  */
 
 
 .line-numbers {
