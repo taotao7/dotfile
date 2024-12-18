@@ -387,29 +387,8 @@
   "editor.suggestLineHeight": 30,
   "terminal.integrated.lineHeight": 1.5,
   "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.padding.top": 16,
-  "editor.stickyScroll.enabled": false,
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [
-          "comment",
-          "keyword",
-          "variable.language",
-          "entity.other.attribute-name.html",
-          "entity.other.attribute-name",
-          "keyword.control",
-          "storage.type",
-          "comment",
-          "comment.block",
-          "comment.line"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-  }
+  "editor.stickyScroll.enabled": false
 }

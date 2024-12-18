@@ -2,7 +2,6 @@
 return {
   "AstroNvim/astroui",
   opts = {
-    colorscheme = "monokai-pro",
     highlights = {
       init = {
         -- 基础透明设置
