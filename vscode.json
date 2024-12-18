@@ -229,7 +229,7 @@
   "workbench.preferredLightColorTheme": "Monokai Pro Light",
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2024/12/17 11:34:47",
+    "//": "Last update at 2024/12/18 11:29:27",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
@@ -365,8 +365,6 @@
   "files.insertFinalNewline": true,
   "workbench.editor.showTabs": "multiple",
   "breadcrumbs.enabled": false,
-  "editor.hover.delay": 1000,
-  "editor.hover.enabled": true,
   "editor.matchBrackets": "never",
   "workbench.tips.enabled": false,
   "editor.colorDecorators": true,
