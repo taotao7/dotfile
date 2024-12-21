@@ -10,7 +10,7 @@ return {
   -- { import = "astrocommunity.diagnostics.error-lens-nvim" },
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
-  -- { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
