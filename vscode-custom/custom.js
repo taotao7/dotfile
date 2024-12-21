@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Execute when command palette was launched.
   document.addEventListener("keydown", function (event) {
-    if ((event.metaKey || event.ctrlKey) && event.key === "p") {
+    if (event.metaKey && event.key === "p") {
       event.preventDefault();
       runMyScript();
     } else if (event.key === "Escape" || event.key === "Esc") {
