@@ -363,7 +363,7 @@
   "window.nativeFullScreen": true,
   "files.insertFinalNewline": true,
   "workbench.editor.showTabs": "multiple",
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "editor.matchBrackets": "never",
   "workbench.tips.enabled": false,
   "editor.colorDecorators": true,
