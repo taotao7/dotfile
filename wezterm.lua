@@ -4,9 +4,9 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = "Monokai Pro (Gogh)"
+config.color_scheme = "Gruvbox dark, soft (base16)"
 config.font = wezterm.font("UbuntuMono Nerd Font")
-config.font_size = 16
+config.font_size = 18
 config.window_frame = {
 	font = wezterm.font("Roboto"),
 	font_size = 14,
@@ -34,7 +34,7 @@ config.colors = {
 	scrollbar_thumb = "#34354D",
 	-- background = "rgba(0, 0, 0, 0.6)",
 }
-config.window_background_opacity = 0.5
+config.window_background_opacity = 1
 
 config.macos_window_background_blur = 25
 
