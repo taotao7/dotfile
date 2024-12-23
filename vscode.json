@@ -389,6 +389,5 @@
   "workbench.statusBar.visible": true,
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.padding.top": 16,
-  "editor.stickyScroll.enabled": false,
-  "vscode-neovim.neovimClean": true
+  "editor.stickyScroll.enabled": false
 }
