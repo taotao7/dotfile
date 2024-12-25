@@ -17,7 +17,6 @@ end
 
 if vim.g.vscode then
   local cmdheight = 1 -- this is the new line I added
-  return
 end
 
 require "lazy_setup"
