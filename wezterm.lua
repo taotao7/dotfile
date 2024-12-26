@@ -4,7 +4,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
-config.color_scheme = "Gruvbox dark, soft (base16)"
+config.color_scheme = "Monokai Pro (Gogh)"
 config.font = wezterm.font("UbuntuMono Nerd Font")
 config.font_size = 18
 config.window_frame = {
