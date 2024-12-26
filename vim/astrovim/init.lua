@@ -16,7 +16,7 @@ if not pcall(require, "lazy") then
 end
 
 if vim.g.vscode then
-  local cmdheight = 1 -- this is the new line I added
+  cmdheight = 1 -- this is the new line I added
 end
 
 require "lazy_setup"

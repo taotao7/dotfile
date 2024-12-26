@@ -229,7 +229,7 @@
   "workbench.preferredLightColorTheme": "Monokai Pro Light",
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2024/12/23 10:00:17",
+    "//": "Last update at 2024/12/26 10:06:21",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
@@ -345,7 +345,7 @@
   "editor.guides.indentation": false,
   "notebook.showFoldingControls": "never",
   "editor.guides.highlightActiveIndentation": false,
-  "workbench.preferredDarkColorTheme": "Gruvbox Dark Soft",
+  "workbench.preferredDarkColorTheme": "Monokai Pro",
   "vscode_custom_css.imports": [
     "file:///Users/tao/dotfile/vscode-custom/custom.css",
     "file:///Users/tao/dotfile/vscode-custom/custom.js"
@@ -389,5 +389,7 @@
   "workbench.statusBar.visible": true,
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.padding.top": 16,
-  "editor.stickyScroll.enabled": false
+  "editor.stickyScroll.enabled": false,
+  "dotnetAcquisitionExtension.sharedExistingDotnetPath": "/usr/local/share/dotnet/dotnet",
+  "workbench.iconTheme": "Monokai Classic Monochrome Icons"
 }
