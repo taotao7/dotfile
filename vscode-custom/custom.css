@@ -395,3 +395,8 @@
 .tab.active:hover {
     background-color: #d8d8d8 !important;
 }
+
+#workbench\.parts\.editor > div.content > div > div > div > div > div.monaco-scrollable-element.mac > div.split-view-container > div > div > div.editor-container > div > div > div.overflowingContentWidgets > div.cursorGhostTextWidget > div > div > div > div > div:nth-child(1) {
+  width: 300px !important;
+  height: 300px !important;
+}
