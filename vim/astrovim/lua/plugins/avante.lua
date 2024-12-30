@@ -82,7 +82,15 @@ return {
     },
   },
   opts = {
-    provider = "claude",
+    provider = "deepseek",
+    vendors = {
+      deepseek = {
+        __inherited_from = "openai",
+        api_key_name = "DEEPSEEK_API_KEY",
+        endpoint = "https://api.deepseek.com",
+        model = "deepseek-coder",
+      },
+    },
     claude = {
       endpoint = "https://api.302.ai",
       model = "claude-3-5-sonnet-20241022",

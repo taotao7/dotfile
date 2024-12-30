@@ -400,3 +400,12 @@
   width: 300px !important;
   height: 300px !important;
 }
+
+.monaco-list-row {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.monaco-list-row:hover {
+  background-color: transparent !important;
+}
