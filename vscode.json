@@ -229,7 +229,7 @@
   "workbench.preferredLightColorTheme": "Monokai Pro Light",
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2024/12/26 10:06:21",
+    "//": "Last update at 2025/1/2 10:15:33",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
@@ -362,7 +362,7 @@
   "editor.detectIndentation": false,
   "window.nativeFullScreen": true,
   "files.insertFinalNewline": true,
-  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.showTabs": "none",
   "breadcrumbs.enabled": false,
   "editor.matchBrackets": "never",
   "workbench.tips.enabled": false,
@@ -391,5 +391,7 @@
   "editor.padding.top": 16,
   "editor.stickyScroll.enabled": false,
   "dotnetAcquisitionExtension.sharedExistingDotnetPath": "/usr/local/share/dotnet/dotnet",
-  "workbench.iconTheme": "Monokai Classic Monochrome Icons"
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "editor.renderWhitespace": "none",
+  "workbench.editor.editorActionsLocation": "hidden"
 }
