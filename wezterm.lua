@@ -60,7 +60,7 @@ config.initial_rows = 24
 config.window_padding = {
 	left = 8,
 	right = 8,
-	top = 16,
+	top = 0,
 	bottom = 0,
 }
 config.window_close_confirmation = "AlwaysPrompt"
