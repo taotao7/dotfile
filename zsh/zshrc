@@ -134,6 +134,8 @@ export DEEPSEEK_API_KEY="xxxxx"
 export AIDER_CHAT_LANGUAGE="Chinese"
 export AIDER_DARK_MODE=True
 export AIDER_DEEPSEEK=True
+export AIDER_EDITOR=vim
+
 
 
 

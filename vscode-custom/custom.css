@@ -1,6 +1,6 @@
 /* Code comment style */
 .mtk3 {
-  font-family: "UbuntuMono Nerd Font", monospace !important;
+  font-family: "Hurmit Nerd Font", monospace !important;
   color: #008c7d !important;
 }
 
@@ -85,12 +85,11 @@
     text-shadow: 0 0 2px rgba(193, 121, 0, 0.3), 0 0 4px rgba(193, 121, 0, 0.2);
 }  */
 
-
 .line-numbers {
   position: relative !important;
   width: 35px !important;
   font-size: 16px !important;
-  font-family: "UbuntuMono Nerd Font" !important;
+  font-family: "Hurmit Nerd Font" !important;
   opacity: 0.3;
 }
 /* Code canvas top shadow */
@@ -98,8 +97,6 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75) !important;
   top: -6px !important;
 }
-
-
 
 /* Toolbars when tabs are enabled. */
 .monaco-workbench
@@ -138,20 +135,34 @@
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-  font-family: "UbuntuMono Nerd Font", monospace !important;
+  font-family: "Hurmit Nerd Font", monospace !important;
   font-size: 14px !important;
   font-weight: 400 !important;
 }
 
 /* 暗色主题文字颜色 */
-[data-vscode-theme-kind="vscode-dark"] .monaco-tree .monaco-tree-row .label-name,
-[data-vscode-theme-kind="vscode-dark"] .monaco-list .monaco-list-row .monaco-icon-label .label-name {
+[data-vscode-theme-kind="vscode-dark"]
+  .monaco-tree
+  .monaco-tree-row
+  .label-name,
+[data-vscode-theme-kind="vscode-dark"]
+  .monaco-list
+  .monaco-list-row
+  .monaco-icon-label
+  .label-name {
   color: #fff !important;
 }
 
 /* 亮色主题文字颜色 */
-[data-vscode-theme-kind="vscode-light"] .monaco-tree .monaco-tree-row .label-name,
-[data-vscode-theme-kind="vscode-light"] .monaco-list .monaco-list-row .monaco-icon-label .label-name {
+[data-vscode-theme-kind="vscode-light"]
+  .monaco-tree
+  .monaco-tree-row
+  .label-name,
+[data-vscode-theme-kind="vscode-light"]
+  .monaco-list
+  .monaco-list-row
+  .monaco-icon-label
+  .label-name {
   color: #333 !important;
 }
 
@@ -223,7 +234,7 @@
 
 /* Search Label */
 .search-label {
-  font-family: "UbuntuMono Nerd Font" !important;
+  font-family: "Hurmit Nerd Font" !important;
   font-size: 16px !important;
   display: block;
   text-align: center !important;
@@ -241,7 +252,7 @@
 }
 
 /* Search icon */
- .search-icon {
+.search-icon {
   display: none !important;
 }
 
@@ -291,28 +302,26 @@
   background: none !important;
 }
 
-
 /* Command palette text input */
 .quick-input-filter .monaco-inputbox {
   border-radius: 12px !important;
   padding: 8px !important;
   border: none !important;
-  font-family: "UbuntuMono Nerd Font" !important;
+  font-family: "Hurmit Nerd Font" !important;
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
 
 #command-blur {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.15);
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(8px);
-    z-index: 1000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
-
 
 /* 暗色主题输入框背景 */
 [data-vscode-theme-kind="vscode-dark"] .quick-input-filter .monaco-inputbox {
@@ -341,16 +350,15 @@
 
 /* 暗色主题标签颜色 */
 [data-vscode-theme-kind="vscode-dark"] .monaco-workbench label {
-    color: #fff !important;
-    font-size: 14px !important;
+  color: #fff !important;
+  font-size: 14px !important;
 }
 
 /* 亮色主题标签颜色 */
 [data-vscode-theme-kind="vscode-light"] .monaco-workbench label {
-    color: #000 !important;  /* 改为纯黑色 */
-    font-size: 14px !important;
+  color: #000 !important; /* 改为纯黑色 */
+  font-size: 14px !important;
 }
-
 
 /* Container that holds the VS Code home icon. */
 .editor-group-watermark {
@@ -361,42 +369,57 @@
   width: auto !important;
 }
 
-
 /* 暗色主题活动标签页 */
-[data-vscode-theme-kind="vscode-dark"] .monaco-workbench .part.editor>
-.content .editor-group-container.active>
-.title .tabs-container>
-.tab.active {
-    background-color: #2b2d45 !important;
-    border-radius: 5px;
-    overflow: hidden;
+[data-vscode-theme-kind="vscode-dark"]
+  .monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.active {
+  background-color: #2b2d45 !important;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-[data-vscode-theme-kind="vscode-dark"] .monaco-workbench .part.editor>
-.content .editor-group-container.active>
-.title .tabs-container>
-.tab.active:hover {
-    background-color: #343258 !important;
+[data-vscode-theme-kind="vscode-dark"]
+  .monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.active:hover {
+  background-color: #343258 !important;
 }
 
 /* 亮色主题活动标签页 */
-[data-vscode-theme-kind="vscode-light"] .monaco-workbench .part.editor>
-.content .editor-group-container.active>
-.title .tabs-container>
-.tab.active {
-    background-color: #e8e8e8 !important;
-    border-radius: 5px;
-    overflow: hidden;
+[data-vscode-theme-kind="vscode-light"]
+  .monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.active {
+  background-color: #e8e8e8 !important;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-[data-vscode-theme-kind="vscode-light"] .monaco-workbench .part.editor>
-.content .editor-group-container.active>
-.title .tabs-container>
-.tab.active:hover {
-    background-color: #d8d8d8 !important;
+[data-vscode-theme-kind="vscode-light"]
+  .monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.active:hover {
+  background-color: #d8d8d8 !important;
 }
 
-#workbench\.parts\.editor > div.content > div > div > div > div > div.monaco-scrollable-element.mac > div.split-view-container > div > div > div.editor-container > div > div > div.overflowingContentWidgets > div.cursorGhostTextWidget > div > div > div > div > div:nth-child(1) {
+/* #workbench\.parts\.editor > div.content > div > div > div > div > div.monaco-scrollable-element.mac > div.split-view-container > div > div > div.editor-container > div > div > div.overflowingContentWidgets > div.cursorGhostTextWidget > div > div > div > div > div:nth-child(1) {
   width: 300px !important;
   height: 300px !important;
 }
@@ -408,4 +431,4 @@
 
 .monaco-list-row:hover {
   background-color: transparent !important;
-}
+} */
