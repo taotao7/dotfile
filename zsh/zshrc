@@ -132,6 +132,7 @@ alias arm="$env /usr/bin/arch -arm64 /bin/zsh ---login"
 export GEMINI_KEY="xxxx"
 export DEEPSEEK_API_KEY="xxxxx"
 export AIDER_CHAT_LANGUAGE="Chinese"
+export AIDER_AUTO_COMMITS=False
 export AIDER_DARK_MODE=True
 export AIDER_DEEPSEEK=True
 export AIDER_EDITOR=vim
