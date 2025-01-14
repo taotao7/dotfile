@@ -25,6 +25,7 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   -- { import = "astrocommunity.editing-support.copilotchat-nvim" },
