@@ -7,30 +7,35 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Tokyo Night Storm",
-  "language_models": {
-    "openai": {
-      "version": "1",
-      "available_models": [
-        {
-          "name": "deepseek-coder",
-          "max_tokens": 128000
-        },
-        {
-          "name": "deepseek-chat",
-          "max_tokens": 128000
-        }
-      ],
-      "api_url": "https://api.deepseek.com/beta"
-    }
-  },
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "openai",
+      "model": "deepseek-chat"
     },
     "version": "2"
   },
+  "theme": "One Dark",
+  "features": { "inline_completion_provider": "supermaven" },
+  "language_models": {
+    "openai": {
+      "version": "1",
+      "api_url": "https://api.deepseek.com/v1",
+      "available_models": [
+        {
+          "name": "deepseek-chat",
+          "display_name": "deepseek",
+          "max_tokens": 128000
+        }
+      ]
+    }
+  },
+  // "assistant": {
+  //   "default_model": {
+  //     "provider": "copilot_chat",
+  //     "model": "gpt-4o"
+  //   },
+  //   "version": "2"
+  // },
   // "assistant": {
   //   "version": "2",
   //   "default_model": {
@@ -59,8 +64,8 @@
   "auto_signature_help": false,
   "vim_mode": true,
   "ui_font_size": 15,
-  "buffer_font_size": 13,
-  "buffer_font_family": "CartographCF Nerd Font",
+  "buffer_font_size": 16,
+  "buffer_font_family": "Hurmit Nerd Font",
   "cursor_blink": true,
   "relative_line_numbers": true,
   "scrollbar": {
@@ -104,40 +109,6 @@
           "command": "black",
           "arguments": ["-"]
         }
-      }
-    }
-  },
-  "experimental.theme_overrides": {
-    "syntax": {
-      "attribute": {
-        "color": "#74ade8ff",
-        "font_style": null,
-        "font_weight": null
-      },
-      "comment": {
-        "color": "#5d636fff",
-        "font_style": "italic",
-        "font_weight": null
-      },
-      "function": {
-        "color": "#73ade9ff",
-        "font_style": "italic",
-        "font_weight": null
-      },
-      "keyword": {
-        "color": "#b477cfff",
-        "font_style": null,
-        "font_weight": null
-      },
-      "type": {
-        "color": "#6eb4bfff",
-        "font_style": "italic",
-        "font_weight": null
-      },
-      "variable": {
-        "color": "#c8ccd4ff",
-        "font_style": null,
-        "font_weight": null
       }
     }
   }
