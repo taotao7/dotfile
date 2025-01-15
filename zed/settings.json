@@ -14,7 +14,7 @@
     },
     "version": "2"
   },
-  "theme": "One Dark",
+  "theme": "Andromeda",
   "features": { "inline_completion_provider": "supermaven" },
   "language_models": {
     "openai": {
@@ -49,6 +49,7 @@
   //     "api_url": "https://openai.api2d.net/v1"
   //   }
   // },
+  "always_treat_brackets_as_autoclosed": true,
   "soft_wrap": "editor_width",
   "outline_panel": {
     "button": true,
