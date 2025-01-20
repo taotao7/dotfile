@@ -82,7 +82,7 @@ return {
     },
   },
   opts = {
-    provider = "deepseek",
+    provider = "claude",
     vendors = {
       deepseek = {
         __inherited_from = "openai",
@@ -95,7 +95,7 @@ return {
       endpoint = "https://api.302.ai",
       model = "claude-3-5-sonnet-20241022",
       temperature = 0,
-      max_tokens = 4096,
+      max_tokens = 8192,
     },
     behaviour = {
       auto_suggestions = false, -- Experimental stage
