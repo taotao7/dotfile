@@ -100,5 +100,6 @@
   "workbench.list.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
   "editor.guides.bracketPairsHorizontal": false,
-  "editor.guides.indentation": false
+  "editor.guides.indentation": false,
+  "editor.formatOnSave": true
 }
