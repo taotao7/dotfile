@@ -82,7 +82,7 @@ return {
     },
   },
   opts = {
-    provider = "claude",
+    provider = "deepseek",
     vendors = {
       deepseek = {
         __inherited_from = "openai",
