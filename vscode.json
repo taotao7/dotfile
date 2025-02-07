@@ -121,8 +121,8 @@
   "editor.formatOnSave": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
-  "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "security.workspace.trust.enabled": true,
@@ -141,5 +141,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cursor.composer.renderPillsInsteadOfBlocks": true,
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
