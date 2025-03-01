@@ -12,7 +12,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map za <Action>(CollapseSelection)
-map s (flash.search)
+map s <Action>(flash.search)
 
 " Fast saving
 nmap <leader>w :w!<cr>
