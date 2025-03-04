@@ -10,12 +10,12 @@
   "icon_theme": "Material Icon Theme",
   "assistant": {
     "default_model": {
-      "provider": "openai",
-      "model": "deepseek-chat"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
-  "theme": "Zedokai (Filter Spectrum)",
+  "theme": "Zedokai Light (Filter Sun)",
   "features": { "edit_prediction_provider": "zed" },
   "language_models": {
     "openai": {
@@ -66,7 +66,7 @@
   "auto_signature_help": false,
   "vim_mode": true,
   "ui_font_size": 15,
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "cursor_blink": true,
   "relative_line_numbers": true,
@@ -77,11 +77,11 @@
   "line_numbers": false,
   "indent_guides": {
     "line_width": 1,
-    "enabled": false,
+    "enabled": true,
     "highlight_active_indent": true,
     "active_line_width": 3,
     "coloring": "indent_aware",
-    "background_coloring": "disabled"
+    "background_coloring": "indent_aware"
   },
   "tab_bar": {
     "show": true,
