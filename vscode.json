@@ -163,7 +163,7 @@
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
   "workbench.preferredLightColorTheme": "Monokai Pro Light (Filter Sun)",
-  "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.preferredDarkColorTheme": "Monokai Pro",
   "window.autoDetectColorScheme": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
