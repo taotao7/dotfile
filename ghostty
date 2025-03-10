@@ -1,5 +1,5 @@
 font-family = "SauceCodePro Nerd Font Mono"
-font-size = 16
-theme = "Monokai Pro Spectrum"
+font-size = 14
+theme = "seoulbones_dark"
 window-height=65
-window-width=125
+window-width=125 
