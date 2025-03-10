@@ -20,7 +20,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2025/3/3 15:01:18",
+    "//": "Last update at 2025/3/10 10:10:43",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .lfsconfig, .mailmap, .git-blame*",
@@ -141,7 +141,7 @@
   "cursor.composer.renderPillsInsteadOfBlocks": true,
   "extensions.ignoreRecommendations": true,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "editor.fontSize": 14,
   "[astro]": {
@@ -163,7 +163,10 @@
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
   "workbench.preferredLightColorTheme": "Monokai Pro Light (Filter Sun)",
-  "workbench.preferredDarkColorTheme": "Monokai Pro",
+  "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.view.showQuietly": {
+    "workbench.panel.output": true
+  },
   "window.autoDetectColorScheme": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
