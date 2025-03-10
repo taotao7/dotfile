@@ -19,14 +19,17 @@ return {
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"loctvl842/monokai-pro.nvim",
 		config = function()
 			require("monokai-pro").setup({
-				filter = "light", -- classic | octagon | pro | machine | ristretto | spectrum
+				filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
 			})
 		end,
+	},
+	{
+		"shaunsingh/seoul256.nvim",
 	},
 }
