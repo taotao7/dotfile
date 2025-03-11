@@ -162,8 +162,7 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "workbench.preferredLightColorTheme": "Monokai Pro Light (Filter Sun)",
-  "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.preferredLightColorTheme": "Horizon Extended - Light Neo",
   "workbench.view.showQuietly": {
     "workbench.panel.output": true
   },
@@ -176,5 +175,6 @@
   "rust-analyzer.inlayHints.genericParameterHints.lifetime.enable": true,
   "rust-analyzer.inlayHints.genericParameterHints.type.enable": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.guides.bracketPairs": true
+  "editor.guides.bracketPairs": true,
+  "workbench.preferredDarkColorTheme": "Horizon Extended - Neo"
 }
