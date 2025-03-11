@@ -1,6 +1,6 @@
 /* Code comment style */
 .mtk3 {
-  font-family: "Hurmit Nerd Font", monospace !important;
+  /* font-family: "Hurmit Nerd Font", monospace !important; */
   color: #008c7d !important;
 }
 
@@ -89,7 +89,7 @@
   position: relative !important;
   width: 35px !important;
   font-size: 16px !important;
-  font-family: "Hurmit Nerd Font" !important;
+  /* font-family: "Hurmit Nerd Font" !important; */
   opacity: 0.3;
 }
 /* Code canvas top shadow */
@@ -135,7 +135,7 @@
 /* File Explorer Item Label */
 .monaco-tree .monaco-tree-row .label-name,
 .monaco-list .monaco-list-row .monaco-icon-label .label-name {
-  font-family: "Hurmit Nerd Font", monospace !important;
+  /* font-family: "Hurmit Nerd Font", monospace !important; */
   font-size: 14px !important;
   font-weight: 400 !important;
 }
@@ -234,7 +234,7 @@
 
 /* Search Label */
 .search-label {
-  font-family: "Hurmit Nerd Font" !important;
+  /* font-family: "Hurmit Nerd Font" !important; */
   font-size: 16px !important;
   display: block;
   text-align: center !important;
@@ -307,7 +307,7 @@
   border-radius: 12px !important;
   padding: 8px !important;
   border: none !important;
-  font-family: "Hurmit Nerd Font" !important;
+  /* font-family: "Hurmit Nerd Font" !important; */
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
