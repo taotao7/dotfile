@@ -3,7 +3,7 @@ if not vim.g.vscode then
 	return {
 		"AstroNvim/astroui",
 		opts = {
-			colorscheme = "seoul256",
+			colorscheme = "horizon",
 			--   highlights = {
 			--     init = {
 			--       -- 基础透明设置
