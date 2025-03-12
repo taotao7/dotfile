@@ -171,10 +171,13 @@
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
-  "go.inlayHints.parameterNames": true,
-  "rust-analyzer.inlayHints.genericParameterHints.lifetime.enable": true,
-  "rust-analyzer.inlayHints.genericParameterHints.type.enable": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.guides.bracketPairs": true,
-  "workbench.preferredDarkColorTheme": "Horizon Extended - Neo"
+  "workbench.preferredDarkColorTheme": "Horizon Extended - Neo",
+  "editor.padding.top": 16,
+  "vscode_custom_css.imports": [
+    "file:///Users/tao/dotfile/vscode-custom/custom.css",
+    "file:///Users/tao/dotfile/vscode-custom/custom.js"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
