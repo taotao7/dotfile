@@ -1,5 +1,6 @@
-font-family = "Hasklug Nerd Font Mono"
+font-family = "SauceCodePro Nerd Font Mono"
 font-size = 14
-theme = "horizon"
+theme=dark:Builtin Solarized Dark,light:Builtin Solarized Light
+background-opacity = 0.9
 window-height=65
 window-width=125 

@@ -20,7 +20,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2025/3/16 16:35:10",
+    "//": "Last update at 2025/3/19 16:44:38",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .lfsconfig, .mailmap, .git-blame*",
@@ -110,7 +110,7 @@
     "*.wat": "$(capture).wasm",
     "*.xaml": "$(capture).xaml.cs"
   },
-  "editor.fontFamily": "\"Hasklug Nerd Font Mono\",'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontFamily": "\"SauceCodePro Nerd Font Mono\",'Droid Sans Mono', 'monospace', monospace",
   "terminal.integrated.fontSize": 14,
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
@@ -118,9 +118,6 @@
   "editor.guides.bracketPairsHorizontal": false,
   "editor.formatOnSave": true,
   "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
-  "workbench.colorTheme": "Horizon Extended - Neo",
-  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "security.workspace.trust.enabled": true,
@@ -162,7 +159,7 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "workbench.preferredLightColorTheme": "Horizon Extended - Light Neo",
+  "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.view.showQuietly": {
     "workbench.panel.output": true
   },
@@ -172,7 +169,6 @@
   "javascript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
   "editor.guides.bracketPairs": true,
-  "workbench.preferredDarkColorTheme": "Horizon Extended - Neo",
   "editor.padding.top": 16,
   "vscode_custom_css.imports": [
     "file:///Users/tao/dotfile/vscode-custom/custom.css",
@@ -181,5 +177,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "terminal.integrated.fontLigatures": true,
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "workbench.preferredDarkColorTheme": "Solarized Dark",
+  "window.titleBarStyle": "custom"
 }
