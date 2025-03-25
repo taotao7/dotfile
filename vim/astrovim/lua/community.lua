@@ -17,7 +17,7 @@ return {
 	-- { import = "astrocommunity.completion.copilot-lua-cmp" },
 	-- { import = "astrocommunity.completion.coq_nvim" },
 	-- { import = "astrocommunity.completion.codeium-vim" },
-	-- { import = "astrocommunity.completion.blink-cmp" },
+	{ import = "astrocommunity.completion.blink-cmp" },
 	{ import = "astrocommunity.completion.supermaven-nvim" },
 	{ import = "astrocommunity.pack.docker" },
 	{ import = "astrocommunity.pack.go" },
