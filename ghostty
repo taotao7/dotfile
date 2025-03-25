@@ -1,6 +1,6 @@
 font-family = "SauceCodePro Nerd Font Mono"
 font-size = 14
-theme=dark:Builtin Solarized Dark,light:Builtin Solarized Light
+theme=dark:gruvbox-material,light:Builtin Solarized Light
 background-opacity = 0.9
-window-height=65
-window-width=125 
+window-height=50
+window-width=80
