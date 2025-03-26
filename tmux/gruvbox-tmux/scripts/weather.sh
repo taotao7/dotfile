@@ -7,8 +7,8 @@ location=$2
 
 display_location() {
 	if $location; then
-		city=$(curl -s https://ipinfo.io/city -H "Authorization: Bearer b144a927227fc2" 2>/dev/null)
-		region=$(curl -s https://ipinfo.io/region -H "Authorization: Bearer b144a927227fc2" 2>/dev/null)
+		city="Chengdu"
+		region="Sichuan"
 		echo " $city, $region"
 	else
 		echo ''

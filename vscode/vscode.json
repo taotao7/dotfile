@@ -161,7 +161,7 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "workbench.preferredLightColorTheme": "Gruvbox Light Soft",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.view.showQuietly": {
     "workbench.panel.output": true
   },
@@ -181,7 +181,8 @@
   "terminal.integrated.fontLigatures": true,
   "editor.fontLigatures": true,
   "window.titleBarStyle": "custom",
-  "workbench.preferredDarkColorTheme": "Gruvbox Dark Soft",
   "explorer.fileNesting.expand": false,
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha"
 }
