@@ -19,7 +19,7 @@ return {
 	-- { import = "astrocommunity.completion.coq_nvim" },
 	-- { import = "astrocommunity.completion.codeium-vim" },
 	{ import = "astrocommunity.completion.blink-cmp" },
-	{ import = "astrocommunity.completion.supermaven-nvim" },
+	-- { import = "astrocommunity.completion.supermaven-nvim" },
 	{ import = "astrocommunity.pack.docker" },
 	{ import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.pack.json" },
@@ -42,5 +42,7 @@ return {
 	-- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
 	{ import = "astrocommunity.icon.mini-icons" },
 	{ import = "astrocommunity.recipes.vscode" },
+	{ import = "astrocommunity.recipes.ai" },
+	{ import = "astrocommunity.utility.mason-tool-installer-nvim" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 }
