@@ -113,7 +113,7 @@
     "*.wat": "$(capture).wasm",
     "*.xaml": "$(capture).xaml.cs"
   },
-  "editor.fontFamily": "\"SauceCodePro Nerd Font Mono\",'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontFamily": "\"UbuntuMono Nerd Font Mono\",'Droid Sans Mono', 'monospace', monospace",
   "terminal.integrated.fontSize": 14,
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
