@@ -1,6 +1,6 @@
-font-family = "UbuntuMono Nerd Font Mono"
-font-size = 16
+font-family = "SauceCodePro Nerd Font Mono"
+font-size = 14
 theme=dark:catppuccin-mocha,light:catppuccin-latte
 background-opacity = 0.9
-window-height=55
+window-height=60
 window-width=120
