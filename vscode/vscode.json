@@ -20,7 +20,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2025/3/23 12:31:33",
+    "//": "Last update at 2025/3/27 14:49:53",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .lfsconfig, .mailmap, .git-blame*",
@@ -113,7 +113,7 @@
     "*.wat": "$(capture).wasm",
     "*.xaml": "$(capture).xaml.cs"
   },
-  "editor.fontFamily": "\"SauceCodePro Nerd Font Mono\",'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontFamily": "\"Maple Mono NF CN\",'Droid Sans Mono', 'monospace', monospace",
   "terminal.integrated.fontSize": 14,
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
@@ -182,7 +182,7 @@
   "editor.fontLigatures": true,
   "window.titleBarStyle": "custom",
   "explorer.fileNesting.expand": false,
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha"
 }
