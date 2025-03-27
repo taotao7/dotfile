@@ -16,7 +16,7 @@ return {
 	opts = {
 		features = {
 			codelens = true,
-			inlay_hints = false,
+			inlay_hints = true,
 			semantic_tokens = true,
 			signature_help = false,
 		},
