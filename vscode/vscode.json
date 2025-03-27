@@ -161,7 +161,7 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.view.showQuietly": {
     "workbench.panel.output": true
   },
@@ -182,7 +182,5 @@
   "editor.fontLigatures": true,
   "window.titleBarStyle": "custom",
   "explorer.fileNesting.expand": false,
-  "editor.fontSize": 16,
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.iconTheme": "catppuccin-mocha"
+  "editor.fontSize": 16
 }

@@ -1,6 +1,6 @@
 font-family = "Maple Mono NF CN"
 font-size = 16
-theme=dark:catppuccin-mocha,light:catppuccin-latte
+theme=dark:Builtin Solarized Light,light:Builtin Solarized Light
 background-opacity = 0.9
-window-height=80
+window-height=60
 window-width=120
