@@ -1,6 +1,7 @@
 font-family = "Maple Mono NF CN"
 font-size = 16
 theme=dark:noctis,light:noctis-lux
+command = /bin/zsh -c "tmux new -A -s work"
 background-opacity = 1 
 window-height=60
 window-width=120
