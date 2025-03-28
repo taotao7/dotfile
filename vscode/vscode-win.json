@@ -155,14 +155,15 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1,
     "vscodevim.vim": 1,
-    "golang.go": 2,
+    "golang.go": 11,
     "dbaeumer.vscode-eslint": 2,
     "astro-build.astro-vscode": 3,
     "esbenp.prettier-vscode": 3,
-    "rust-lang.rust-analyzer": 7,
+    "rust-lang.rust-analyzer": 10,
     "Vue.volar": 5,
     "serayuzgur.crates": 6,
-    "tamasfe.even-better-toml": 8
+    "tamasfe.even-better-toml": 9,
+    "usernamehw.errorlens": 12
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
