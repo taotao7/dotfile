@@ -161,7 +161,6 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "git.openRepositoryInParentFolders": "always",
-  "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.view.showQuietly": {
     "workbench.panel.output": true
   },
@@ -182,5 +181,9 @@
   "editor.fontLigatures": true,
   "window.titleBarStyle": "custom",
   "explorer.fileNesting.expand": false,
-  "editor.fontSize": 16
+  "editor.fontSize": 16,
+  "workbench.colorCustomizations": {},
+  "terminal.integrated.gpuAcceleration": "auto",
+  "workbench.preferredLightColorTheme": "Noctis Lux",
+  "editor.lineHeight": 2
 }
