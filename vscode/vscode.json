@@ -181,9 +181,8 @@
   "editor.fontLigatures": true,
   "window.titleBarStyle": "custom",
   "explorer.fileNesting.expand": false,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "workbench.colorCustomizations": {},
   "terminal.integrated.gpuAcceleration": "auto",
-  "workbench.preferredLightColorTheme": "Noctis Lux",
-  "editor.lineHeight": 2
+  "workbench.preferredLightColorTheme": "Noctis Lux"
 }
