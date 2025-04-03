@@ -2,6 +2,7 @@
 return {
 	"AstroNvim/astroui",
 	opts = {
+		-- colorscheme = "noctis",
 		colorscheme = "noctis_lux",
 		-- highlights = {
 		-- 	init = {
