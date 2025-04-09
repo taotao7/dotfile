@@ -15,9 +15,5 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
-if vim.g.vscode then
-  cmdheight = 1 -- this is the new line I added
-end
-
 require "lazy_setup"
 require "polish"
