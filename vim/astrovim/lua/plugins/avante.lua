@@ -29,7 +29,7 @@ return {
   },
   opts = {
     mappings = {
-      ask = prefix .. "<CR>",
+      ask = prefix .. "a",
       edit = prefix .. "e",
       refresh = prefix .. "r",
       focus = prefix .. "f",
@@ -48,14 +48,15 @@ return {
         add_current = prefix .. ".",
       },
     },
-    provider = "deepseek",
+    provider = "gemini",
     -- auto_suggestions_provider = "openrouter",
     vendors = {
       deepseek = {
         __inherited_from = "openai",
         api_key_name = "DEEPSEEK_API_KEY",
         endpoint = "https://api.deepseek.com",
-        model = "deepseek-chat",
+        model = "deepseek-coder",
+        max_tokens = 8192,
       },
       openrouter = {
         __inherited_from = "openai",

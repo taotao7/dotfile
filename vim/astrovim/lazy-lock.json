@@ -32,6 +32,7 @@
   "mason.nvim": { "branch": "main", "commit": "fc98833b6da5de5a9c5b1446ac541577059555be" },
   "mini.icons": { "branch": "main", "commit": "910db5df9724d65371182948f921fce23c2c881e" },
   "mini.indentscope": { "branch": "main", "commit": "8af2569a7d7fd37300dfa760e44e71efbbf322fd" },
+  "monokai-pro.nvim": { "branch": "master", "commit": "872f774303f79416000e8049630052f4124d9534" },
   "neo-tree.nvim": { "branch": "main", "commit": "9b5d67119c46e3262ffe1508fe6d8540b79ad75d" },
   "neoconf.nvim": { "branch": "main", "commit": "4a36457c389fab927c885d53fba6e07f4eedf1f4" },
   "noctis.nvim": { "branch": "main", "commit": "a1b31827dec585d6bb35292f97b8951712ed9312" },
