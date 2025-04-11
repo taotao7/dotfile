@@ -7,8 +7,13 @@ return {
 
   -- == Examples of Adding Plugins ==
   {
-    "lukas-reineke/indent-blankline.nvim",
-    enabled = false,
+    "folke/snacks.nvim",
+    config = function(_, opts)
+      opts.indent = {
+        enable = false,
+      }
+      -- require("snacks").setup({
+    end,
   },
 
   "andweeb/presence.nvim",
