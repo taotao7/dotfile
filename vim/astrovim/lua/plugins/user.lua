@@ -85,4 +85,6 @@ return {
     "talha-akram/noctis.nvim",
     enabled = true,
   },
+
+  { "akinsho/horizon.nvim", version = "*", enabled = true },
 }

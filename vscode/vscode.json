@@ -20,7 +20,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "smooth",
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 2025/3/27 14:49:53",
+    "//": "Last update at 2025/4/11 15:31:14",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .lfsconfig, .mailmap, .git-blame*",
@@ -82,7 +82,7 @@
     "*.component.ts": "$(capture).component.html, $(capture).component.spec.ts, $(capture).component.css, $(capture).component.scss, $(capture).component.sass, $(capture).component.less",
     "*.cpp": "$(capture).hpp, $(capture).h, $(capture).hxx, $(capture).hh",
     "*.cs": "$(capture).*.cs",
-    "*.cshtml": "$(capture).cshtml.cs",
+    "*.cshtml": "$(capture).cshtml.cs, $(capture).cshtml.css",
     "*.csproj": "*.config, *proj.user, appsettings.*, bundleconfig.json",
     "*.css": "$(capture).css.map, $(capture).*.css",
     "*.cxx": "$(capture).hpp, $(capture).h, $(capture).hxx, $(capture).hh",
@@ -118,7 +118,6 @@
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
-  "editor.guides.bracketPairsHorizontal": false,
   "editor.formatOnSave": true,
   "explorer.fileNesting.enabled": true,
   "git.enableSmartCommit": true,
@@ -170,7 +169,6 @@
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.parameterTypes.enabled": true,
-  "editor.guides.bracketPairs": true,
   "editor.padding.top": 16,
   "vscode_custom_css.imports": [
     "file:///Users/tao/dotfile/vscode-custom/custom.css",
@@ -185,5 +183,10 @@
   "editor.fontSize": 14,
   "workbench.colorCustomizations": {},
   "terminal.integrated.gpuAcceleration": "auto",
-  "workbench.preferredLightColorTheme": "Noctis Lux"
+  "workbench.preferredLightColorTheme": "Monokai Pro Light (Filter Sun)",
+  "editor.inlayHints.enabled": "off",
+  "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+  "i18n-ally.displayLanguage": "zh",
+  "workbench.iconTheme": "Monokai Pro Light (Filter Sun) Icons",
+  "editor.guides.indentation": false
 }
