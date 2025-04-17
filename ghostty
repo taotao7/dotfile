@@ -1,6 +1,6 @@
 font-family = "Maple Mono NF CN"
 font-size = 14
-theme=dark:noctis,light:noctis-lux
+theme=dark:Builtin Solarized Dark,light:Builtin Solarized Light
 background-opacity = 1 
 window-height=60
 window-width=120
