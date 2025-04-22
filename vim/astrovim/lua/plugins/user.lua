@@ -87,4 +87,19 @@ return {
   },
 
   { "akinsho/horizon.nvim", version = "*", enabled = true },
+  {
+    "augmentcode/augment.vim",
+    config = function()
+      vim.g.augment_workspace_folders = { "/Users/tao/workspace/org-management-temp" }
+      -- require("snacks").setup({
+    end,
+  },
+  -- {
+  --   "augmentcode/augment.vim",
+  --   config = function(plugin, opts)
+  --   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
+  -- end,
+  -- },
+  { "yetone/avante.nvim", enabled = false },
+  { "supermaven-inc/supermaven-nvim", enabled = false },
 }
