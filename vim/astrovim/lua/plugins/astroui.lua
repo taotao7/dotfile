@@ -9,8 +9,10 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "horizon",
-    -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
+    -- colorscheme = "noctis_lux",
+    -- AstroUI allows youjj to easily modify highlight groups easily for any and all colorschemes
+    colorscheme = "carbonfox",
+    -- colorscheme = "tempus_winter",
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },

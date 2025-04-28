@@ -29,7 +29,7 @@ return {
   },
   opts = {
     mappings = {
-      ask = prefix .. "a",
+      ask = prefix .. "c",
       edit = prefix .. "e",
       refresh = prefix .. "r",
       focus = prefix .. "f",
