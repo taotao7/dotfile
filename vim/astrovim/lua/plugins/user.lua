@@ -90,7 +90,7 @@ return {
   {
     "augmentcode/augment.vim",
     config = function()
-      vim.g.augment_workspace_folders = { "/Users/tao/workspace" }
+      vim.g.augment_workspace_folders = { "/home/tao/workspace" }
       -- require("snacks").setup({
     end,
     enabled = false,
@@ -102,6 +102,6 @@ return {
   --   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
   -- end,
   -- },
-  { "yetone/avante.nvim", enabled = true },
-  { "supermaven-inc/supermaven-nvim", enabled = true },
+  { "yetone/avante.nvim", enabled = false },
+  { "supermaven-inc/supermaven-nvim", enabled = false },
 }
