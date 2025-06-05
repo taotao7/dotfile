@@ -2,7 +2,7 @@ local prefix = "<Leader>a"
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-    or "BUILD_FROM_SOURCE=true make",
+      or "BUILD_FROM_SOURCE=true make",
   event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   -- init = function()
   --   local config = require "avante.config"
@@ -50,13 +50,12 @@ return {
     },
     provider = "deepseek",
     -- auto_suggestions_provider = "openrouter",
-    vendors = {
+    providers = {
       deepseek = {
         __inherited_from = "openai",
         api_key_name = "DEEPSEEK_API_KEY",
         endpoint = "https://api.deepseek.com",
         model = "deepseek-coder",
-        max_tokens = 8192,
       },
       openrouter = {
         __inherited_from = "openai",
@@ -64,12 +63,14 @@ return {
         api_key_name = "OPENROUTER_API_KEY",
         model = "anthropic/claude-3.7-sonnet",
       },
-    },
-    claude = {
-      endpoint = "https://api.302.ai",
-      model = "claude-3-5-sonnet-20241022",
-      temperature = 0,
-      max_tokens = 8192,
+      claude = {
+        endpoint = "https://api.302.ai",
+        model = "claude-3-5-sonnet-20241022",
+        extra_request_body = {
+          temperature = 0.75,
+          max_tokens = 8192,
+        },
+      },
     },
     behaviour = {
       auto_suggestions = false,
