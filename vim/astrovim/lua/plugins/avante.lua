@@ -2,7 +2,7 @@ local prefix = "<Leader>a"
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-      or "BUILD_FROM_SOURCE=true make",
+    or "BUILD_FROM_SOURCE=true make",
   event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   -- init = function()
   --   local config = require "avante.config"
@@ -61,11 +61,11 @@ return {
         __inherited_from = "openai",
         endpoint = "https://openrouter.ai/api/v1",
         api_key_name = "OPENROUTER_API_KEY",
-        model = "anthropic/claude-3.7-sonnet",
+        model = "anthropic/claude-sonnet-4",
       },
       claude = {
         endpoint = "https://api.302.ai",
-        model = "claude-3-5-sonnet-20241022",
+        model = "claude-sonnet-4",
         extra_request_body = {
           temperature = 0.75,
           max_tokens = 8192,
