@@ -9,10 +9,12 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    -- colorscheme = "noctis_lux",
+    colorscheme = "noctis_lux",
     -- AstroUI allows youjj to easily modify highlight groups easily for any and all colorschemes
-    colorscheme = "horizon",
+    -- colorscheme = "horizon",
+    -- colorscheme = "onedark",
     -- colorscheme = "tempus_winter",
+    -- colorscheme = "gruvbox",
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
@@ -41,7 +43,7 @@ return {
         NeoTreeGitUnstaged = { bg = "none" },
         NeoTreeWindowsHidden = { bg = "none" },
 
-        -- Neo-tree 边��透明设置
+        -- Neo-tree 边透明设置
         NeoTreeWinSeparator = { bg = "none", fg = "none" },
         NeoTreeEndOfBuffer = { bg = "none" },
         NeoTreeVertSplit = { bg = "none", fg = "none" },
@@ -168,6 +170,13 @@ return {
         PmenuSel = { bg = "none" },
         PmenuSbar = { bg = "none" },
         PmenuThumb = { bg = "none" },
+
+        -- 确保空白行也透明
+        NonText = { bg = "none", fg = "none" },
+        Whitespace = { bg = "none" },
+
+        -- 再次确保空白行与缓冲区外行透明
+        EndOfBuffer = { bg = "none", fg = "none" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },

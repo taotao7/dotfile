@@ -22,7 +22,6 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-
   {
     "folke/snacks.nvim",
     opts = {
@@ -86,7 +85,7 @@ return {
     enabled = true,
   },
 
-  { "akinsho/horizon.nvim", version = "*", enabled = true },
+  -- { "akinsho/horizon.nvim", version = "*", enabled = true },
   {
     "augmentcode/augment.vim",
     config = function()
@@ -95,7 +94,7 @@ return {
     end,
     enabled = false,
   },
-  { "EdenEast/nightfox.nvim", enabled = true },
+  { "EdenEast/nightfox.nvim", enabled = false },
   -- {
   --   "augmentcode/augment.vim",
   --   config = function(plugin, opts)
@@ -103,5 +102,5 @@ return {
   -- end,
   -- },
   { "yetone/avante.nvim", enabled = false },
-  { "supermaven-inc/supermaven-nvim", enabled = false },
+  { "supermaven-inc/supermaven-nvim", enabled = true },
 }
