@@ -9,7 +9,8 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = "noctis_lux",
+    -- colorscheme = "noctis_lux",
+    colorscheme = "oxocarbon",
     -- AstroUI allows youjj to easily modify highlight groups easily for any and all colorschemes
     -- colorscheme = "horizon",
     -- colorscheme = "onedark",
