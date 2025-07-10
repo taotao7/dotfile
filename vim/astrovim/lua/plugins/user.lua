@@ -106,4 +106,5 @@ return {
   -- },
   { "yetone/avante.nvim", enabled = false },
   { "supermaven-inc/supermaven-nvim", enabled = true },
+  { "rebelot/heirline.nvim", opts = function(_, opts) opts.winbar = nil end },
 }

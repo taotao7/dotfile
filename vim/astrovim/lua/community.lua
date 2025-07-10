@@ -42,7 +42,7 @@ return {
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
   -- { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
-  -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  -- { import = "astrocommunity.recipes.heirline-clock-statusline" },
   { import = "astrocommunity.icon.mini-icons" },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.recipes.ai" },
