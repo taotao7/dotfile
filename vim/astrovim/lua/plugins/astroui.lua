@@ -10,7 +10,8 @@ return {
   opts = {
     -- change colorscheme
     -- colorscheme = "noctis_lux",
-    colorscheme = "oxocarbon",
+    -- colorscheme = "oxocarbon",
+    colorscheme = "seoul256-light",
     -- AstroUI allows youjj to easily modify highlight groups easily for any and all colorschemes
     -- colorscheme = "horizon",
     -- colorscheme = "onedark",

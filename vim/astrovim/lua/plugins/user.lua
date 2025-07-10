@@ -84,7 +84,10 @@ return {
     "talha-akram/noctis.nvim",
     enabled = true,
   },
-
+  {
+    "junegunn/seoul256.vim",
+    enabled = true,
+  },
   -- { "akinsho/horizon.nvim", version = "*", enabled = true },
   {
     "augmentcode/augment.vim",
