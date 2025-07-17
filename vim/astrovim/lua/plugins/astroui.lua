@@ -198,5 +198,181 @@ return {
       LSPLoading9 = "⠇",
       LSPLoading10 = "⠏",
     },
+
+    -- Seoul256 Status Line Configuration
+    status = {
+      -- Seoul256 color scheme for both light and dark modes
+      colors = function(hl)
+        local get_hlgroup = require("astroui").get_hlgroup
+
+        -- Detect if we're in light or dark mode
+        local bg = vim.opt.background:get()
+
+        if bg == "light" then
+          -- Seoul256 Light Mode Colors
+          return {
+            -- Basic colors
+            fg = "#4e4e4e",
+            bg = "#e8e8e8",
+            section_fg = "#4e4e4e",
+            section_bg = "#e8e8e8",
+
+            -- Mode colors (light mode)
+            normal = "#5f8700", -- Green
+            insert = "#0087d7", -- Blue
+            visual = "#d75f00", -- Orange
+            replace = "#d70000", -- Red
+            command = "#8700d7", -- Purple
+            terminal = "#005f87", -- Dark Blue
+            inactive = "#9e9e9e", -- Gray
+
+            -- Git colors (light mode)
+            git_branch_fg = "#875f00", -- Brown
+            git_added = "#5f8700", -- Green
+            git_changed = "#d75f00", -- Orange
+            git_removed = "#d70000", -- Red
+
+            -- LSP/Diagnostic colors (light mode)
+            diag_ERROR = "#d70000", -- Red
+            diag_WARN = "#d75f00", -- Orange
+            diag_INFO = "#0087d7", -- Blue
+            diag_HINT = "#5f8700", -- Green
+
+            -- TreeSitter
+            treesitter_fg = "#875f87", -- Purple
+
+            -- Winbar colors
+            winbar_fg = "#4e4e4e",
+            winbar_bg = "#d7d7d7",
+            winbarnc_fg = "#9e9e9e",
+            winbarnc_bg = "#e8e8e8",
+
+            -- Buffer colors
+            buffer_fg = "#9e9e9e",
+            buffer_path_fg = "#767676",
+            buffer_close_fg = "#9e9e9e",
+            buffer_bg = "#e8e8e8",
+            buffer_active_fg = "#4e4e4e",
+            buffer_active_path_fg = "#767676",
+            buffer_active_close_fg = "#d70000",
+            buffer_active_bg = "#d7d7d7",
+            buffer_visible_fg = "#4e4e4e",
+            buffer_visible_path_fg = "#767676",
+            buffer_visible_close_fg = "#d70000",
+            buffer_visible_bg = "#d7d7d7",
+
+            -- Tabline colors
+            tabline_bg = "#e8e8e8",
+            tabline_fg = "#4e4e4e",
+            tab_fg = "#9e9e9e",
+            tab_bg = "#e8e8e8",
+            tab_active_fg = "#4e4e4e",
+            tab_active_bg = "#d7d7d7",
+            tab_close_fg = "#d70000",
+            tab_close_bg = "#e8e8e8",
+
+            -- Scrollbar
+            scrollbar = "#875f87",
+          }
+        else
+          -- Seoul256 Dark Mode Colors
+          return {
+            -- Basic colors
+            fg = "#d0d0d0",
+            bg = "#3a3a3a",
+            section_fg = "#d0d0d0",
+            section_bg = "#3a3a3a",
+
+            -- Mode colors (dark mode)
+            normal = "#87d75f", -- Light Green
+            insert = "#5fafd7", -- Light Blue
+            visual = "#ffaf5f", -- Light Orange
+            replace = "#ff5f5f", -- Light Red
+            command = "#d787ff", -- Light Purple
+            terminal = "#5f87af", -- Medium Blue
+            inactive = "#626262", -- Dark Gray
+
+            -- Git colors (dark mode)
+            git_branch_fg = "#dfaf87", -- Light Brown
+            git_added = "#87d75f", -- Light Green
+            git_changed = "#ffaf5f", -- Light Orange
+            git_removed = "#ff5f5f", -- Light Red
+
+            -- LSP/Diagnostic colors (dark mode)
+            diag_ERROR = "#ff5f5f", -- Light Red
+            diag_WARN = "#ffaf5f", -- Light Orange
+            diag_INFO = "#5fafd7", -- Light Blue
+            diag_HINT = "#87d75f", -- Light Green
+
+            -- TreeSitter
+            treesitter_fg = "#d7afd7", -- Light Purple
+
+            -- Winbar colors
+            winbar_fg = "#d0d0d0",
+            winbar_bg = "#4e4e4e",
+            winbarnc_fg = "#808080",
+            winbarnc_bg = "#3a3a3a",
+
+            -- Buffer colors
+            buffer_fg = "#808080",
+            buffer_path_fg = "#626262",
+            buffer_close_fg = "#808080",
+            buffer_bg = "#3a3a3a",
+            buffer_active_fg = "#d0d0d0",
+            buffer_active_path_fg = "#949494",
+            buffer_active_close_fg = "#ff5f5f",
+            buffer_active_bg = "#4e4e4e",
+            buffer_visible_fg = "#d0d0d0",
+            buffer_visible_path_fg = "#949494",
+            buffer_visible_close_fg = "#ff5f5f",
+            buffer_visible_bg = "#4e4e4e",
+
+            -- Tabline colors
+            tabline_bg = "#3a3a3a",
+            tabline_fg = "#d0d0d0",
+            tab_fg = "#808080",
+            tab_bg = "#3a3a3a",
+            tab_active_fg = "#d0d0d0",
+            tab_active_bg = "#4e4e4e",
+            tab_close_fg = "#ff5f5f",
+            tab_close_bg = "#3a3a3a",
+
+            -- Scrollbar
+            scrollbar = "#d7afd7",
+          }
+        end
+      end,
+
+      -- Seoul256 separators
+      separators = {
+        none = { "", "" },
+        left = { "", "  " },
+        right = { "  ", "" },
+        center = { "  ", "  " },
+        tab = { "", " " },
+        breadcrumbs = "  ",
+        path = "  ",
+      },
+
+      -- Seoul256 attributes
+      attributes = {
+        buffer_active = { bold = true },
+        buffer_picker = { bold = true },
+        macro_recording = { bold = true },
+        git_branch = { bold = true },
+        git_diff = { bold = true },
+        mode = { bold = true },
+      },
+
+      -- Icon highlights
+      icon_highlights = {
+        breadcrumbs = false,
+        file_icon = {
+          tabline = function(self) return self.is_active or self.is_visible end,
+          statusline = true,
+          winbar = false,
+        },
+      },
+    },
   },
 }

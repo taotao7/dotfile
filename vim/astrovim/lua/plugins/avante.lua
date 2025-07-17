@@ -48,7 +48,7 @@ return {
         add_current = prefix .. ".",
       },
     },
-    provider = "deepseek",
+    provider = "moonshot",
     -- auto_suggestions_provider = "openrouter",
     providers = {
       deepseek = {
