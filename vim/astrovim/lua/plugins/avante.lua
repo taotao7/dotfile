@@ -71,6 +71,16 @@ return {
           max_tokens = 8192,
         },
       },
+      moonshot = {
+        endpoint = "https://api.moonshot.ai/v1",
+        api_key_name = "MOONSHOT_API_KEY",
+        model = "kimi-k2-0711-preview",
+        timeout = 30000, -- Timeout in milliseconds
+        extra_request_body = {
+          temperature = 0.75,
+          max_tokens = 32768,
+        },
+      },
     },
     behaviour = {
       auto_suggestions = false,

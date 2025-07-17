@@ -104,7 +104,7 @@ return {
   --   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
   -- end,
   -- },
-  { "yetone/avante.nvim", enabled = false },
+  { "yetone/avante.nvim", enabled = true },
   { "supermaven-inc/supermaven-nvim", enabled = true },
   { "rebelot/heirline.nvim", opts = function(_, opts) opts.winbar = nil end },
 }
