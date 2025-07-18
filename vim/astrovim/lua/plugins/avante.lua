@@ -2,7 +2,7 @@ local prefix = "<Leader>a"
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-    or "BUILD_FROM_SOURCE=true make",
+      or "BUILD_FROM_SOURCE=true make",
   event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   -- init = function()
   --   local config = require "avante.config"
@@ -86,12 +86,13 @@ return {
       auto_suggestions = false,
       auto_set_highlight_group = true,
       auto_set_keymaps = true,
-      auto_apply_diff_after_generation = false,
+      enable_fastapply = true,
+      auto_apply_diff_after_generation = true,
       support_paste_from_clipboard = false,
       minimize_diff = true,
       enable_token_counting = true,
-      enable_cursor_planning_mode = false,
-      enable_claude_text_editor_tool_mode = false,
+      enable_cursor_planning_mode = true,
+      enable_claude_text_editor_tool_mode = true,
     },
     suggestion = {
       debounce = 600,
