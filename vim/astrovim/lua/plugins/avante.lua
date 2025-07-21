@@ -72,7 +72,7 @@ return {
         },
       },
       moonshot = {
-        endpoint = "https://api.moonshot.ai/v1",
+        endpoint = "https://api.moonshot.cn/v1",
         api_key_name = "MOONSHOT_API_KEY",
         model = "kimi-k2-0711-preview",
         timeout = 30000, -- Timeout in milliseconds
@@ -86,6 +86,7 @@ return {
       auto_suggestions = false,
       auto_set_highlight_group = true,
       auto_set_keymaps = true,
+      enable_fastapply = true,
       auto_apply_diff_after_generation = false,
       support_paste_from_clipboard = false,
       minimize_diff = true,
