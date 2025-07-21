@@ -121,8 +121,8 @@ export HF_TOKEN='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'
 export CHROME_EXECUTABLE="/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -137,12 +137,10 @@ export AIDER_DARK_MODE=True
 export AIDER_DEEPSEEK=True
 export AIDER_EDITOR=vim
 
-if [ -z "$TMUX" ]
-then
-    tmux attach -t TMUX || tmux new -s TMUX
+alias aidergemini="aider --model openrouter/google/gemini-2.5-pro"
+alias aiderclaude="aider --model openrouter/anthropic/claude-sonnet-4"
+alias aiderdeepseek="aider --model deepseek/deepseek-chat"
+
+if [ -z "$TMUX" ]; then
+  tmux attach -t TMUX || tmux new -s TMUX
 fi
-
-
-
-
-
