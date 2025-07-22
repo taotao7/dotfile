@@ -2,7 +2,7 @@ local prefix = "<Leader>a"
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-      or "BUILD_FROM_SOURCE=true make",
+    or "BUILD_FROM_SOURCE=true make",
   event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   -- init = function()
   --   local config = require "avante.config"
@@ -68,7 +68,7 @@ return {
         model = "claude-sonnet-4",
         extra_request_body = {
           temperature = 0.75,
-          max_tokens = 8192,
+          max_tokens = 20480,
         },
       },
       moonshot = {
