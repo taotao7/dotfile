@@ -91,12 +91,6 @@ return {
         CursorLineSign = { bg = "none" },
         CursorLineFold = { bg = "none" },
         
-        -- 选中行相关透明设置
-        CursorLine = { bg = "none" },
-        Visual = { bg = "none" },
-        VisualNOS = { bg = "none" },
-        VisualInDiff = { bg = "none" },
-        
         -- 其他可能的行相关高亮组
         Cursor = { bg = "none" },
         lCursor = { bg = "none" },
@@ -169,9 +163,12 @@ return {
         
         -- 确保选中行完全透明
         CursorLine = { bg = "none" },
-        Visual = { bg = "none" },
-        VisualNOS = { bg = "none" },
-        VisualInDiff = { bg = "none" },
+        -- Visual 模式需要可见的选中效果（深色模式）
+        Visual = { bg = "#404040", fg = "#ffffff" },
+        VisualNOS = { bg = "#404040", fg = "#ffffff" },
+        VisualInDiff = { bg = "#404040", fg = "#ffffff" },
+        -- 浅色模式下的 Visual 效果
+        VisualLight = { bg = "#e0e0e0", fg = "#000000" },
         
         -- 强制设置所有可能的 GitSigns 高亮组为透明
         GitSignsAdd = { bg = "none", fg = "#87d75f" },
@@ -293,6 +290,10 @@ return {
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
+        -- 确保在 astrodark 主题下 Visual 模式可见
+        Visual = { bg = "#404040", fg = "#ffffff" },
+        VisualNOS = { bg = "#404040", fg = "#ffffff" },
+        VisualInDiff = { bg = "#404040", fg = "#ffffff" },
       },
     },
     -- Icons can be configured throughout the interface
