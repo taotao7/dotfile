@@ -2,7 +2,7 @@ local prefix = "<Leader>a"
 return {
   "yetone/avante.nvim",
   build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-    or "BUILD_FROM_SOURCE=true make",
+      or "BUILD_FROM_SOURCE=true make",
   event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   -- init = function()
   --   local config = require "avante.config"
@@ -79,19 +79,6 @@ return {
         extra_request_body = {
           temperature = 0.75,
           max_tokens = 32768,
-        },
-      },
-      provider = "qianwen",
-      providers = {
-        qianwen = {
-          api_key_name = "OPENAI_API_KEY",
-          __inherited_from = "openai",
-          endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1",
-          model = "qwen3-coder-plus",
-          extra_request_body = {
-            temperature = 0.75,
-            max_tokens = 1000000,
-          },
         },
       },
     },
