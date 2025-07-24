@@ -48,7 +48,7 @@ return {
         add_current = prefix .. ".",
       },
     },
-    provider = "deepseek",
+    provider = "moonshot",
     -- auto_suggestions_provider = "openrouter",
     providers = {
       deepseek = {
@@ -92,7 +92,7 @@ return {
       minimize_diff = true,
       enable_token_counting = true,
       enable_cursor_planning_mode = true,
-      enable_claude_text_editor_tool_mode = true,
+      enable_claude_text_editor_tool_mode = false,
     },
     suggestion = {
       debounce = 600,
@@ -111,6 +111,23 @@ return {
             provider = "copilot",
             auto_suggestions_provider = "copilot",
           },
+        },
+      },
+    },
+    {
+      -- support for image pasting
+      "HakonHarnes/img-clip.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- recommended settings
+        default = {
+          embed_image_as_base64 = false,
+          prompt_for_file_name = false,
+          drag_and_drop = {
+            insert_mode = true,
+          },
+          -- required for Windows users
+          use_absolute_path = true,
         },
       },
     },
