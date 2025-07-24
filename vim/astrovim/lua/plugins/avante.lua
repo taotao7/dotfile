@@ -1,8 +1,8 @@
 local prefix = "<Leader>a"
 return {
   "yetone/avante.nvim",
-  build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-    or "BUILD_FROM_SOURCE=true make",
+  build = vim.fn.has("win32") == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+      or "BUILD_FROM_SOURCE=true make",
   event = "User AstroFile", -- load on file open because Avante manages it's own bindings
   -- init = function()
   --   local config = require "avante.config"
@@ -24,7 +24,9 @@ return {
     "MunifTanjim/nui.nvim",
     {
       "AstroNvim/astrocore",
-      opts = function(_, opts) opts.mappings.n[prefix] = { desc = " Avante" } end,
+      opts = function(_, opts)
+        opts.mappings.n[prefix] = { desc = " Avante" }
+      end,
     },
   },
   opts = {
@@ -92,7 +94,7 @@ return {
       minimize_diff = true,
       enable_token_counting = true,
       enable_cursor_planning_mode = true,
-      enable_claude_text_editor_tool_mode = false,
+      enable_claude_text_editor_tool_mode = true,
     },
     suggestion = {
       debounce = 600,
@@ -136,7 +138,9 @@ return {
       "MeanderingProgrammer/render-markdown.nvim",
       optional = true,
       opts = function(_, opts)
-        if not opts.file_types then opts.file_types = { "markdown" } end
+        if not opts.file_types then
+          opts.file_types = { "markdown" }
+        end
         opts.file_types = require("astrocore").list_insert_unique(opts.file_types, { "Avante" })
       end,
     },
@@ -145,7 +149,9 @@ return {
       "OXY2DEV/markview.nvim",
       optional = true,
       opts = function(_, opts)
-        if not opts.filetypes then opts.filetypes = { "markdown", "quarto", "rmd" } end
+        if not opts.filetypes then
+          opts.filetypes = { "markdown", "quarto", "rmd" }
+        end
         opts.filetypes = require("astrocore").list_insert_unique(opts.filetypes, { "Avante" })
       end,
     },
@@ -186,7 +192,9 @@ return {
               sidebar.file_selector:add_selected_file(relative_path)
 
               -- remove neo tree buffer
-              if not open then sidebar.file_selector:remove_selected_file "neo-tree filesystem [1]" end
+              if not open then
+                sidebar.file_selector:remove_selected_file("neo-tree filesystem [1]")
+              end
             end,
           },
           window = {

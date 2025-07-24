@@ -11,9 +11,9 @@ return {
     -- change colorscheme
     -- colorscheme = "noctis_lux",
     -- colorscheme = "oxocarbon",
-    colorscheme = "seoul256",
+    -- colorscheme = "seoul256",
     -- AstroUI allows youjj to easily modify highlight groups easily for any and all colorschemes
-    -- colorscheme = "horizon",
+    colorscheme = "horizon",
     -- colorscheme = "onedark",
     -- colorscheme = "tempus_winter",
     -- colorscheme = "gruvbox",
@@ -83,21 +83,21 @@ return {
         CursorLine = { bg = "none" },
         StatusLine = { bg = "none" },
         StatusLineNC = { bg = "none" },
-        
+
         -- 行号相关透明设置
         LineNrAbove = { bg = "none" },
         LineNrBelow = { bg = "none" },
         CursorLineNr = { bg = "none" },
         CursorLineSign = { bg = "none" },
         CursorLineFold = { bg = "none" },
-        
+
         -- 其他可能的行相关高亮组
         Cursor = { bg = "none" },
         lCursor = { bg = "none" },
         CursorIM = { bg = "none" },
         TermCursor = { bg = "none" },
         TermCursorNC = { bg = "none" },
-        
+
         -- 额外的行相关透明设置
         LineNrRelative = { bg = "none" },
         LineNrRelativeAbove = { bg = "none" },
@@ -105,7 +105,7 @@ return {
         LineNrRelativeCurrent = { bg = "none" },
         LineNrRelativeAboveCurrent = { bg = "none" },
         LineNrRelativeBelowCurrent = { bg = "none" },
-        
+
         -- 确保所有可能的选中状态都透明
         CursorLine = { bg = "none" },
         CursorLineNr = { bg = "none" },
@@ -130,7 +130,7 @@ return {
         GitSignsChangeLn = { bg = "none" },
         GitSignsChangedeleteLn = { bg = "none" },
         GitSignsUntrackedLn = { bg = "none" },
-        
+
         -- 额外的 GitSigns 高亮组
         GitSignsAddInline = { bg = "none" },
         GitSignsChangeInline = { bg = "none" },
@@ -138,21 +138,21 @@ return {
         GitSignsChangedeleteInline = { bg = "none" },
         GitSignsTopdeleteInline = { bg = "none" },
         GitSignsUntrackedInline = { bg = "none" },
-        
+
         -- 确保其他可能的git相关标记也透明
         DiffAdd = { bg = "none" },
         DiffChange = { bg = "none" },
         DiffDelete = { bg = "none" },
         DiffText = { bg = "none" },
-        
+
         -- 额外的 diff 相关高亮组
         DiffAdded = { bg = "none" },
         DiffRemoved = { bg = "none" },
         DiffModified = { bg = "none" },
-        
+
         -- 确保 SignColumn 完全透明
         SignColumn = { bg = "none", sp = "none" },
-        
+
         -- 确保行号区域完全透明
         LineNr = { bg = "none" },
         LineNrAbove = { bg = "none" },
@@ -160,7 +160,7 @@ return {
         CursorLineNr = { bg = "none" },
         CursorLineSign = { bg = "none" },
         CursorLineFold = { bg = "none" },
-        
+
         -- 确保选中行完全透明
         CursorLine = { bg = "none" },
         -- Visual 模式需要可见的选中效果（深色模式）
@@ -169,7 +169,7 @@ return {
         VisualInDiff = { bg = "#404040", fg = "#ffffff" },
         -- 浅色模式下的 Visual 效果
         VisualLight = { bg = "#e0e0e0", fg = "#000000" },
-        
+
         -- 强制设置所有可能的 GitSigns 高亮组为透明
         GitSignsAdd = { bg = "none", fg = "#87d75f" },
         GitSignsChange = { bg = "none", fg = "#ffaf5f" },
@@ -177,7 +177,7 @@ return {
         GitSignsChangedelete = { bg = "none", fg = "#ffaf5f" },
         GitSignsTopdelete = { bg = "none", fg = "#ff5f5f" },
         GitSignsUntracked = { bg = "none", fg = "#87d75f" },
-        
+
         -- 行号区域的 GitSigns
         GitSignsAddNr = { bg = "none", fg = "#87d75f" },
         GitSignsChangeNr = { bg = "none", fg = "#ffaf5f" },
@@ -185,7 +185,7 @@ return {
         GitSignsChangedeleteNr = { bg = "none", fg = "#ffaf5f" },
         GitSignsTopdeleteNr = { bg = "none", fg = "#ff5f5f" },
         GitSignsUntrackedNr = { bg = "none", fg = "#87d75f" },
-        
+
         -- 行内容区域的 GitSigns
         GitSignsAddLn = { bg = "none", fg = "#87d75f" },
         GitSignsChangeLn = { bg = "none", fg = "#ffaf5f" },
@@ -480,7 +480,9 @@ return {
       icon_highlights = {
         breadcrumbs = false,
         file_icon = {
-          tabline = function(self) return self.is_active or self.is_visible end,
+          tabline = function(self)
+            return self.is_active or self.is_visible
+          end,
           statusline = true,
           winbar = false,
         },
