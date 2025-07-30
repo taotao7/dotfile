@@ -1,6 +1,7 @@
-font-family = "Maple Mono NF CN"
-font-size = 14
-theme=dark:Horizon,light:Horizon-Bright
-background-opacity = 1 
+font-family = "SauceCodePro Nerd Font Mono"
+font-size = 16
+theme=dark: "Monokai Pro",light: "Monokai Pro Light Sun"
+background-opacity = 1
 window-height=60
 window-width=120
+keybind = shift+enter=text:\n
