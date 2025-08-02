@@ -1,0 +1,92 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "deepseek": {
+      "type": "openai",
+      "api_key": "$DEEPSEEK_API_KEY",
+      "base_url": "$DEEPSEEK_BASE_URL",
+      "models": [
+        {
+          "id": "deepseek-reasoner",
+          "name": "Deepseek reasoner",
+          "cost_per_1m_in": 0.27,
+          "cost_per_1m_out": 1.1,
+          "can_reason": true,
+          "cost_per_1m_in_cached": 0.07,
+          "cost_per_1m_out_cached": 1.1,
+          "context_window": 64000,
+          "default_max_tokens": 5000
+        },
+        {
+          "id": "deepseek-chat",
+          "name": "Deepseek chat",
+          "cost_per_1m_in": 0.27,
+          "cost_per_1m_out": 1.1,
+          "cost_per_1m_in_cached": 0.07,
+          "cost_per_1m_out_cached": 1.1,
+          "context_window": 64000,
+          "default_max_tokens": 5000
+        }
+      ]
+    },
+    "moonshotai": {
+      "type": "openai",
+      "base_url": "MOONSHOTAI_BASE_URL",
+      "api_key": "$MOONSHOT_API_KEY",
+      "default_large_model_id": "kimi-k2-0711-preview",
+      "models": [
+        {
+          "id": "kimi-k2-0711-preview",
+          "name": "kimi-k2-0711-preview",
+          "cost_per_1m_in": 0.6,
+          "cost_per_1m_out": 2.5,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 131072,
+          "default_max_tokens": 13107,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        }
+      ]
+    },
+    "zhipuai": {
+      "type": "openai",
+      "base_url": "$ZHIPU_BASE_URL",
+      "api_key": "$ZHIPU_AUTH_TOKEN",
+      "default_large_model_id": "GLM-4.5",
+      "models": [
+        {
+          "id": "GLM-4.5",
+          "name": "GLM-4.5",
+          "cost_per_1m_in": 0.6,
+          "cost_per_1m_out": 2.2,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 131072,
+          "default_max_tokens": 65536,
+          "can_reason": true,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "go": {
+      "command": "gopls"
+    },
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"]
+    },
+    "vue": {
+      "command": "vue-language-server",
+      "args": ["--stdio"]
+    }
+  },
+  "models": {
+    "large": { "model": "deepseek-reasoner", "provider": "deepseek" },
+    "small": { "model": "deepseek-chat", "provider": "deepseek" }
+  }
+}
