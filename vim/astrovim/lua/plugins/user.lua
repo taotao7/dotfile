@@ -4,18 +4,6 @@
 
 ---@type LazySpec
 return {
-
-	-- == Examples of Adding Plugins ==
-	{
-		"folke/snacks.nvim",
-		config = function(_, opts)
-			opts.indent = {
-				enable = false,
-			}
-			-- require("snacks").setup({
-		end,
-	},
-
 	"andweeb/presence.nvim",
 	{
 		"ray-x/lsp_signature.nvim",
