@@ -2,7 +2,7 @@ local prefix = "<Leader>a"
 return {
 	"yetone/avante.nvim",
 	build = vim.fn.has("win32") == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-			or "BUILD_FROM_SOURCE=true make",
+		or "BUILD_FROM_SOURCE=true make",
 	event = "User AstroFile", -- load on file open because Avante manages it's own bindings
 	-- init = function()
 	--   local config = require "avante.config"
@@ -79,6 +79,15 @@ return {
 					max_tokens = 20480,
 				},
 			},
+			cerebras = {
+				__inherited_from = "openai",
+				endpoint = "https://api.cerebras.ai/v1/",
+				api_key_name = "CEREBRAS_API_KEY",
+				model = "qwen-3-coder-480b",
+				extra_request_body = {
+					max_tokens = 32768,
+				},
+			},
 			moonshot = {
 				endpoint = "https://api.moonshot.cn/v1",
 				api_key_name = "MOONSHOT_API_KEY",
@@ -98,7 +107,7 @@ return {
 			auto_apply_diff_after_generation = true,
 			support_paste_from_clipboard = false,
 			minimize_diff = true,
-			enable_token_counting = true,
+			enable_token_counting = false,
 			enable_cursor_planning_mode = true,
 			enable_claude_text_editor_tool_mode = true,
 		},

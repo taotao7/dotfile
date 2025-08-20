@@ -16,6 +16,7 @@ return {
 		colorscheme = "monokai-pro",
 		-- colorscheme = "horizon",
 		-- colorscheme = "onedark",
+		-- colorscheme = "everforest",
 		-- colorscheme = "tempus_winter",
 		-- colorscheme = "gruvbox",
 		highlights = {

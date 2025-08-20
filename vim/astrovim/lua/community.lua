@@ -12,7 +12,7 @@ return {
 	-- { import = "astrocommunity.diagnostics.trouble-nvim" },
 	-- { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
 	-- { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
-	-- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+	{ import = "astrocommunity.colorscheme.onedarkpro-nvim" },
 	-- { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
 	-- { import = "astrocommunity.colorscheme.catppuccin" },
 	{ import = "astrocommunity.pack.lua" },
