@@ -94,7 +94,7 @@ return {
 	--   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
 	-- end,
 	-- },
-	{ "yetone/avante.nvim",     enabled = true },
+	{ "yetone/avante.nvim",     enabled = false },
 	{
 		"coder/claudecode.nvim",
 		dependencies = { "folke/snacks.nvim" },
@@ -118,6 +118,20 @@ return {
 		-- 	{ "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
 		-- 	{ "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Deny diff" },
 		-- },
+	},
+	{
+		"marcinjahn/gemini-cli.nvim",
+		cmd = "Gemini",
+		-- Example key mappings for common actions:
+		keys = {
+			{ "<leader>a/", "<cmd>Gemini toggle<cr>",   desc = "Toggle Gemini CLI" },
+			{ "<leader>aa", "<cmd>Gemini ask<cr>",      desc = "Ask Gemini",       mode = { "n", "v" } },
+			{ "<leader>af", "<cmd>Gemini add_file<cr>", desc = "Add File" },
+		},
+		dependencies = {
+			"folke/snacks.nvim",
+		},
+		config = true,
 	},
 	{ "supermaven-inc/supermaven-nvim", enabled = true },
 	{
