@@ -1,0 +1,55 @@
+[projects."/Users/tao/workspace/agent-reach-app"]
+trust_level = "trusted"
+
+profile = "glm"
+
+
+[model_providers.zhipu]
+name = "ZHIPU"
+base_url = "https://open.bigmodel.cn/api/paas/v4"
+env_key = "ZHIPU_AUTH_TOKEN"
+
+[profiles.glm]
+model = "glm-4.5"
+model_provider = "zhipu"
+approval_policy = "never"
+model_reasoning_effort = "high"
+model_reasoning_summary = "detailed"
+
+[model_providers.cerebras]
+name = "CEREBRAS"
+base_url = "https://api.cerebras.ai/v1"
+env_key = "CEREBRAS_API_KEY"
+
+[profiles.qwen]
+model = "qwen-3-coder-480b"
+model_provider = "cerebras"
+approval_policy = "never"
+model_reasoning_effort = "high"
+model_reasoning_summary = "detailed"
+
+
+[model_providers.moonshot]
+name = "MOONSHOT"
+base_url = "https://api.moonshot.cn/v1"
+env_key = "MOONSHOT_API_KEY"
+
+[profiles.kimi]
+model = "kimi-k2-0905-turbo-preview"
+model_provider = "moonshot"
+approval_policy = "never"
+model_reasoning_effort = "high"
+model_reasoning_summary = "detailed"
+
+
+[model_providers.huanfang]
+name = "DEEPSEEK"
+base_url = "https://api.deepseek.com/v1"
+env_key = "DEEPSEEK_API_KEY"
+
+[profiles.deepseek]
+model = "deepseek-reasoner"
+model_provider = "huanfang"
+approval_policy = "never"
+model_reasoning_effort = "high"
+model_reasoning_summary = "detailed"
