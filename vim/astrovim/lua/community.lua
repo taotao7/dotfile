@@ -40,7 +40,7 @@ return {
 	-- { import = "astrocommunity.editing-support.copilotchat-nvim" },
 	-- { import = "astrocommunity.editing-support.copilotchat-nvim" },
 	-- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
-	{ import = "astrocommunity.indent.mini-indentscope" },
+	-- { import = "astrocommunity.indent.mini-indentscope" },
 	-- { import = "astrocommunity.debugging.nvim-dap-repl-highlights" },
 	-- { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
 	-- { import = "astrocommunity.recipes.heirline-clock-statusline" },

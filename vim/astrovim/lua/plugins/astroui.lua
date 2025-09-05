@@ -47,6 +47,23 @@ return {
 				NeoTreeGitUnstaged = { bg = "none" },
 				NeoTreeWindowsHidden = { bg = "none" },
 
+				-- Neo-tree 文件夹特定透明设置
+				NeoTreeDirectoryOpen = { bg = "none" },
+				NeoTreeDirectoryClosed = { bg = "none" },
+				NeoTreeExpander = { bg = "none" },
+				NeoTreeExpanderOpened = { bg = "none" },
+				NeoTreeExpanderClosed = { bg = "none" },
+				NeoTreeCursorLine = { bg = "none" },
+				NeoTreeFileNameOpened = { bg = "none" },
+
+				-- Neo-tree 状态相关透明设置
+				NeoTreeDimText = { bg = "none" },
+				NeoTreeHiddenByName = { bg = "none" },
+				NeoTreeHiddenByExt = { bg = "none" },
+				NeoTreeMessage = { bg = "none" },
+				NeoTreeStats = { bg = "none" },
+				NeoTreeStatsHeader = { bg = "none" },
+
 				-- Neo-tree 边透明设置
 				NeoTreeWinSeparator = { bg = "none", fg = "none" },
 				NeoTreeEndOfBuffer = { bg = "none" },
@@ -366,6 +383,22 @@ return {
 				NoiceLspProgressClient = { bg = "none" },
 				NoiceLspProgressSpinner = { bg = "none" },
 				NoiceLspProgressTitle = { bg = "none" },
+
+				-- Heirline 状态栏透明设置（当光标在 neotree 中时）
+				StatusLineTerm = { bg = "none" },
+				StatusLineTermNC = { bg = "none" },
+
+				-- Heirline 状态栏组件透明设置
+				HeirlineStatusLine = { bg = "none" },
+				HeirlineWinbar = { bg = "none" },
+				HeirlineTabline = { bg = "none" },
+				HeirlineNormal = { bg = "none" },
+				HeirlineInsert = { bg = "none" },
+				HeirlineVisual = { bg = "none" },
+				HeirlineReplace = { bg = "none" },
+				HeirlineCommand = { bg = "none" },
+				HeirlineTerminal = { bg = "none" },
+				HeirlineInactive = { bg = "none" },
 			},
 			astrodark = { -- a table of overrides/changes when applying the astrotheme theme
 				-- Normal = { bg = "#000000" },

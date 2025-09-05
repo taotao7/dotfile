@@ -15,6 +15,9 @@ return {
 	{
 		"folke/snacks.nvim",
 		opts = {
+			indent = {
+				enabled = false,
+			},
 			dashboard = {
 				preset = {
 					header = table.concat({
@@ -52,18 +55,18 @@ return {
 			npairs.add_rules(
 				{
 					Rule("$", "$", { "tex", "latex" })
-					-- don't add a pair if the next character is %
-							:with_pair(cond.not_after_regex("%%"))
-					-- don't add a pair if  the previous character is xxx
-							:with_pair(
-								cond.not_before_regex("xxx", 3)
-							)
-					-- don't move right when repeat character
-							:with_move(cond.none())
-					-- don't delete if the next character is xx
-							:with_del(cond.not_after_regex("xx"))
-					-- disable adding a newline when you press <cr>
-							:with_cr(cond.none()),
+						-- don't add a pair if the next character is %
+						:with_pair(cond.not_after_regex("%%"))
+						-- don't add a pair if  the previous character is xxx
+						:with_pair(
+							cond.not_before_regex("xxx", 3)
+						)
+						-- don't move right when repeat character
+						:with_move(cond.none())
+						-- don't delete if the next character is xx
+						:with_del(cond.not_after_regex("xx"))
+						-- disable adding a newline when you press <cr>
+						:with_cr(cond.none()),
 				},
 				-- disable for .vim files, but it work for another filetypes
 				Rule("a", "a", "-vim")
@@ -78,7 +81,7 @@ return {
 		"junegunn/seoul256.vim",
 		enabled = true,
 	},
-	{ "akinsho/horizon.nvim",   version = "*",  enabled = true },
+	{ "akinsho/horizon.nvim", version = "*", enabled = true },
 	{
 		"augmentcode/augment.vim",
 		config = function()
@@ -94,7 +97,7 @@ return {
 	--   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
 	-- end,
 	-- },
-	{ "yetone/avante.nvim",     enabled = false },
+	{ "yetone/avante.nvim", enabled = false },
 	{
 		"coder/claudecode.nvim",
 		dependencies = { "folke/snacks.nvim" },
@@ -124,8 +127,8 @@ return {
 		cmd = "Gemini",
 		-- Example key mappings for common actions:
 		keys = {
-			{ "<leader>a/", "<cmd>Gemini toggle<cr>",   desc = "Toggle Gemini CLI" },
-			{ "<leader>aa", "<cmd>Gemini ask<cr>",      desc = "Ask Gemini",       mode = { "n", "v" } },
+			{ "<leader>a/", "<cmd>Gemini toggle<cr>", desc = "Toggle Gemini CLI" },
+			{ "<leader>aa", "<cmd>Gemini ask<cr>", desc = "Ask Gemini", mode = { "n", "v" } },
 			{ "<leader>af", "<cmd>Gemini add_file<cr>", desc = "Add File" },
 		},
 		dependencies = {
