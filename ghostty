@@ -3,7 +3,7 @@ font-size = 18
 theme=dark: "Monokai Pro",light: "Monokai Pro Light Sun"
 background-opacity = 0.9
 window-height=60
-window-width=120
+window-width=90
 window-padding-x = 0
 window-padding-y = 0
 keybind = shift+enter=text:\n
