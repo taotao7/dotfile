@@ -17,7 +17,7 @@ return {
 	-- { import = "astrocommunity.colorscheme.catppuccin" },
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-	-- { import = "astrocommunity.completion.copilot-lua-cmp" },
+	{ import = "astrocommunity.completion.copilot-lua-cmp" },
 	-- { import = "astrocommunity.completion.coq_nvim" },
 	-- { import = "astrocommunity.completion.codeium-nvim" },
 	-- { import = "astrocommunity.completion.blink-cmp" },
@@ -46,7 +46,7 @@ return {
 	-- { import = "astrocommunity.recipes.heirline-clock-statusline" },
 	{ import = "astrocommunity.icon.mini-icons" },
 	{ import = "astrocommunity.recipes.vscode" },
-	{ import = "astrocommunity.recipes.ai" },
+	-- { import = "astrocommunity.recipes.ai" },
 	{ import = "astrocommunity.utility.mason-tool-installer-nvim" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 }

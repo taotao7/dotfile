@@ -136,11 +136,29 @@ return {
 	-- 	},
 	-- 	config = true,
 	-- },
-	-- { "supermaven-inc/supermaven-nvim", enabled = true },
+	{ "supermaven-inc/supermaven-nvim", enabled = false },
 	{
 		"rebelot/heirline.nvim",
 		opts = function(_, opts)
 			opts.winbar = nil
+		end,
+	},
+	{
+		"taotao7/i18n.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("i18n").setup({
+				func_pattern = {
+					"t",
+					"$t",
+					{ call = "i18n.t" },
+				},
+				func_type = { "vue", "typescript" },
+				usage = { popup_type = "snacks" },
+				show_mode = "translation_conceal",
+			})
 		end,
 	},
 }
