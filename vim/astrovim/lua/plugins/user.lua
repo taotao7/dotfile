@@ -148,6 +148,7 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
+		enabled = false,
 		config = function()
 			require("i18n").setup({
 				func_pattern = {
