@@ -1,9 +1,10 @@
 font-family = "DankMono Nerd Font Mono"
-font-size = 18
-theme=dark: "Monokai Pro",light: "Monokai Pro Light Sun"
-background-opacity = 0.9
+font-size = 16
+theme=dark: "carbonfox",light: "dawnfox"
+# theme=dark: "seolul256",light: "seoul256-light"
+background-opacity = 1
 window-height=60
-window-width=90
+window-width=100
 window-padding-x = 0
 window-padding-y = 0
 keybind = shift+enter=text:\n
