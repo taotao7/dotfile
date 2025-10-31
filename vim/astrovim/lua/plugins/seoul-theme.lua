@@ -10,7 +10,7 @@ return {
 		config = function()
 			-- Seoul256 configuration
 			-- Set Seoul256 background range (dark mode: 233-239, light mode: 252-256)
-			vim.g.seoul256_background = 236 -- Default dark background
+			vim.g.seoul256_background = 236    -- Default dark background
 			vim.g.seoul256_light_background = 253 -- Default light background
 
 			-- Enable Seoul256 solarized mode (optional)
@@ -110,3 +110,4 @@ return {
 		},
 	},
 }
+

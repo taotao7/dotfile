@@ -55,18 +55,18 @@ return {
 			npairs.add_rules(
 				{
 					Rule("$", "$", { "tex", "latex" })
-					-- don't add a pair if the next character is %
-							:with_pair(cond.not_after_regex("%%"))
-					-- don't add a pair if  the previous character is xxx
-							:with_pair(
-								cond.not_before_regex("xxx", 3)
-							)
-					-- don't move right when repeat character
-							:with_move(cond.none())
-					-- don't delete if the next character is xx
-							:with_del(cond.not_after_regex("xx"))
-					-- disable adding a newline when you press <cr>
-							:with_cr(cond.none()),
+						-- don't add a pair if the next character is %
+						:with_pair(cond.not_after_regex("%%"))
+						-- don't add a pair if  the previous character is xxx
+						:with_pair(
+							cond.not_before_regex("xxx", 3)
+						)
+						-- don't move right when repeat character
+						:with_move(cond.none())
+						-- don't delete if the next character is xx
+						:with_del(cond.not_after_regex("xx"))
+						-- disable adding a newline when you press <cr>
+						:with_cr(cond.none()),
 				},
 				-- disable for .vim files, but it work for another filetypes
 				Rule("a", "a", "-vim")
@@ -79,9 +79,13 @@ return {
 	},
 	{
 		"junegunn/seoul256.vim",
-		enabled = true,
+		enabled = false,
 	},
-	{ "akinsho/horizon.nvim",   version = "*",  enabled = true },
+	{
+		"p00f/alabaster.nvim",
+		enabled = false,
+	},
+	{ "akinsho/horizon.nvim", version = "*", enabled = true },
 	{
 		"augmentcode/augment.vim",
 		config = function()
@@ -90,17 +94,18 @@ return {
 		end,
 		enabled = false,
 	},
-	{ "EdenEast/nightfox.nvim", enabled = false },
+	{ "EdenEast/nightfox.nvim", enabled = true },
 	-- {
 	--   "augmentcode/augment.vim",
 	--   config = function(plugin, opts)
 	--   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
 	-- end,
 	-- },
-	{ "yetone/avante.nvim",     enabled = false },
+	{ "yetone/avante.nvim", enabled = false },
 	{
 		"coder/claudecode.nvim",
 		dependencies = { "folke/snacks.nvim" },
+		enabled = false,
 		config = true,
 		-- keys = {
 		-- 	{ "<leader>a",  nil,                              desc = "AI/Claude Code" },
@@ -142,6 +147,12 @@ return {
 		opts = function(_, opts)
 			opts.winbar = nil
 		end,
+	},
+	{
+		"sourcegraph/amp.nvim",
+		branch = "main",
+		lazy = false,
+		opts = { auto_start = true, log_level = "info" },
 	},
 	{
 		"taotao7/i18n.nvim",
