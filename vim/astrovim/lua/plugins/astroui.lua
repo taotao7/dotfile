@@ -12,7 +12,8 @@ return {
 		-- colorscheme = "noctis_lux",
 		-- colorscheme = "oxocarbon",
 		-- colorscheme = "seoul256",
-		colorscheme = "carbonfox",
+		-- colorscheme = "carbonfox",
+		-- colorscheme = "dawnfox",
 		-- AstroUI allows youjj to easily modify highlight groups easily for any and all colorschemes
 		--		colorscheme = "monokai-pro",
 		-- colorscheme = "horizon",
