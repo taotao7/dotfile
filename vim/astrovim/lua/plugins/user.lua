@@ -94,7 +94,7 @@ return {
 		end,
 		enabled = false,
 	},
-	{ "EdenEast/nightfox.nvim", enabled = true },
+	{ "EdenEast/nightfox.nvim", enabled = false },
 	-- {
 	--   "augmentcode/augment.vim",
 	--   config = function(plugin, opts)
@@ -180,11 +180,11 @@ return {
 		opts = {
 			set_dark_mode = function()
 				vim.api.nvim_set_option_value("background", "dark", {})
-				vim.cmd("colorscheme carbonfox")
+				vim.cmd("colorscheme catppuccin-frappe")
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option_value("background", "light", {})
-				vim.cmd("colorscheme dawnfox")
+				vim.cmd("colorscheme catppuccin-latte")
 			end,
 			update_interval = 3000,
 			fallback = "dark",
