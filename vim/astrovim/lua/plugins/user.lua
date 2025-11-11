@@ -55,18 +55,18 @@ return {
 			npairs.add_rules(
 				{
 					Rule("$", "$", { "tex", "latex" })
-					-- don't add a pair if the next character is %
-							:with_pair(cond.not_after_regex("%%"))
-					-- don't add a pair if  the previous character is xxx
-							:with_pair(
-								cond.not_before_regex("xxx", 3)
-							)
-					-- don't move right when repeat character
-							:with_move(cond.none())
-					-- don't delete if the next character is xx
-							:with_del(cond.not_after_regex("xx"))
-					-- disable adding a newline when you press <cr>
-							:with_cr(cond.none()),
+						-- don't add a pair if the next character is %
+						:with_pair(cond.not_after_regex("%%"))
+						-- don't add a pair if  the previous character is xxx
+						:with_pair(
+							cond.not_before_regex("xxx", 3)
+						)
+						-- don't move right when repeat character
+						:with_move(cond.none())
+						-- don't delete if the next character is xx
+						:with_del(cond.not_after_regex("xx"))
+						-- disable adding a newline when you press <cr>
+						:with_cr(cond.none()),
 				},
 				-- disable for .vim files, but it work for another filetypes
 				Rule("a", "a", "-vim")
@@ -85,7 +85,7 @@ return {
 		"p00f/alabaster.nvim",
 		enabled = false,
 	},
-	{ "akinsho/horizon.nvim",   version = "*",  enabled = true },
+	{ "akinsho/horizon.nvim", version = "*", enabled = true },
 	{
 		"augmentcode/augment.vim",
 		config = function()
@@ -101,7 +101,7 @@ return {
 	--   vim.g.augment_workspace_folders = ["/Users/tao/workspace/org-management-temp"]
 	-- end,
 	-- },
-	{ "yetone/avante.nvim",     enabled = false },
+	{ "yetone/avante.nvim", enabled = false },
 	{
 		"coder/claudecode.nvim",
 		dependencies = { "folke/snacks.nvim" },
@@ -180,11 +180,13 @@ return {
 		opts = {
 			set_dark_mode = function()
 				vim.api.nvim_set_option_value("background", "dark", {})
-				vim.cmd("colorscheme catppuccin-frappe")
+				vim.g.everforest_background = "hard"
+				vim.cmd("colorscheme everforest")
 			end,
 			set_light_mode = function()
 				vim.api.nvim_set_option_value("background", "light", {})
-				vim.cmd("colorscheme catppuccin-latte")
+				vim.g.everforest_background = "hard"
+				vim.cmd("colorscheme everforest")
 			end,
 			update_interval = 3000,
 			fallback = "dark",

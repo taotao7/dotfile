@@ -15,7 +15,7 @@ return {
 	-- { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
 	-- { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
 	-- { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
-	{ import = "astrocommunity.colorscheme.catppuccin" },
+	{ import = "astrocommunity.colorscheme.everforest" },
 	{ import = "astrocommunity.pack.lua" },
 	{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 	{ import = "astrocommunity.completion.copilot-lua-cmp" },
