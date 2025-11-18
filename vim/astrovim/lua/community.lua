@@ -36,7 +36,7 @@ return {
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.astro" },
 	{ import = "astrocommunity.motion.flash-nvim" },
-	{ import = "astrocommunity.lsp.ts-error-translator-nvim" },
+	-- { import = "astrocommunity.lsp.ts-error-translator-nvim" },
 	{ import = "astrocommunity.diagnostics.tiny-inline-diagnostic-nvim" },
 	-- { import = "astrocommunity.editing-support.copilotchat-nvim" },
 	-- { import = "astrocommunity.editing-support.copilotchat-nvim" },
